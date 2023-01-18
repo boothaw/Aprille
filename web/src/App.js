@@ -1,4 +1,5 @@
 import { AuthProvider } from '@redwoodjs/auth'
+
 import WebAuthnClient from '@redwoodjs/auth/webAuthn'
 
 import { FatalErrorBoundary, RedwoodProvider } from '@redwoodjs/web'

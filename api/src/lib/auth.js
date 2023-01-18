@@ -21,7 +21,7 @@ import { db } from './db'
  */
 export const getCurrentUser = async (session) => {
   if (!session || typeof session.id !== 'number') {
-    return null
+    throw new Error('Invalid session')
   }
 
   return await db.user.findUnique({

@@ -7,9 +7,9 @@ const BlogLayout = ({ children }) => {
     <>
       <header>
         <div className="flex-between">
-          <h1>
-            <Link to={routes.home()}>Redwood Blog</Link>
-          </h1>
+          <Link to={routes.home()}>
+            <h1>Aprille Zammit</h1>
+          </Link>
           {isAuthenticated ? (
             <div>
               <span>Logged in as {currentUser.email}</span>{' '}
@@ -21,9 +21,6 @@ const BlogLayout = ({ children }) => {
             <Link to={routes.login()}>Login</Link>
           )}
         </div>
-        <Link to={routes.home()}>
-          <h1>Aprille Zammit</h1>
-        </Link>
         <nav>
           <ul>
             <li>
