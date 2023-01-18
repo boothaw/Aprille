@@ -12,7 +12,7 @@ li {
 }
 h1 > a {
   text-decoration: none;
-  color: black;
+  color: pin;
 }
 button, input, label, textarea {
   display: block;
@@ -47,4 +47,11 @@ input.error, textarea.error {
 }
 .flex-between button {
   display: inline;
+}
+article{
+	header{
+		h2 a{
+			color: pink;
+		}
+	}
 }
