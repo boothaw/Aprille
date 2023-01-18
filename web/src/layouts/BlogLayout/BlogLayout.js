@@ -3,12 +3,16 @@ import { Link, routes } from '@redwoodjs/router'
 
 const BlogLayout = ({ children }) => {
   const { isAuthenticated, currentUser, logOut } = useAuth()
+
   return (
     <>
       <header>
         <div className="flex-between">
           <Link to={routes.home()}>
-            <h1>Aprille Zammit</h1>
+            <img className="logo" src="/LOGO_colour.png" alt="logo" />
+          </Link>
+          <Link to={routes.home()}>
+            <h1>Aprille Zammit ~ Studio</h1>
           </Link>
           {isAuthenticated ? (
             <div>

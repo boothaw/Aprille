@@ -11,7 +11,7 @@ import './index.scss'
 
 const App = () => (
   <FatalErrorBoundary page={FatalErrorPage}>
-    <RedwoodProvider titleTemplate="%PageTitle | %AppTitle">
+    <RedwoodProvider titleTemplate="%PageTitle | Aprille Zammit">
       <AuthProvider type="dbAuth" client={WebAuthnClient}>
         <RedwoodApolloProvider>
           <Routes />
