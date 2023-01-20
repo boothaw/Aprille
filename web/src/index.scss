@@ -123,30 +123,30 @@ header {
 }
 
 
-article{
-	header{
-		h2 a{
-			background:
-				radial-gradient(100% 58% at top   ,$blue   99%,$navy) calc(0*100%/3) 0,
-				radial-gradient(100% 58% at bottom,$navy 99%,$blue  ) calc(3*100%/3) 0,
-				radial-gradient(100% 58% at top   ,$blue   99%,$navy) calc(6*100%/3) 0,
-				radial-gradient(100% 58% at bottom,$navy 99%,$blue  ) calc(9*100%/3) 0
-				$navy;
-			background-size:50% 100%;
-			background-repeat:no-repeat;
-			-webkit-background-clip:text;
-			color:transparent;
-			background-clip:text;
-			display:inline-block;
-			padding:20px;
-			font-size: 100px;
-			font-family:arial;
-			font-weight:bold;
-			animation:
-				move 1s infinite linear,
-				up   5s infinite linear alternate;
-		}
-	}
+.waves-loading{
+	background:
+		radial-gradient(100% 58% at top   ,$blue   99%,$navy) calc(0*100%/3) 0,
+		radial-gradient(100% 58% at bottom,$navy 99%,$blue  ) calc(3*100%/3) 0,
+		radial-gradient(100% 58% at top   ,$blue   99%,$navy) calc(6*100%/3) 0,
+		radial-gradient(100% 58% at bottom,$navy 99%,$blue  ) calc(9*100%/3) 0
+		$navy;
+	background-size:50% 100%;
+	background-repeat:no-repeat;
+	-webkit-background-clip:text;
+	color:transparent;
+	background-clip:text;
+	display:inline-block;
+	padding:40px;
+	font-size: 50px;
+	font-family:arial;
+	font-weight:bold;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	animation:
+		move 1s infinite linear,
+		up   5s infinite linear alternate;
 }
 
 

@@ -11,7 +11,9 @@ export const QUERY = gql`
   }
 `
 
-export const Loading = () => <div>The waves are calling...</div>
+export const Loading = () => (
+  <div className="waves-loading">The Waves Are Calling</div>
+)
 
 export const Empty = () => <div>Uhh not ready yet</div>
 
