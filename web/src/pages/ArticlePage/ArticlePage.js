@@ -8,7 +8,6 @@ const ArticlePage = ({ id }) => {
       <MetaTags title="Article" description="Article page" />
 
       <ArticleCell id={id} />
-      <div>My id is {id}</div>
     </>
   )
 }

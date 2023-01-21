@@ -18,6 +18,7 @@ body {
   font-weight: 400;
   font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	background-color: $off-white;
+	margin: 0;
 }
 
 // Typography
@@ -43,7 +44,7 @@ a {
 }
 
 a:hover{
-	color: $navy;
+	color: $yellow;
 	transition: all .5s ease;
 }
 
@@ -109,19 +110,87 @@ input.error, textarea.error {
 }
 
 // header styles
-header {
-	div a{
-		text-decoration: none;
-	}
-	div a h1{
-		color: $yellow;
-	}
-}
 
 .logo{
 	max-width: 100px;
 }
 
+#redwood-app{
+	display: flex;
+	width: 100%;
+}
+
+.blog-header{
+	max-width: 200px;
+	width: 15%;
+	background-color: $off-white;
+	height: 100vh;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	nav ul{
+		display: flex;
+		flex-direction: column;
+	}
+
+	nav ul li{
+		font-size: 1.5em;
+	}
+
+	&__inner{
+		position: fixed;
+	}
+}
+
+.aprille-name{
+	position: fixed;
+	top: 0;
+	right: 0;
+	background-color: #fff;
+	padding: 8px;
+	border-bottom-left-radius: 16px;
+
+	h1 {
+		color: $yellow;
+		margin-bottom: 0;
+		font-size: 32px;
+		text-align: center;
+	}
+
+	p{
+		text-transform: uppercase;
+		color: $yellow;
+		font-weight: bold;
+		font-size: 12px;
+		text-align: center;
+		margin-bottom: 0;
+	}
+}
+
+// blog
+
+.blog-main{
+	width: 90%;
+	padding: 100px 20px;
+}
+
+.article{
+	max-width: 500px;
+
+	h2 a{
+		color: $navy;
+		text-decoration: none;
+	}
+	h2 a:hover{
+		color: $blue;
+	}
+}
+
+.scaffold-layout{
+	margin: auto;
+}
 
 .waves-loading{
 	background:
@@ -149,9 +218,7 @@ header {
 		up   5s infinite linear alternate;
 }
 
-
 // Animations
-
 
 @keyframes move {
 	to {
@@ -168,6 +235,10 @@ header {
 		background-size:50% 50%;
 	}
 }
+
+
+
+
 
 // Media Queries
 

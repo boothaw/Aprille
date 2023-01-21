@@ -9,7 +9,7 @@ const Article = ({ article }) => {
         </h2>
       </header>
       <p>{article.body}</p>
-      <div>Posted At: {article.createdAt}</div>
+      {/* <div>Posted At: {article.createdAt}</div> */}
     </article>
   )
 }
