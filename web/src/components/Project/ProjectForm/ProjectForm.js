@@ -1,3 +1,7 @@
+import { useState } from 'react'
+
+import { PickerInline } from 'filestack-react'
+
 import {
   Form,
   FormError,
@@ -8,8 +12,24 @@ import {
 } from '@redwoodjs/forms'
 
 const ProjectForm = (props) => {
+  const [url, setUrl] = useState(props?.image?.url)
+
   const onSubmit = (data) => {
-    props.onSave(data, props?.project?.id)
+    // props.onSave(data, props?.project?.id)
+    const dataWithUrl = Object.assign(data, { url })
+    props.onSave(dataWithUrl, props?.image)
+  }
+
+  // OG above
+
+  // const onSubmit = (data) => {
+  //   const dataWithUrl = Object.assign(data, { url })
+  //   props.onSave(dataWithUrl, props?.image?.id)
+  //   // props.onSave(data, props?.image?.id)
+  // }
+
+  const onFileUpload = (response) => {
+    setUrl(response.filesUploaded[0].url)
   }
 
   return (
@@ -57,6 +77,31 @@ const ProjectForm = (props) => {
         />
 
         <FieldError name="body" className="rw-field-error" />
+
+        <PickerInline
+          apikey={process.env.REDWOOD_ENV_FILESTACK_API_KEY}
+          onSuccess={onFileUpload}
+        >
+          <div
+            style={{ display: url ? 'none' : 'block', height: '500px' }}
+          ></div>
+        </PickerInline>
+
+        {url && (
+          <div>
+            <img
+              alt={url}
+              src={url}
+              style={{ display: 'block', margin: '2rem 0' }}
+            />
+            <button
+              onClick={() => setUrl(null)}
+              className="rw-button rw-button-blue"
+            >
+              Replace Image
+            </button>
+          </div>
+        )}
 
         <div className="rw-button-group">
           <Submit disabled={props.loading} className="rw-button rw-button-blue">

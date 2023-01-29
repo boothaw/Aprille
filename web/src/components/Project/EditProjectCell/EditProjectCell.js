@@ -1,5 +1,4 @@
 import { navigate, routes } from '@redwoodjs/router'
-
 import { useMutation } from '@redwoodjs/web'
 import { toast } from '@redwoodjs/web/toast'
 
@@ -15,6 +14,9 @@ export const QUERY = gql`
     }
   }
 `
+
+// problem below - how up updat the gql query
+
 const UPDATE_PROJECT_MUTATION = gql`
   mutation UpdateProjectMutation($id: Int!, $input: UpdateProjectInput!) {
     updateProject(id: $id, input: $input) {
@@ -22,6 +24,7 @@ const UPDATE_PROJECT_MUTATION = gql`
       title
       body
       createdAt
+      url
     }
   }
 `

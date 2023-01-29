@@ -16,6 +16,8 @@ export const schema = gql`
     body: String!
   }
 
+  # // problem below - update project input
+
   input UpdateProjectInput {
     title: String
     body: String
