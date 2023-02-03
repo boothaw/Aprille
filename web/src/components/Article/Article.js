@@ -10,6 +10,7 @@ const Article = ({ article }) => {
       </header>
       <p>{article.body}</p>
       {/* <div>Posted At: {article.createdAt}</div> */}
+      <img className="featured-image" src={article.url} alt={article.title} />
       <img className="wave-div" src="/wave.svg" alt="wave divider" />
     </article>
   )
