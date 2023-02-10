@@ -1,6 +1,7 @@
 import { Link, routes } from '@redwoodjs/router'
 
 const Article = ({ article }) => {
+  // console.log(article.url)
   return (
     <article id={`article-${article.id}`} className="article" key={article.id}>
       <header>
@@ -9,7 +10,7 @@ const Article = ({ article }) => {
         </h2>
       </header>
       <p>{article.body}</p>
-      {/* <div>Posted At: {article.createdAt}</div> */}
+      <img className="featured-image" src={article.url} alt={article.title} />
       <img className="wave-div" src="/wave.svg" alt="wave divider" />
     </article>
   )

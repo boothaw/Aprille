@@ -1,9 +1,10 @@
 import { navigate, routes } from '@redwoodjs/router'
-
 import { useMutation } from '@redwoodjs/web'
 import { toast } from '@redwoodjs/web/toast'
 
 import ProjectForm from 'src/components/Project/ProjectForm'
+
+// all info is getting passed in correctly -- just not getting save through gql correctly - will log to console, but does not show up in prisma studio
 
 export const QUERY = gql`
   query EditProjectById($id: Int!) {
@@ -12,9 +13,11 @@ export const QUERY = gql`
       title
       body
       createdAt
+      # url -- this caused error -- why?
     }
   }
 `
+
 const UPDATE_PROJECT_MUTATION = gql`
   mutation UpdateProjectMutation($id: Int!, $input: UpdateProjectInput!) {
     updateProject(id: $id, input: $input) {
@@ -22,6 +25,7 @@ const UPDATE_PROJECT_MUTATION = gql`
       title
       body
       createdAt
+      # url
     }
   }
 `
@@ -42,6 +46,7 @@ export const Success = ({ project }) => {
       },
       onError: (error) => {
         toast.error(error.message)
+        console.log(error)
       },
     }
   )

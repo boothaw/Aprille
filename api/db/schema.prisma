@@ -20,6 +20,7 @@ model Project {
   title     String
   body      String
   createdAt DateTime @default(now())
+  url       String?
 }
 
 model Contact {

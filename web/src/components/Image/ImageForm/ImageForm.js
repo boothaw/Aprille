@@ -17,7 +17,6 @@ const ImageForm = (props) => {
   const onSubmit = (data) => {
     const dataWithUrl = Object.assign(data, { url })
     props.onSave(dataWithUrl, props?.image?.id)
-    // props.onSave(data, props?.image?.id)
   }
 
   const onFileUpload = (response) => {
