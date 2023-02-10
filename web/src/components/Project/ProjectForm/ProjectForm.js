@@ -15,18 +15,9 @@ const ProjectForm = (props) => {
   const [url, setUrl] = useState(props?.image?.url)
 
   const onSubmit = (data) => {
-    // props.onSave(data, props?.project?.id)
     const dataWithUrl = Object.assign(data, { url })
-    props.onSave(dataWithUrl, props?.image)
+    props.onSave(dataWithUrl, props?.project?.id)
   }
-
-  // OG above
-
-  // const onSubmit = (data) => {
-  //   const dataWithUrl = Object.assign(data, { url })
-  //   props.onSave(dataWithUrl, props?.image?.id)
-  //   // props.onSave(data, props?.image?.id)
-  // }
 
   const onFileUpload = (response) => {
     setUrl(response.filesUploaded[0].url)

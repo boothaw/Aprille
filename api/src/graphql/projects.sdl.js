@@ -3,7 +3,7 @@ export const schema = gql`
     id: Int!
     title: String!
     body: String!
-    url: String!
+    url: String
     createdAt: DateTime!
   }
 
@@ -15,7 +15,7 @@ export const schema = gql`
   input CreateProjectInput {
     title: String!
     body: String!
-    url: String!
+    url: String
   }
 
   # // problem below - update project input

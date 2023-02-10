@@ -4,6 +4,8 @@ import { toast } from '@redwoodjs/web/toast'
 
 import ProjectForm from 'src/components/Project/ProjectForm'
 
+// all info is getting passed in correctly -- just not getting save through gql correctly - will log to console, but does not show up in prisma studio
+
 export const QUERY = gql`
   query EditProjectById($id: Int!) {
     project: project(id: $id) {
@@ -11,11 +13,10 @@ export const QUERY = gql`
       title
       body
       createdAt
+      # url -- this caused error -- why?
     }
   }
 `
-
-// problem below - how up updat the gql query
 
 const UPDATE_PROJECT_MUTATION = gql`
   mutation UpdateProjectMutation($id: Int!, $input: UpdateProjectInput!) {
@@ -24,7 +25,7 @@ const UPDATE_PROJECT_MUTATION = gql`
       title
       body
       createdAt
-      url
+      # url
     }
   }
 `
@@ -45,6 +46,7 @@ export const Success = ({ project }) => {
       },
       onError: (error) => {
         toast.error(error.message)
+        console.log(error)
       },
     }
   )

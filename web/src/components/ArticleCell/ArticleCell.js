@@ -7,6 +7,7 @@ export const QUERY = gql`
       title
       body
       createdAt
+      # url - will this cause error?
     }
   }
 `

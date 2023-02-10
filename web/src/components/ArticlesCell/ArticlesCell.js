@@ -7,6 +7,8 @@ export const QUERY = gql`
       title
       body
       createdAt
+      url
+      # figure out why this is still red ^^
     }
   }
 `
