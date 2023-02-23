@@ -20,6 +20,15 @@ const BlogLayout = ({ children }) => {
           <nav>
             <ul>
               <li>
+                <a href="#photos">photography</a>
+              </li>
+              <li>
+                <a href="#projects">projects</a>
+              </li>
+              <li>
+                <a href="#workshops">workshops</a>
+              </li>
+              <li>
                 <Link to={routes.about()}>about</Link>
               </li>
               <li>
