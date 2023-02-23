@@ -229,10 +229,10 @@ const LoginPage = ({ type }) => {
     } else {
       return (
         <div className="rw-login-link">
-          <span>Don&apos;t have an account?</span>{' '}
-          <Link to={routes.signup()} className="rw-link">
+          <span>Are you Aprille? If not, leave.</span>{' '}
+          {/* <Link to={routes.signup()} className="rw-link">
             Sign up!
-          </Link>
+          </Link> */}
         </div>
       )
     }
@@ -246,7 +246,7 @@ const LoginPage = ({ type }) => {
     <>
       <MetaTags title="Login" />
 
-      <main className="rw-main">
+      <main className="rw-main login-page">
         <Toaster toastOptions={{ className: 'rw-toast', duration: 6000 }} />
         <div className="rw-scaffold rw-login-container">
           <div className="rw-segment">

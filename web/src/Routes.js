@@ -46,6 +46,7 @@ const Routes = () => {
         <Route path="/" page={HomePage} name="home" />
         <Route path="/contact" page={ContactPage} name="contact" />
         <Route path="/article/{id:Int}" page={ArticlePage} name="article" />
+        <Route path="/photo/{id:Int}" page={PhotoPage} name="photo" />
         <Route notfound page={NotFoundPage} />
       </Set>
     </Router>

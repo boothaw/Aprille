@@ -8,9 +8,15 @@ const HomePage = () => {
     <>
       <MetaTags title="Home" description="Home page" />
       <>
-        <PhotosCell></PhotosCell>
-        <img className="wave-div" src="/wave.svg" alt="wave divider" />
-        <ArticlesCell></ArticlesCell>
+        <div className="home">
+          <PhotosCell></PhotosCell>
+          <img
+            className="wave-svg"
+            src="/wave-cropped.svg"
+            alt="wave divider"
+          />
+          <ArticlesCell></ArticlesCell>
+        </div>
       </>
     </>
   )

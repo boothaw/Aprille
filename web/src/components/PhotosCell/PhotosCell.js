@@ -1,3 +1,5 @@
+import Photo from '../Photo/Photo'
+
 export const QUERY = gql`
   query PhotosQuery {
     photos: images {
@@ -17,17 +19,14 @@ export const Failure = ({ error }) => (
 )
 
 export const Success = ({ photos }) => {
-  const mix = (arr) => [...arr].sort(() => Math.random() - 0.5)
-  const shuffledPhotos = mix(photos)
+  // const mix = (arr) => [...arr].sort(() => Math.random() - 0.5)
+  // const shuffledPhotos = mix(photos)
 
   return (
-    <div className="photography-section">
-      {shuffledPhotos.map((item) => {
-        return (
-          <a href="/no" className="photo-container" key={item.id}>
-            <img className="photo" src={item.url} alt={item.title} />
-          </a>
-        )
+    <div className="photography-section-grid">
+      {/* {shuffledPhotos.map((item) => { */}
+      {photos.map((photo) => {
+        return <Photo key={photo.id} id={photo.id} photo={photo}></Photo>
       })}
     </div>
   )
