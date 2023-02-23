@@ -1,8 +1,8 @@
-import { useAuth } from '@redwoodjs/auth'
+// import { useAuth } from '@redwoodjs/auth'
 import { Link, routes } from '@redwoodjs/router'
 
 const BlogLayout = ({ children }) => {
-  const { isAuthenticated, currentUser, logOut } = useAuth()
+  // const { isAuthenticated, currentUser, logOut } = useAuth()
 
   return (
     <>
@@ -20,6 +20,15 @@ const BlogLayout = ({ children }) => {
           <nav>
             <ul>
               <li>
+                <a href="/#photos">photography</a>
+              </li>
+              <li>
+                <a href="/#projects">projects</a>
+              </li>
+              <li>
+                <a href="/#workshops">workshops</a>
+              </li>
+              <li>
                 <Link to={routes.about()}>about</Link>
               </li>
               <li>
@@ -27,16 +36,16 @@ const BlogLayout = ({ children }) => {
               </li>
             </ul>
           </nav>
-          {isAuthenticated ? (
+          {/* {isAuthenticated ? (
             <div>
-              {/* <span>Logged in as {currentUser.email}</span>{' '} */}
+              <span>Logged in as {currentUser.email}</span>{' '}
               <button type="button" onClick={logOut}>
                 Logout
               </button>
             </div>
           ) : (
             <Link to={routes.login()}>Login</Link>
-          )}
+          )} */}
         </div>
       </header>
       <main className="blog-main">{children}</main>

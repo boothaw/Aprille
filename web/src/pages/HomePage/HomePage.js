@@ -1,19 +1,23 @@
 import { MetaTags } from '@redwoodjs/web'
 
 import ArticlesCell from 'src/components/ArticlesCell'
-// import ImageCell from 'src/components/Image/ImagesCell'
-
-import ContactPage from '../ContactPage/ContactPage'
+import PhotosCell from 'src/components/PhotosCell/PhotosCell.js'
 
 const HomePage = () => {
   return (
     <>
       <MetaTags title="Home" description="Home page" />
-
       <>
-        <ArticlesCell></ArticlesCell>
-        {/* <ImageCell></ImageCell> */}
-        <ContactPage></ContactPage>
+        <div className="home" id="home">
+          <PhotosCell></PhotosCell>
+          <img
+            className="wave-svg"
+            src="/wave-cropped.svg"
+            alt="wave divider"
+            id="projects"
+          />
+          <ArticlesCell></ArticlesCell>
+        </div>
       </>
     </>
   )
