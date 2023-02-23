@@ -9,8 +9,8 @@ const PhotoPage = ({ id }) => {
       <MetaTags title="Photo -- Title Here" description="Photo Page" />
       <div className="photo-page">
         <PhotoCell id={id}></PhotoCell>
-        <img className="wave-div" src="/wave-cropped.svg" alt="wave divider" />
-        <h2>More Stuff Below</h2>
+        <img className="wave-svg" src="/wave-cropped.svg" alt="wave divider" />
+        <h2>More...</h2>
         <PhotosCell></PhotosCell>
       </div>
     </>

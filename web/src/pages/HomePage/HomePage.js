@@ -10,8 +10,6 @@ const HomePage = () => {
       <>
         <div className="home" id="home">
           <PhotosCell></PhotosCell>
-          <PhotosCell></PhotosCell>
-          <PhotosCell></PhotosCell>
           <img
             className="wave-svg"
             src="/wave-cropped.svg"

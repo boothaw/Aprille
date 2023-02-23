@@ -249,6 +249,7 @@ input.error, textarea.error {
 	display: flex;
   flex-wrap: wrap;
   gap: 20px;
+	padding-bottom: 20px;
 
 	.photo-container{
 		max-height: 200px;
@@ -285,6 +286,10 @@ input.error, textarea.error {
 	.photo{
 		max-width: 900px;
 		width: 100%;
+	}
+
+	h2{
+		text-align: center;
 	}
 }
 
