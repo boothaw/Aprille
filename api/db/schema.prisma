@@ -19,8 +19,17 @@ model Project {
   id        Int      @id @default(autoincrement())
   title     String
   body      String
+  body2     String?
+  body3     String?
   createdAt DateTime @default(now())
   url       String?
+  url2      String?
+  url3      String?
+  url4      String?
+  url5      String?
+  url6      String?
+  url7      String?
+  url8      String?
 }
 
 model Contact {
