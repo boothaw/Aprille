@@ -6,7 +6,17 @@ export const QUERY = gql`
       id
       title
       body
+      body2
+      body3
       createdAt
+      url
+      url2
+      url3
+      url4
+      url5
+      url6
+      url7
+      url8
     }
   }
 `

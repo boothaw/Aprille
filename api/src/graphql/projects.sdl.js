@@ -3,27 +3,52 @@ export const schema = gql`
     id: Int!
     title: String!
     body: String!
-    url: String
+    body2: String
+    body3: String
     createdAt: DateTime!
+    url: String
+    url2: String
+    url3: String
+    url4: String
+    url5: String
+    url6: String
+    url7: String
+    url8: String
   }
 
   type Query {
-    projects: [Project!]! @skipAuth
-    project(id: Int!): Project @skipAuth
+    projects: [Project!]! @requireAuth
+    project(id: Int!): Project @requireAuth
   }
 
   input CreateProjectInput {
     title: String!
     body: String!
+    body2: String
+    body3: String
     url: String
+    url2: String
+    url3: String
+    url4: String
+    url5: String
+    url6: String
+    url7: String
+    url8: String
   }
-
-  # // problem below - update project input
 
   input UpdateProjectInput {
     title: String
     body: String
+    body2: String
+    body3: String
     url: String
+    url2: String
+    url3: String
+    url4: String
+    url5: String
+    url6: String
+    url7: String
+    url8: String
   }
 
   type Mutation {
