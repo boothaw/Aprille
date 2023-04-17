@@ -52,8 +52,48 @@ const Project = ({ project }) => {
               <td>{project.body}</td>
             </tr>
             <tr>
+              <th>Body2</th>
+              <td>{project.body2}</td>
+            </tr>
+            <tr>
+              <th>Body3</th>
+              <td>{project.body3}</td>
+            </tr>
+            <tr>
               <th>Created at</th>
               <td>{timeTag(project.createdAt)}</td>
+            </tr>
+            <tr>
+              <th>Url</th>
+              <td>{project.url}</td>
+            </tr>
+            <tr>
+              <th>Url2</th>
+              <td>{project.url2}</td>
+            </tr>
+            <tr>
+              <th>Url3</th>
+              <td>{project.url3}</td>
+            </tr>
+            <tr>
+              <th>Url4</th>
+              <td>{project.url4}</td>
+            </tr>
+            <tr>
+              <th>Url5</th>
+              <td>{project.url5}</td>
+            </tr>
+            <tr>
+              <th>Url6</th>
+              <td>{project.url6}</td>
+            </tr>
+            <tr>
+              <th>Url7</th>
+              <td>{project.url7}</td>
+            </tr>
+            <tr>
+              <th>Url8</th>
+              <td>{project.url8}</td>
             </tr>
           </tbody>
         </table>
