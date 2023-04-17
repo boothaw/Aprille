@@ -19,16 +19,17 @@ export const Failure = ({ error }) => (
 )
 
 export const Success = ({ photos, exclude }) => {
+  // const mix = (arr) => [...arr].sort(() => Math.random() - 0.5)
+  // const shuffledPhotos = mix(photos)
+
   return (
     <div className="photography-section-grid">
+      {/* {shuffledPhotos.map((item) => { */}
       {photos
         .filter((photo) => photo.id !== exclude)
         .map((photo) => {
           return <Photo key={photo.id} id={photo.id} photo={photo}></Photo>
         })}
-      {/* {photos.map((photo) => {
-        return <Photo key={photo.id} id={photo.id} photo={photo}></Photo>
-      })} */}
     </div>
   )
 }
