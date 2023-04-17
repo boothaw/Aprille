@@ -188,6 +188,11 @@ input.error, textarea.error {
 	h2 a:hover{
 		color: $blue;
 	}
+
+	.featured-image{
+		max-width: 100%;
+		height: auto;
+	}
 }
 
 .scaffold-layout{
@@ -332,3 +337,7 @@ input.error, textarea.error {
 
 /* Larger than tablet */
 @media (min-width: 1200px) {}
+
+.rw-scaffold{
+	margin: 2rem auto;
+}
