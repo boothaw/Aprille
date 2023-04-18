@@ -11,6 +11,7 @@ const Article = ({ article }) => {
       <p>{article.body}</p>
       <p>{article.body2}</p>
       <p>{article.body3}</p>
+      <p>{article.url2}</p>
       <img className="featured-image" src={article.url} alt={article.title} />
       <img className="featured-image" src={article.url2} alt={article.title} />
       <img className="featured-image" src={article.url3} alt={article.title} />

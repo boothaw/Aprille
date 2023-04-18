@@ -237,6 +237,10 @@ input.error, textarea.error {
 	color: $yellow;
 }
 
+.additional-work-title{
+	text-align: center;
+}
+
 // form stuff
 
 .rw-form-wrapper{
@@ -291,10 +295,6 @@ input.error, textarea.error {
 	.photo{
 		max-width: 900px;
 		width: 100%;
-	}
-
-	h2{
-		text-align: center;
 	}
 }
 
