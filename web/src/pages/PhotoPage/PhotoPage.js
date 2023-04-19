@@ -10,7 +10,7 @@ const PhotoPage = ({ id }) => {
       <div className="photo-page">
         <PhotoCell id={id}></PhotoCell>
         <img className="wave-svg" src="/wave-cropped.svg" alt="wave divider" />
-        <h2>More...</h2>
+        <h2 className="additional-work-title">More...</h2>
         <PhotosCell exclude={id}></PhotosCell>
       </div>
     </>

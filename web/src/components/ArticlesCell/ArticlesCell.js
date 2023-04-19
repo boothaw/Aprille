@@ -1,14 +1,11 @@
-import Article from '../Article/Article'
+import ArticleThumb from '../ArticleThumb/ArticleThumb'
 
 export const QUERY = gql`
   query ArticlesQuery {
     articles: projects {
       id
       title
-      body
-      createdAt
       url
-      # figure out why this is still red ^^
     }
   }
 `
@@ -23,8 +20,14 @@ export const Failure = ({ error }) => (
   <div style={{ color: 'red' }}>Error: {error?.message}</div>
 )
 
-export const Success = ({ articles }) => {
-  return articles.map((article) => (
-    <Article key={article.id} article={article} />
-  ))
+export const Success = ({ articles, exclude }) => {
+  return (
+    <div className="projects-section" id="projects">
+      {articles
+        .filter((article) => article.id !== exclude)
+        .map((article) => {
+          return <ArticleThumb key={article.id} article={article} />
+        })}
+    </div>
+  )
 }
