@@ -23,7 +23,7 @@ export const Success = ({ photos, exclude }) => {
   // const shuffledPhotos = mix(photos)
 
   return (
-    <div className="photography-section-grid">
+    <div className="photography-section-grid" id="photos">
       {/* {shuffledPhotos.map((item) => { */}
       {photos
         .filter((photo) => photo.id !== exclude)

@@ -259,6 +259,7 @@ input.error, textarea.error {
   flex-wrap: wrap;
   gap: 20px;
 	padding-bottom: 20px;
+	justify-content: center;
 
 	.photo-container{
 		max-height: 200px;
@@ -296,6 +297,17 @@ input.error, textarea.error {
 		max-width: 900px;
 		width: 100%;
 	}
+}
+
+// projects section
+
+.projects-section{
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px;
+	padding-bottom: 20px;
+	align-items: flex-end;
+	justify-content: center;
 }
 
 // about page

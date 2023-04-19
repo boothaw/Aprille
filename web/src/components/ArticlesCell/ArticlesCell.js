@@ -21,7 +21,13 @@ export const Failure = ({ error }) => (
 )
 
 export const Success = ({ articles, exclude }) => {
-  return articles
-    .filter((article) => article.id !== exclude)
-    .map((article) => <ArticleThumb key={article.id} article={article} />)
+  return (
+    <div className="projects-section" id="projects">
+      {articles
+        .filter((article) => article.id !== exclude)
+        .map((article) => {
+          return <ArticleThumb key={article.id} article={article} />
+        })}
+    </div>
+  )
 }
