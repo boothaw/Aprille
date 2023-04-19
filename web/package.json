@@ -13,6 +13,8 @@
     ]
   },
   "dependencies": {
+    "@emailjs/browser": "^3.11.0",
+    "@react-email/render": "^0.0.7",
     "@redwoodjs/auth": "3.8.0",
     "@redwoodjs/forms": "3.8.0",
     "@redwoodjs/router": "3.8.0",
@@ -20,6 +22,7 @@
     "@simplewebauthn/browser": "^7.0.0",
     "filestack-react": "^4.0.1",
     "humanize-string": "2.1.0",
+    "nodemailer": "^6.9.1",
     "prop-types": "15.8.1",
     "react": "17.0.2",
     "react-dom": "17.0.2"
