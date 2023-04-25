@@ -47,6 +47,7 @@ const Article = ({ article }) => {
     >
       <header>
         <h2>{article.title}</h2>
+        <div className="title-line"></div>
       </header>
       <div className="article-body">
         <div className="article-copy">

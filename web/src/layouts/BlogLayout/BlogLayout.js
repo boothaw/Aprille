@@ -26,14 +26,24 @@ const BlogLayout = ({ children }) => {
                 <a href="/#projects">projects</a>
               </li>
               <li>
+                <a href="/#screenprints">screenprints</a>
+              </li>
+              <li>
                 <a href="/#workshops">workshops</a>
               </li>
               <li>
-                <Link to={routes.about()}>about</Link>
+                <Link to={routes.about()}>bio & contact</Link>
               </li>
-              <li>
-                <Link to={routes.contact()}>contact</Link>
+              <li className="hamburger">
+                <Link to={routes.about()}>
+                  <span>~</span>
+                  <span>~</span>
+                  <span>~</span>
+                </Link>
               </li>
+              {/* <li>
+                <Link to={routes.about()}>contact</Link>
+              </li> */}
             </ul>
           </nav>
           {/* {isAuthenticated ? (

@@ -326,6 +326,7 @@ input.error, textarea.error {
 
 	h2{
 		transition: all .5s ease;
+		text-transform: capitalize;
 	}
 	h2 a{
 		color: $navy;
@@ -338,15 +339,35 @@ input.error, textarea.error {
 	}
 }
 
+.hamburger a{
+	display: flex;
+	flex-direction: column;
+}
+
+.hamburger a span{
+	height: 12px;
+	font-size: 40px;
+}
+
 .article-page{
 		margin: auto;
 
 		header{
-			border-bottom: 4px solid $yellow;
 			margin-bottom: 20px;
 			max-width: 600px;
 			width: fit-content;
 			margin: 0 auto 20px auto;
+		}
+
+		h2{
+			text-transform: capitalize;
+			text-align: center;
+		}
+
+		.title-line{
+			border-bottom: 4px solid $yellow;
+			width: 150px;
+			margin: 0 auto;
 		}
 
 		h2 a{
