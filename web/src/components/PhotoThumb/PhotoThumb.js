@@ -10,7 +10,9 @@ const PhotoThumb = ({ photo }) => {
       key={photo.id}
     >
       <img className="photo" src={photo.url} alt={photo.title} />
-      <h2>{photo.title}</h2>
+      <div className="hover-card">
+        <h2>{photo.title}</h2>
+      </div>
     </Link>
   )
 }

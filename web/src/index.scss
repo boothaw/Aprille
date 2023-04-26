@@ -29,12 +29,12 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
   margin-bottom: 2rem;
   font-weight: 300; }
-h1 { font-size: 4.0rem; line-height: 1.2;  letter-spacing: -.1rem;}
-h2 { font-size: 3.6rem; line-height: 1.25; letter-spacing: -.1rem; }
-h3 { font-size: 3.0rem; line-height: 1.3;  letter-spacing: -.1rem; }
-h4 { font-size: 2.4rem; line-height: 1.35; letter-spacing: -.08rem; }
-h5 { font-size: 1.8rem; line-height: 1.5;  letter-spacing: -.05rem; }
-h6 { font-size: 1.5rem; line-height: 1.6;  letter-spacing: 0; }
+h1 { font-size: 4.0rem; line-height: 1.2;  }
+h2 { font-size: 3.6rem; line-height: 1.25;  }
+h3 { font-size: 3.0rem; line-height: 1.3;   }
+h4 { font-size: 2.4rem; line-height: 1.35;  }
+h5 { font-size: 1.8rem; line-height: 1.5;   }
+h6 { font-size: 1.5rem; line-height: 1.6;   }
 
 h1, h2, h3, h4, h5, h6{
 	color: $navy;
@@ -159,6 +159,7 @@ input.error, textarea.error {
 	background-color: #fff;
 	padding: 8px;
 	border-bottom-left-radius: 16px;
+	z-index: 5;
 
 	h1 {
 		color: $yellow;
@@ -256,15 +257,47 @@ input.error, textarea.error {
 	padding-bottom: 20px;
 	justify-content: center;
 
-	.photo-container{
+	.photo-thumbnail{
 		max-height: 250px;
 		height: 16vw;
 		// this might work better
 		cursor: pointer;
+		position: relative;
 
-		h2{
-			display: none;
-			// have overlay on hover like katy binks
+		.hover-card{
+			display: flex;
+			justify-content: center;
+			align-items: flex-end;
+			position: absolute;
+			bottom: 0px;
+			top: 0px;
+			left: auto;
+			right: auto;
+			width: 100%;
+			height: 100%;
+			// background-color: rgb(235, 156, 49, .5);
+			// or totally like katy binks
+			background-color: $yellow;
+			opacity: 0;
+		}
+
+		h2 {
+			text-align: center;
+			font-size: 18px;
+			width: 90%;
+			font-weight: bold;
+			margin-left: auto;
+			margin-right: auto;
+			color: #fff;
+			// transition: all .5s ease;
+		}
+
+		&:hover{
+
+				.hover-card{
+					animation: fadeIn .5s;
+					opacity: 1;
+				}
 		}
 	}
 
@@ -353,7 +386,7 @@ input.error, textarea.error {
 	font-size: 40px;
 }
 
-.article-page{
+.article-page {
 		margin: auto;
 
 		header{
@@ -389,7 +422,7 @@ input.error, textarea.error {
 			margin-left: auto;
 			margin-right: auto;
 
-			.article-copy{
+			.article-copy {
 				max-width: 600px;
 				margin-left: auto;
 				margin-right: auto;
@@ -421,7 +454,7 @@ input.error, textarea.error {
 
 .hecking{
 	font-size: 50px;
-	 color: red;
+	color: red;
 }
 
 // Animations
@@ -439,6 +472,17 @@ input.error, textarea.error {
 @keyframes up {
 	to {
 		background-size:50% 50%;
+	}
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		height: 0;
+	}
+	to {
+		opacity: 1;
+		height: 100%;
 	}
 }
 
