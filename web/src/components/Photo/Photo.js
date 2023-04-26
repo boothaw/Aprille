@@ -1,8 +1,15 @@
+import { Head } from '@redwoodjs/web'
+
 const Photo = ({ photo }) => {
   return (
-    <div className="photo-container" key={photo.id}>
-      <img className="photo" src={photo.url} alt={photo.title} />
-      <h2>{photo.title}</h2>
+    <div>
+      <Head>
+        <title>{photo.title} | Photography</title>
+      </Head>
+      <div className="photo-container" key={photo.id}>
+        <img className="photo" src={photo.url} alt={photo.title} />
+        <h1>{photo.title}</h1>
+      </div>
     </div>
   )
 }

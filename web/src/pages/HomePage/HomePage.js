@@ -10,6 +10,10 @@ const HomePage = () => {
       <MetaTags title="Home" description="Home page" />
       <>
         <div className="home" id="home">
+          <a href="/" className="aprille-name">
+            <h1>Aprille Zammit ~ Studio</h1>
+            <p>Screenprinter, Photographer, Nature Junkie</p>
+          </a>
           <PhotosCell></PhotosCell>
           <Wave></Wave>
           <ArticlesCell></ArticlesCell>

@@ -1,3 +1,5 @@
+import { Head } from '@redwoodjs/web'
+
 const Article = ({ article }) => {
   // TO DO:
   // 1. loop over article object - Object.keys
@@ -43,6 +45,9 @@ const Article = ({ article }) => {
       className="article-page"
       key={article.id}
     >
+      <Head>
+        <title>{article.title} | Projects</title>
+      </Head>
       <header>
         <h2>{article.title}</h2>
         <div className="title-line"></div>
