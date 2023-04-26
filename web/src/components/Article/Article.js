@@ -5,12 +5,10 @@ const Article = ({ article }) => {
   // 3. check for null
   // 4. return html with content out remaining
 
-  // console.log(Object.keys(article).length)
-
   // const imageLoop = () => {
   // return <div>{article.title}</div>
 
-  // figure out why below is not working
+  // figure out how to get below working
 
   // Object.keys(article)
   //   .filter((a) => a.includes('url'))

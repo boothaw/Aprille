@@ -247,7 +247,7 @@ input.error, textarea.error {
 	max-width: 500px;
 }
 
-// photography page/section
+// photography page/section -- photoscell
 
 .photography-section-grid{
 	display: flex;
@@ -277,6 +277,8 @@ input.error, textarea.error {
 		vertical-align: middle;
 	}
 }
+
+// individual photo page -- photocell
 
 .photo-page{
 	.photo-container{
