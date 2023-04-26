@@ -1,5 +1,5 @@
 $off-white: rgb(248, 245, 237);
-$navy: rgb(29, 31, 71);
+$navy: rgb(32, 36, 88);
 $blue: rgb(138, 165, 187);
 $yellow: rgb(235, 156, 49);
 
@@ -29,14 +29,18 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
   margin-bottom: 2rem;
   font-weight: 300; }
-h1 { font-size: 4.0rem; line-height: 1.2;  letter-spacing: -.1rem;}
-h2 { font-size: 3.6rem; line-height: 1.25; letter-spacing: -.1rem; }
-h3 { font-size: 3.0rem; line-height: 1.3;  letter-spacing: -.1rem; }
-h4 { font-size: 2.4rem; line-height: 1.35; letter-spacing: -.08rem; }
-h5 { font-size: 1.8rem; line-height: 1.5;  letter-spacing: -.05rem; }
-h6 { font-size: 1.5rem; line-height: 1.6;  letter-spacing: 0; }
+h1 { font-size: 4.0rem; line-height: 1.2;  }
+h2 { font-size: 3.6rem; line-height: 1.25;  }
+h3 { font-size: 3.0rem; line-height: 1.3;   }
+h4 { font-size: 2.4rem; line-height: 1.35;  }
+h5 { font-size: 1.8rem; line-height: 1.5;   }
+h6 { font-size: 1.5rem; line-height: 1.6;   }
 
-h1, h2, h3, h4, h5, h6, p, ul, li a{
+h1, h2, h3, h4, h5, h6{
+	color: $navy;
+}
+
+p, ul, li a{
 	color: $blue;
 }
 
@@ -62,7 +66,9 @@ a:hover{
 }
 
 p {
-  margin-top: 0; }
+  margin-top: 0;
+	font-size: 1.5em;
+ }
 ul {
   list-style-type: none;
   margin: 1rem 0;
@@ -146,13 +152,14 @@ input.error, textarea.error {
 	}
 }
 
-.aprille-name{
+.aprille-name {
 	position: fixed;
 	top: 0;
 	right: 0;
 	background-color: #fff;
 	padding: 8px;
 	border-bottom-left-radius: 16px;
+	z-index: 5;
 
 	h1 {
 		color: $yellow;
@@ -175,24 +182,9 @@ input.error, textarea.error {
 
 .blog-main{
 	width: 90%;
-	padding: 100px 20px;
-}
-
-.article{
-	max-width: 500px;
-
-	h2 a{
-		color: $navy;
-		text-decoration: none;
-	}
-	h2 a:hover{
-		color: $blue;
-	}
-
-	.featured-image{
-		max-width: 100%;
-		height: auto;
-	}
+	padding: 140px 20px;
+	max-width: 1600px;
+	margin: auto;
 }
 
 .scaffold-layout{
@@ -226,7 +218,11 @@ input.error, textarea.error {
 }
 
 .wave-svg{
-	padding: 40px 0;
+	padding: 80px 0;
+	max-width: 900px;
+	width: 90%;
+	margin: 0 auto;
+	display: flex;
 }
 
 .login-page{
@@ -252,7 +248,7 @@ input.error, textarea.error {
 	max-width: 500px;
 }
 
-// photography page/section
+// photography page/section -- photoscell
 
 .photography-section-grid{
 	display: flex;
@@ -261,15 +257,47 @@ input.error, textarea.error {
 	padding-bottom: 20px;
 	justify-content: center;
 
-	.photo-container{
-		max-height: 200px;
+	.photo-thumbnail{
+		max-height: 250px;
 		height: 16vw;
 		// this might work better
 		cursor: pointer;
+		position: relative;
 
-		h2{
-			display: none;
-			// have overlay on hover like katy binks
+		.hover-card{
+			display: flex;
+			justify-content: center;
+			align-items: flex-end;
+			position: absolute;
+			bottom: 0px;
+			top: 0px;
+			left: auto;
+			right: auto;
+			width: 100%;
+			height: 100%;
+			// background-color: rgb(235, 156, 49, .5);
+			// or totally like katy binks
+			background-color: $yellow;
+			opacity: 0;
+		}
+
+		h2 {
+			text-align: center;
+			font-size: 18px;
+			width: 90%;
+			font-weight: bold;
+			margin-left: auto;
+			margin-right: auto;
+			color: #fff;
+			// transition: all .5s ease;
+		}
+
+		&:hover{
+
+				.hover-card{
+					animation: fadeIn .5s;
+					opacity: 1;
+				}
 		}
 	}
 
@@ -282,6 +310,8 @@ input.error, textarea.error {
 		vertical-align: middle;
 	}
 }
+
+// individual photo page -- photocell
 
 .photo-page{
 	.photo-container{
@@ -319,7 +349,113 @@ input.error, textarea.error {
 	}
 }
 
+// article thumbnail
 
+.article{
+	max-width: 500px;
+	transition: all .5s ease;
+
+	:hover{
+		h2{
+			color: $yellow;
+		}
+	}
+
+	h2{
+		transition: all .5s ease;
+		text-transform: capitalize;
+	}
+	h2 a{
+		color: $navy;
+		text-decoration: none;
+	}
+
+	.featured-image{
+		max-width: 100%;
+		height: auto;
+	}
+}
+
+.hamburger a{
+	display: flex;
+	flex-direction: column;
+}
+
+.hamburger a span{
+	height: 12px;
+	font-size: 40px;
+}
+
+.article-page {
+		margin: auto;
+
+		header{
+			margin-bottom: 20px;
+			max-width: 600px;
+			width: fit-content;
+			margin: 0 auto 20px auto;
+		}
+
+		h2{
+			text-transform: capitalize;
+			text-align: center;
+		}
+
+		.title-line{
+			border-bottom: 4px solid $yellow;
+			width: 150px;
+			margin: 0 auto;
+		}
+
+		h2 a{
+			color: $navy;
+			text-decoration: none;
+		}
+		h2 a:hover{
+			color: $blue;
+		}
+
+		.article-body{
+			display: flex;
+			flex-direction: column;
+			width: 90%;
+			margin-left: auto;
+			margin-right: auto;
+
+			.article-copy {
+				max-width: 600px;
+				margin-left: auto;
+				margin-right: auto;
+				padding-bottom: 40px;
+
+				p{
+					text-align: center;
+				}
+
+				p:last-of-type{
+					margin-bottom: 0;
+				}
+			}
+
+			.article-gallery{
+				display: flex;
+				flex-direction: column;
+
+				img{
+					height: 30vw;
+					margin-left: auto;
+					margin-right: auto;
+					margin-bottom: 80px;
+					border: 40px solid #fff;
+				}
+			}
+		}
+}
+
+.hecking{
+	font-size: 50px;
+	color: red;
+}
 
 // Animations
 
@@ -336,6 +472,17 @@ input.error, textarea.error {
 @keyframes up {
 	to {
 		background-size:50% 50%;
+	}
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		height: 0;
+	}
+	to {
+		opacity: 1;
+		height: 100%;
 	}
 }
 

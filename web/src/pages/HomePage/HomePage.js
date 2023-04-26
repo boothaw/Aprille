@@ -2,6 +2,7 @@ import { MetaTags } from '@redwoodjs/web'
 
 import ArticlesCell from 'src/components/ArticlesCell'
 import PhotosCell from 'src/components/PhotosCell/PhotosCell.js'
+import Wave from 'src/components/Wave/Wave'
 
 const HomePage = () => {
   return (
@@ -10,13 +11,9 @@ const HomePage = () => {
       <>
         <div className="home" id="home">
           <PhotosCell></PhotosCell>
-          <img
-            className="wave-svg"
-            src="/wave-cropped.svg"
-            alt="wave divider"
-            id="projects"
-          />
+          <Wave></Wave>
           <ArticlesCell></ArticlesCell>
+          <Wave></Wave>
         </div>
       </>
     </>

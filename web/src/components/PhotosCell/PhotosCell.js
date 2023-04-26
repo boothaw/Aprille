@@ -1,4 +1,4 @@
-import Photo from '../Photo/Photo'
+import PhotoThumb from '../PhotoThumb/PhotoThumb'
 
 export const QUERY = gql`
   query PhotosQuery {
@@ -26,7 +26,9 @@ export const Success = ({ photos, exclude }) => {
       {photosRev
         .filter((photo) => photo.id !== exclude)
         .map((photo) => {
-          return <Photo key={photo.id} id={photo.id} photo={photo}></Photo>
+          return (
+            <PhotoThumb key={photo.id} id={photo.id} photo={photo}></PhotoThumb>
+          )
         })}
     </div>
   )
