@@ -235,6 +235,8 @@ input.error, textarea.error {
 
 .additional-work-title{
 	text-align: center;
+	font-weight: bold;
+	margin-bottom: 40px;
 }
 
 // form stuff
@@ -364,7 +366,6 @@ input.error, textarea.error {
 	h2{
 		transition: all .5s ease;
 		text-transform: capitalize;
-		font-size: 36px;
 		font-size: 2em;
 		font-weight: bold;
 	}
@@ -394,7 +395,6 @@ input.error, textarea.error {
 
 		header{
 			margin-bottom: 20px;
-			max-width: 600px;
 			width: fit-content;
 			margin: 0 auto 20px auto;
 		}
@@ -402,6 +402,7 @@ input.error, textarea.error {
 		h2{
 			text-transform: capitalize;
 			text-align: center;
+			font-weight: bold;
 		}
 
 		.title-line{
@@ -450,6 +451,10 @@ input.error, textarea.error {
 					margin-right: auto;
 					margin-bottom: 80px;
 					border: 40px solid #fff;
+				}
+
+				img:last-of-type{
+					margin-bottom: 0;
 				}
 			}
 		}
