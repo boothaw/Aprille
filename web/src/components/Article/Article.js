@@ -1,6 +1,11 @@
 import { Head } from '@redwoodjs/web'
 
 const Article = ({ article }) => {
+  const shrinker = (url) => {
+    const parts = url.split('/')
+    parts.splice(3, 0, 'resize=height:2000')
+    return parts.join('/')
+  }
   // TO DO:
   // 1. loop over article object - Object.keys
   // 2. check for if p or if images -- count .length
@@ -63,7 +68,7 @@ const Article = ({ article }) => {
           {article.url && article.url !== '' && (
             <img
               className="body-image"
-              src={article.url}
+              src={shrinker(article.url)}
               onError={(e) => (e.target.style.display = 'none')}
               alt={article.title}
             />
@@ -71,7 +76,7 @@ const Article = ({ article }) => {
           {article.url2 && article.url2 !== '' && (
             <img
               className="body-image"
-              src={article.url2}
+              src={shrinker(article.url2)}
               onError={(e) => (e.target.style.display = 'none')}
               alt={article.title}
             />
@@ -79,7 +84,7 @@ const Article = ({ article }) => {
           {article.url3 && article.url3 !== '' && (
             <img
               className="body-image"
-              src={article.url3}
+              src={shrinker(article.url3)}
               onError={(e) => (e.target.style.display = 'none')}
               alt={article.title}
             />
@@ -87,7 +92,7 @@ const Article = ({ article }) => {
           {article.url4 && article.url4 !== '' && (
             <img
               className="body-image"
-              src={article.url4}
+              src={shrinker(article.url4)}
               onError={(e) => (e.target.style.display = 'none')}
               alt={article.title}
             />
@@ -95,7 +100,7 @@ const Article = ({ article }) => {
           {article.url5 && article.url5 !== '' && (
             <img
               className="body-image"
-              src={article.url5}
+              src={shrinker(article.url5)}
               onError={(e) => (e.target.style.display = 'none')}
               alt={article.title}
             />
@@ -103,7 +108,15 @@ const Article = ({ article }) => {
           {article.url6 && article.url6 !== '' && (
             <img
               className="body-image"
-              src={article.url6}
+              src={shrinker(article.url6)}
+              onError={(e) => (e.target.style.display = 'none')}
+              alt={article.title}
+            />
+          )}
+          {article.url7 && article.url7 !== '' && (
+            <img
+              className="body-image"
+              src={shrinker(article.url7)}
               onError={(e) => (e.target.style.display = 'none')}
               alt={article.title}
             />
@@ -111,15 +124,7 @@ const Article = ({ article }) => {
           {article.url8 && article.url8 !== '' && (
             <img
               className="body-image"
-              src={article.url8}
-              onError={(e) => (e.target.style.display = 'none')}
-              alt={article.title}
-            />
-          )}
-          {article.url8 && article.url8 !== '' && (
-            <img
-              className="body-image"
-              src={article.url8}
+              src={shrinker(article.url8)}
               onError={(e) => (e.target.style.display = 'none')}
               alt={article.title}
             />
