@@ -2,12 +2,16 @@ import { Link, routes } from '@redwoodjs/router'
 
 const ArticleThumb = ({ article }) => {
   return (
-    <article id={`article-${article.id}`} className="article" key={article.id}>
+    <article
+      id={`article-${article.id}`}
+      className="article-thumb"
+      key={article.id}
+    >
       <Link to={routes.article({ id: article.id })}>
+        <img className="featured-image" src={article.url} alt={article.title} />
         <header>
           <h2>{article.title}</h2>
         </header>
-        <img className="featured-image" src={article.url} alt={article.title} />
       </Link>
     </article>
   )

@@ -178,6 +178,16 @@ input.error, textarea.error {
 	}
 }
 
+.hamburger a{
+	display: flex;
+	flex-direction: column;
+}
+
+.hamburger a span{
+	height: 12px;
+	font-size: 40px;
+}
+
 // blog general
 
 .blog-main{
@@ -286,10 +296,12 @@ input.error, textarea.error {
 		h2 {
 			text-align: center;
 			font-size: 1.5em;
-			width: 90%;
-			font-weight: bold;
+			width: 80%;
+			// font-weight: bold;
 			margin-left: auto;
-			margin-right: auto;
+			margin-right: 5%;
+			margin-bottom: 4%;
+			text-align: end;
 			color: #fff;
 			// transition: all .5s ease;
 		}
@@ -321,12 +333,14 @@ input.error, textarea.error {
 		flex-direction: column;
 		align-items: center;
 
-		h2{
+		h1{
 			margin-top: 20px;
+			font-weight: bold;
+			font-size: 3.6rem;
 		}
 	}
 	.photo{
-		max-width: 900px;
+		max-width: 1200px;
 		width: 100%;
 	}
 }
@@ -336,9 +350,8 @@ input.error, textarea.error {
 .projects-section{
 	display: flex;
 	flex-wrap: wrap;
-	gap: 20px;
+	gap: 40px;
 	padding-bottom: 20px;
-	align-items: flex-end;
 	justify-content: center;
 }
 
@@ -353,9 +366,16 @@ input.error, textarea.error {
 
 // article thumbnail
 
-.article{
+.article-thumb{
 	max-width: 500px;
 	transition: all .5s ease;
+
+	a{
+		display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+	}
 
 	:hover{
 		h2{
@@ -368,6 +388,9 @@ input.error, textarea.error {
 		text-transform: capitalize;
 		font-size: 2em;
 		font-weight: bold;
+		text-align: end;
+		margin-bottom: 0;
+		margin-top: 4px;
 	}
 	h2 a{
 		color: $navy;
@@ -378,16 +401,6 @@ input.error, textarea.error {
 		max-width: 100%;
 		height: auto;
 	}
-}
-
-.hamburger a{
-	display: flex;
-	flex-direction: column;
-}
-
-.hamburger a span{
-	height: 12px;
-	font-size: 40px;
 }
 
 .article-page {

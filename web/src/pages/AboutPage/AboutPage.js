@@ -58,7 +58,7 @@ const AboutPage = () => {
 
   return (
     <>
-      <MetaTags title="About" description="About page" />
+      <MetaTags title="Profile & Contact" description="About page" />
 
       <div className="about-page">
         <p>
