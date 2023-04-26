@@ -1,6 +1,12 @@
 import { Link, routes } from '@redwoodjs/router'
 
 const PhotoThumb = ({ photo }) => {
+  const shrinker = (url) => {
+    const parts = url.split('/')
+    parts.splice(3, 0, 'resize=height:1200')
+    return parts.join('/')
+  }
+
   return (
     <Link
       to={routes.photo({
@@ -9,7 +15,7 @@ const PhotoThumb = ({ photo }) => {
       className="photo-container photo-thumbnail"
       key={photo.id}
     >
-      <img className="photo" src={photo.url} alt={photo.title} />
+      <img className="photo" src={shrinker(photo.url)} alt={photo.title} />
       <div className="hover-card">
         <h2>{photo.title}</h2>
       </div>

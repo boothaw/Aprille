@@ -1,6 +1,12 @@
 import { Link, routes } from '@redwoodjs/router'
 
 const ArticleThumb = ({ article }) => {
+  const shrinker = (url) => {
+    const parts = url.split('/')
+    parts.splice(3, 0, 'resize=height:1200')
+    return parts.join('/')
+  }
+
   return (
     <article
       id={`article-${article.id}`}
@@ -8,7 +14,11 @@ const ArticleThumb = ({ article }) => {
       key={article.id}
     >
       <Link to={routes.article({ id: article.id })}>
-        <img className="featured-image" src={article.url} alt={article.title} />
+        <img
+          className="featured-image"
+          src={shrinker(article.url)}
+          alt={article.title}
+        />
         <header>
           <h2>{article.title}</h2>
         </header>
