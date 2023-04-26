@@ -181,7 +181,9 @@ input.error, textarea.error {
 
 .blog-main{
 	width: 90%;
-	padding: 100px 20px;
+	padding: 140px 20px;
+	max-width: 1600px;
+	margin: auto;
 }
 
 .scaffold-layout{
@@ -255,7 +257,7 @@ input.error, textarea.error {
 	justify-content: center;
 
 	.photo-container{
-		max-height: 200px;
+		max-height: 250px;
 		height: 16vw;
 		// this might work better
 		cursor: pointer;
@@ -400,7 +402,7 @@ input.error, textarea.error {
 				}
 			}
 
-			.aricle-gallery{
+			.article-gallery{
 				display: flex;
 				flex-direction: column;
 
@@ -408,7 +410,8 @@ input.error, textarea.error {
 					height: 30vw;
 					margin-left: auto;
 					margin-right: auto;
-					margin-bottom: 40px;
+					margin-bottom: 80px;
+					border: 40px solid #fff;
 				}
 			}
 		}

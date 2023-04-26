@@ -55,7 +55,7 @@ const Article = ({ article }) => {
           {article.body2 && article.body2 !== '' && <p>{article.body2}</p>}
           {article.body3 && article.body3 !== '' && <p>{article.body3}</p>}
         </div>
-        <div className="aricle-gallery">
+        <div className="article-gallery">
           {/* {imageLoop()} */}
           {article.url && article.url !== '' && (
             <img
