@@ -18,6 +18,9 @@ const HomePage = () => {
           <Wave></Wave>
           <ArticlesCell></ArticlesCell>
           <Wave></Wave>
+          <div id="screenprints">screenprints</div>
+          <Wave></Wave>
+          <div id="workshops">workshops</div>
         </div>
       </>
     </>
