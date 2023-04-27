@@ -3,7 +3,7 @@ import { useState, useEffect, useRef } from 'react'
 
 import { Link, routes } from '@redwoodjs/router'
 
-import Wave from 'src/components/Wave/Wave'
+// import Scrollhash from 'src/components/Scrollhash/Scrollhash'
 
 const BlogLayout = ({ children }) => {
   // const { isAuthenticated, currentUser, logOut } = useAuth()
@@ -131,7 +131,7 @@ const BlogLayout = ({ children }) => {
         </div>
       </header>
       <main className="blog-main">{children}</main>
-      <footer className="footer">
+      <footer id="footer" className="footer">
         <div className="footer-inner">
           <Link to={routes.home()}>
             <img className="logo" src="/LOGO_colour.png" alt="logo" />
