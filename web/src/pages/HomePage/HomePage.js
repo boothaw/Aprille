@@ -12,12 +12,15 @@ const HomePage = () => {
         <div className="home" id="home">
           <a href="/" className="aprille-name">
             <h1>Aprille Zammit ~ Studio</h1>
-            <p>Screenprinter, Photographer, Nature Junkie</p>
+            <p>Screenprinting, Photography, Adventure</p>
           </a>
           <PhotosCell></PhotosCell>
           <Wave></Wave>
           <ArticlesCell></ArticlesCell>
           <Wave></Wave>
+          <div id="screenprints">screenprints</div>
+          <Wave></Wave>
+          <div id="workshops">workshops</div>
         </div>
       </>
     </>
