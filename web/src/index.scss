@@ -390,6 +390,7 @@ input.error, textarea.error {
 	width: 90%;
 	margin: 0 auto;
 	display: flex;
+	justify-content: center;
 }
 
 .login-page{
@@ -404,6 +405,14 @@ input.error, textarea.error {
 	text-align: center;
 	font-weight: bold;
 	margin-bottom: 40px;
+}
+
+//
+
+.home{
+	.photography-section-grid{
+		padding-bottom: 0;
+	}
 }
 
 // form stuff
@@ -494,6 +503,8 @@ input.error, textarea.error {
 			margin-top: 20px;
 			font-weight: bold;
 			font-size: 3.6rem;
+			width: 90%;
+			max-width: 1200px;
 		}
 	}
 	.photo{
@@ -508,7 +519,7 @@ input.error, textarea.error {
 	display: flex;
 	flex-wrap: wrap;
 	gap: 40px;
-	padding-bottom: 20px;
+	// padding-bottom: 20px;
 	justify-content: center;
 }
 
@@ -525,6 +536,7 @@ input.error, textarea.error {
 
 .article-thumb{
 	max-width: 500px;
+	width: 90%;
 	transition: all .5s ease;
 
 	a{
@@ -667,7 +679,6 @@ input.error, textarea.error {
 		transform: translateX(150%);
 	}
 }
-
 @keyframes up {
 	to {
 		background-size:50% 50%;
@@ -688,13 +699,62 @@ input.error, textarea.error {
 // Media Queries
 
 /* Larger than mobile (default point when grid becomes active) */
-@media (min-width: 600px) {}
+@media (max-width: 600px) {
+	.photography-section-grid{
+		flex-direction: column;
+		gap: 0;
+
+		.photo-thumbnail{
+			height: auto;
+			max-height: none;
+			width: 90%;
+			margin: 0 auto 40px auto;
+		}
+		.photo-thumbnail:last-of-type{
+			margin-bottom: 0;
+		}
+	}
+}
 
 /* Larger still */
-@media (min-width: 900px) {}
+@media (max-width: 900px) {
+	.wave-svg{
+		padding: 40px 0;
+	}
+	.aprille-name {
+		position: static;
+		transform: none;
+		padding: 0 0 40px 0;
+
+		h1{
+			font-size: 1.5em;
+		}
+		p{
+			font-size: .7em;
+		}
+	}
+	.blog-main:has(.home){
+		padding-top: 20px;
+	}
+	.footer{
+		.footer-inner{
+			flex-direction: column;
+		}
+		.aprille-name{
+			padding: 0 0 20px 0;
+			h2{
+				font-size: 1.5em;
+			}
+			p{
+				font-size: .7em;
+			}
+		}
+
+	}
+}
 
 /* Larger than tablet */
-@media (min-width: 1200px) {}
+@media (max-width: 1200px) {}
 
 .rw-scaffold{
 	margin: 2rem auto;
@@ -709,6 +769,8 @@ input.error, textarea.error {
 	border: 2px solid $navy;
 	text-align: center;
 }
+
+// workshops
 
 #workshops{
 	height: 600px;
