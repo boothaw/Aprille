@@ -16,12 +16,21 @@ import BlogLayout from './layouts/BlogLayout/BlogLayout'
 const Routes = () => {
   return (
     <Router>
+      <Set wrap={BlogLayout}>
+        <Route path="/about" page={AboutPage} name="about" />
+        <Route path="/" page={HomePage} name="home" />
+        <Route path="/contact" page={ContactPage} name="contact" />
+        <Route path="/article/{id:Int}" page={ArticlePage} name="article" />
+        <Route path="/photo/{id:Int}" page={PhotoPage} name="photo" />
+      </Set>
+
       {/* administrative */}
       <Route path="/login" page={LoginPage} name="login" />
       {/* <Route path="/signup" page={SignupPage} name="signup" /> */}
       <Route path="/forgot-password" page={ForgotPasswordPage} name="forgotPassword" />
       <Route path="/reset-password" page={ResetPasswordPage} name="resetPassword" />
       <Route notfound page={NotFoundPage} />
+
       {/* logged in */}
       <Private unauthenticated="home">
         {/* <Set wrap={ScaffoldLayout} title="Posts" titleTo="posts" buttonLabel="New Post" buttonTo="newPost">
@@ -30,6 +39,7 @@ const Routes = () => {
           <Route path="/admin/posts/{id:Int}" page={PostPostPage} name="post" />
           <Route path="/admin/posts" page={PostPostsPage} name="posts" />
         </Set> */}
+        <Route path="/admin" page={AdminPage} name="admin" />
         <Set wrap={ScaffoldLayout} title="Projects" titleTo="projects" buttonLabel="New Project" buttonTo="newProject">
           <Route path="/admin/projects/new" page={ProjectNewProjectPage} name="newProject" />
           <Route path="/admin/projects/{id:Int}/edit" page={ProjectEditProjectPage} name="editProject" />
@@ -45,13 +55,6 @@ const Routes = () => {
       </Private>
       <Set wrap={ScaffoldLayout} title="Posts" titleTo="posts" buttonLabel="New Post" buttonTo="newPost"></Set>
       {/* public facing */}
-      <Set wrap={BlogLayout}>
-        <Route path="/about" page={AboutPage} name="about" />
-        <Route path="/" page={HomePage} name="home" />
-        <Route path="/contact" page={ContactPage} name="contact" />
-        <Route path="/article/{id:Int}" page={ArticlePage} name="article" />
-        <Route path="/photo/{id:Int}" page={PhotoPage} name="photo" />
-      </Set>
     </Router>
   )
 }

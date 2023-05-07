@@ -1,12 +1,12 @@
-// import { useAuth } from '@redwoodjs/auth'
 import { useState, useEffect, useRef } from 'react'
 
+import { useAuth } from '@redwoodjs/auth'
 import { Link, routes } from '@redwoodjs/router'
 
 // import Scrollhash from 'src/components/Scrollhash/Scrollhash'
 
 const BlogLayout = ({ children }) => {
-  // const { isAuthenticated, currentUser, logOut } = useAuth()
+  const { isAuthenticated, currentUser, logOut } = useAuth()
   const [showMenu, setShowMenu] = useState(false)
   const ref = useRef()
 
@@ -75,6 +75,13 @@ const BlogLayout = ({ children }) => {
                     bio & contact
                   </Link>
                 </li>
+                <li>
+                  {isAuthenticated && (
+                    <button type="button" onClick={logOut}>
+                      Logout
+                    </button>
+                  )}
+                </li>
                 {/* <li className="hamburger-wave">
                 <div>
                   <span>~</span>
@@ -85,6 +92,16 @@ const BlogLayout = ({ children }) => {
                 {/* <li>
                 <Link to={routes.about()}>contact</Link>
               </li> */}
+                {/* {isAuthenticated ? (
+                    <div>
+                      <span>Logged in as {currentUser.email}</span>{' '}
+                      <button type="button" onClick={logOut}>
+                        Logout
+                      </button>
+                    </div>
+                  ) : (
+                    <Link to={routes.login()}>Login</Link>
+                  )} */}
               </ul>
             </nav>
             <button className="hamburger-container" onClick={switch_menu}>
@@ -118,16 +135,6 @@ const BlogLayout = ({ children }) => {
               </div>
             </button>
           </div>
-          {/* {isAuthenticated ? (
-            <div>
-              <span>Logged in as {currentUser.email}</span>{' '}
-              <button type="button" onClick={logOut}>
-                Logout
-              </button>
-            </div>
-          ) : (
-            <Link to={routes.login()}>Login</Link>
-          )} */}
         </div>
       </header>
       <main className="blog-main">{children}</main>
