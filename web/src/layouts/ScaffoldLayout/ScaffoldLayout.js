@@ -10,6 +10,10 @@ const ScaffoldLayout = ({
 }) => {
   return (
     <div className="rw-scaffold">
+      <div className="back-to-dash">
+        {' '}
+        <Link to={routes.admin()}>Back To Admin Dashboard</Link>
+      </div>
       <Toaster toastOptions={{ className: 'rw-toast', duration: 6000 }} />
       <header className="rw-header">
         <h1 className="rw-heading rw-heading-primary">
