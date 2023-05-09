@@ -10,6 +10,7 @@ const BlogLayout = ({ children }) => {
   const [showMenu, setShowMenu] = useState(false)
   const navRef = useRef()
   const scroller = useRef(null)
+  const workshopScroll = useRef()
 
   // firt try
   // const ExecuteScroll = () => {
@@ -42,20 +43,25 @@ const BlogLayout = ({ children }) => {
     rollto()
   }, [])
 
-  const rollto = () => {
-    console.log('rerender')
-    const workshops = document.querySelector('#workshops')
-    const url = window.location.href
-    const scroll = scroller.current.href
-    const hash = url.split('/')[3]
+  // rollto 2
 
-    console.log('window', hash)
+  const rollto = () => {}
 
-    // if (scroll == url) {
-    //   console.log('if statement', scroller.current)
-    //   // scroller.current?.scrollIntoView({ block: 'start', inline: 'nearest' })
-    // }
-  }
+  // rollto 1
+  // const rollto = () => {
+  //   console.log('rerender')
+  //   const workshops = document.querySelector('#workshops')
+  //   const url = window.location.href
+  //   // const scroll = scroller.current.href
+  //   const hash = url.split('/')[3]
+
+  //   console.log('window', hash)
+
+  //   // if (scroll == url) {
+  //   //   console.log('if statement', scroller.current)
+  //   //   // scroller.current?.scrollIntoView({ block: 'start', inline: 'nearest' })
+  //   // }
+  // }
 
   function switch_menu() {
     setShowMenu(!showMenu)
@@ -113,9 +119,16 @@ const BlogLayout = ({ children }) => {
                   </a>
                 </li>
                 <li>
-                  <a ref={scroller} href="/#workshops" onClick={switch_menu}>
+                  {/* <a ref={scroller} href="/#workshops" onClick={switch_menu}>
                     workshops
-                  </a>
+                  </a> */}
+                  <Link
+                    ref={workshopScroll}
+                    to={routes.home()}
+                    onClick={switch_menu}
+                  >
+                    workshops
+                  </Link>
                 </li>
                 <li>
                   <Link to={routes.about()} onClick={switch_menu}>
