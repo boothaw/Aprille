@@ -1,22 +1,63 @@
 import { useState, useEffect, useRef } from 'react'
 
 import { useAuth } from '@redwoodjs/auth'
-import { Link, routes } from '@redwoodjs/router'
+import { Link, routes, useParams } from '@redwoodjs/router'
 
 // import Scrollhash from 'src/components/Scrollhash/Scrollhash'
 
 const BlogLayout = ({ children }) => {
   const { isAuthenticated, currentUser, logOut } = useAuth()
   const [showMenu, setShowMenu] = useState(false)
-  const ref = useRef()
+  const navRef = useRef()
+  const scroller = useRef(null)
+
+  // firt try
+  // const ExecuteScroll = () => {
+  //   // scroller.current.scrollIntoView()
+  //   useEffect(() => {
+  //     scroller.current?.scrollIntoView()
+  //     console.log(window.location.href, scroller)
+  //   }, [])
+  // }
+  // ExecuteScroll()
+
+  // second try
+  // const executeScroll = () => {
+  //   console.log(scroller.current)
+  //   scroller.current?.scrollIntoView({ behavior: 'smooth' })
+  // }
+
+  // useEffect(() => {
+  //   const el = scroller
+  //   console.log(el.current)
+  //   if (el) {
+  //     // el.scrollIntoView()
+  //     scroller.current.scrollIntoView()
+  //   }
+  // }, [scroller])
+
+  const rollto = () => {
+    console.log('scroll', scroller.current)
+    const workshops = document.querySelector('#workshops')
+    const url = window.location.href
+    const scroll = scroller.current.href
+
+    if (scroll == url) {
+      workshops.scrollIntoView({ block: 'start', inline: 'nearest' })
+    }
+  }
+
+  useEffect(() => {
+    rollto()
+  }, [])
 
   function switch_menu() {
     setShowMenu(!showMenu)
   }
 
-  const OtherClick = (ref, callback) => {
+  const OtherClick = (navRef, callback) => {
     const handleClick = (e) => {
-      if (ref.current && !ref.current.contains(e.target)) {
+      if (navRef.current && !navRef.current.contains(e.target)) {
         callback()
       }
     }
@@ -30,7 +71,7 @@ const BlogLayout = ({ children }) => {
     })
   }
 
-  OtherClick(ref, () => {
+  OtherClick(navRef, () => {
     if (showMenu) setShowMenu(!showMenu)
   })
 
@@ -48,7 +89,7 @@ const BlogLayout = ({ children }) => {
               showMenu ? 'menu_active' : 'menu_inactive'
             }`}
           >
-            <nav ref={ref} className="nav">
+            <nav ref={navRef} className="nav">
               <ul>
                 <li>
                   <a href="/#photos" onClick={switch_menu}>
@@ -66,7 +107,7 @@ const BlogLayout = ({ children }) => {
                   </a>
                 </li>
                 <li>
-                  <a href="/#workshops" onClick={switch_menu}>
+                  <a ref={scroller} href="/#workshops" onClick={switch_menu}>
                     workshops
                   </a>
                 </li>
@@ -75,7 +116,7 @@ const BlogLayout = ({ children }) => {
                     bio & contact
                   </Link>
                 </li>
-                <li>
+                <li className="auth-button">
                   {isAuthenticated && (
                     <button type="button" onClick={logOut}>
                       Logout
