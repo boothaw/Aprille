@@ -36,20 +36,26 @@ const BlogLayout = ({ children }) => {
   //   }
   // }, [scroller])
 
-  const rollto = () => {
-    console.log('scroll', scroller.current)
-    const workshops = document.querySelector('#workshops')
-    const url = window.location.href
-    const scroll = scroller.current.href
-
-    if (scroll == url) {
-      workshops.scrollIntoView({ block: 'start', inline: 'nearest' })
-    }
-  }
+  // console.log('parent', scroller.current)
 
   useEffect(() => {
     rollto()
   }, [])
+
+  const rollto = () => {
+    console.log('rerender')
+    const workshops = document.querySelector('#workshops')
+    const url = window.location.href
+    const scroll = scroller.current.href
+    const hash = url.split('/')[3]
+
+    console.log('window', hash)
+
+    // if (scroll == url) {
+    //   console.log('if statement', scroller.current)
+    //   // scroller.current?.scrollIntoView({ block: 'start', inline: 'nearest' })
+    // }
+  }
 
   function switch_menu() {
     setShowMenu(!showMenu)
