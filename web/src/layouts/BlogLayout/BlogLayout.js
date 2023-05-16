@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
 
 import { useAuth } from '@redwoodjs/auth'
-import { Link, routes, useParams } from '@redwoodjs/router'
+import { Link, routes, NavLink } from '@redwoodjs/router'
 
 // import Scrollhash from 'src/components/Scrollhash/Scrollhash'
 
@@ -9,8 +9,38 @@ const BlogLayout = ({ children }) => {
   const { isAuthenticated, currentUser, logOut } = useAuth()
   const [showMenu, setShowMenu] = useState(false)
   const navRef = useRef()
-  const scroller = useRef(null)
-  const workshopScroll = useRef()
+  // const ref = useRef(null)
+  // const workshopScroll = useRef()
+
+  // console.log('ref1', { children })
+  //
+
+  // // third try
+  // useEffect(() => {
+  //   // call api or anything
+  //   // const beforeLoad = document.querySelectorAll(
+  //   //   '.photography-section-grid img'
+  //   // )
+
+  //   // console.log('loaded', beforeLoad[1])
+  //   onLoad()
+  // }, [])
+
+  // const onLoad = () => {
+  //   const url = window.location.href
+  //   // const workshops = document.getElementById('workshops')
+  //   const footer = document.getElementById('footer')
+  //   // console.log('should be scrolling')
+
+  //   if (url.includes('#workshop')) {
+  //     console.log('workshops', footer)
+  //     footer.scrollIntoView({
+  //       behavior: 'smooth',
+  //       block: 'end',
+  //       inline: 'nearest',
+  //     })
+  //   }
+  // }
 
   // firt try
   // const ExecuteScroll = () => {
@@ -39,13 +69,13 @@ const BlogLayout = ({ children }) => {
 
   // console.log('parent', scroller.current)
 
-  useEffect(() => {
-    rollto()
-  }, [])
+  // useEffect(() => {
+  //   rollto()
+  // }, [])
 
   // rollto 2
 
-  const rollto = () => {}
+  // const rollto = () => {}
 
   // rollto 1
   // const rollto = () => {
@@ -63,7 +93,7 @@ const BlogLayout = ({ children }) => {
   //   // }
   // }
 
-  function switch_menu() {
+  function switch_menu(btn) {
     setShowMenu(!showMenu)
   }
 
@@ -119,16 +149,15 @@ const BlogLayout = ({ children }) => {
                   </a>
                 </li>
                 <li>
-                  {/* <a ref={scroller} href="/#workshops" onClick={switch_menu}>
+                  {/* <a href="/#workshops" onClick={switch_menu}>
                     workshops
                   </a> */}
-                  <Link
-                    ref={workshopScroll}
-                    to={routes.home()}
+                  <NavLink
+                    to={routes.home() + `#workshops`}
                     onClick={switch_menu}
                   >
                     workshops
-                  </Link>
+                  </NavLink>
                 </li>
                 <li>
                   <Link to={routes.about()} onClick={switch_menu}>
