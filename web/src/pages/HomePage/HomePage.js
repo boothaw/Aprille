@@ -1,3 +1,6 @@
+import { useEffect, useState } from 'react'
+
+import { useLocation } from '@redwoodjs/router'
 import { MetaTags } from '@redwoodjs/web'
 
 import ArticlesCell from 'src/components/ArticlesCell'
@@ -6,6 +9,33 @@ import Scrollhash from 'src/components/Scrollhash/Scrollhash'
 import Wave from 'src/components/Wave/Wave'
 
 const HomePage = () => {
+  const [element, setElement] = useState(null)
+
+  let location = useLocation()
+
+  useEffect(() => {
+    let hash = location.hash
+
+    const removeHashCharacter = (str) => {
+      const result = str.slice(1)
+      return result
+    }
+
+    if (hash) {
+      let element = document.getElementById(removeHashCharacter(hash))
+      setElement(element)
+      return element
+    } else {
+      return null
+    }
+  }, [])
+
+  useEffect(() => {
+    if (element) {
+      element.scrollIntoView({ block: 'start', behavior: 'smooth' })
+    }
+  }, [element])
+
   return (
     <>
       <MetaTags title="Home" description="Home page" />

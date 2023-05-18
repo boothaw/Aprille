@@ -1,44 +1,35 @@
-import { useState, useEffect, useRef } from 'react'
+import { useState, useRef, useEffect } from 'react'
 
 import { useAuth } from '@redwoodjs/auth'
 import { Link, routes } from '@redwoodjs/router'
-
-// import Scrollhash from 'src/components/Scrollhash/Scrollhash'
 
 const BlogLayout = ({ children }) => {
   const { isAuthenticated, currentUser, logOut } = useAuth()
   const [showMenu, setShowMenu] = useState(false)
   const ref = useRef()
 
-  useEffect(() => {
-    let element = document.getElementById('workshops')
-    console.log('ell', element)
-    // kkk
-  }, [])
+  const OtherClick = (ref, callback) => {
+    const handleClick = (e) => {
+      if (ref.current && !ref.current.contains(e.target)) {
+        callback()
+      }
+    }
 
-  // const OtherClick = (ref, callback) => {
-  //   const handleClick = (e) => {
-  //     if (ref.current && !ref.current.contains(e.target)) {
-  //       callback()
-  //     }
-  //   }
+    useEffect(() => {
+      document.addEventListener('click', handleClick)
 
-  //   useEffect(() => {
-  //     document.addEventListener('click', handleClick)
+      return () => {
+        document.removeEventListener('click', handleClick)
+      }
+    })
+  }
 
-  //     return () => {
-  //       document.removeEventListener('click', handleClick)
-  //     }
-  //   })
-  // }
-
-  // OtherClick(ref, () => {
-  //   if (showMenu) setShowMenu(!showMenu)
-  // })
+  OtherClick(ref, () => {
+    if (showMenu) setShowMenu(!showMenu)
+  })
 
   function switch_menu() {
-    // setShowMenu(!showMenu)
-    console.log('menu')
+    setShowMenu(!showMenu)
   }
 
   return (
@@ -56,7 +47,6 @@ const BlogLayout = ({ children }) => {
             }`}
           >
             <nav ref={ref} className="nav">
-              {/* <nav className="nav"> */}
               <ul>
                 <li>
                   <a href="/#photos" onClick={switch_menu}>
