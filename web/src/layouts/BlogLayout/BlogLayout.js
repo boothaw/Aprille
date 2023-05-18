@@ -1,7 +1,7 @@
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect, useRef, useMemo } from 'react'
 
 import { useAuth } from '@redwoodjs/auth'
-import { Link, routes, NavLink } from '@redwoodjs/router'
+import { Link, routes, NavLink, useLocation } from '@redwoodjs/router'
 
 // import Scrollhash from 'src/components/Scrollhash/Scrollhash'
 
@@ -9,89 +9,37 @@ const BlogLayout = ({ children }) => {
   const { isAuthenticated, currentUser, logOut } = useAuth()
   const [showMenu, setShowMenu] = useState(false)
   const navRef = useRef()
-  // const ref = useRef(null)
-  // const workshopScroll = useRef()
+  // const workshops = useRef()
 
-  // console.log('ref1', { children })
-  //
+  const Scrollhash = () => {
+    // let location = useLocation()
+    // let hashElement = useMemo(() => {
+    //   let hash = location.hash
+    //   console.log('locations', hash)
+    //   const removeHashCharacter = (str) => {
+    //     const result = str.slice(1)
+    //     return result
+    //   }
+    //   if (hash) {
+    //     let element = document.getElementById(removeHashCharacter(hash))
+    //     return element
+    //   } else {
+    //     return null
+    //   }
+    // }, [location])
+    // useEffect(() => {
+    //   if (hashElement) {
+    //     hashElement.scrollIntoView({
+    //       behavior: 'smooth',
+    //       // block: "end",
+    //       inline: 'nearest',
+    //     })
+    //   }
+    // }, [hashElement])
+    // return null
+  }
 
-  // // third try
-  // useEffect(() => {
-  //   // call api or anything
-  //   // const beforeLoad = document.querySelectorAll(
-  //   //   '.photography-section-grid img'
-  //   // )
-
-  //   // console.log('loaded', beforeLoad[1])
-  //   onLoad()
-  // }, [])
-
-  // const onLoad = () => {
-  //   const url = window.location.href
-  //   // const workshops = document.getElementById('workshops')
-  //   const footer = document.getElementById('footer')
-  //   // console.log('should be scrolling')
-
-  //   if (url.includes('#workshop')) {
-  //     console.log('workshops', footer)
-  //     footer.scrollIntoView({
-  //       behavior: 'smooth',
-  //       block: 'end',
-  //       inline: 'nearest',
-  //     })
-  //   }
-  // }
-
-  // firt try
-  // const ExecuteScroll = () => {
-  //   // scroller.current.scrollIntoView()
-  //   useEffect(() => {
-  //     scroller.current?.scrollIntoView()
-  //     console.log(window.location.href, scroller)
-  //   }, [])
-  // }
-  // ExecuteScroll()
-
-  // second try
-  // const executeScroll = () => {
-  //   console.log(scroller.current)
-  //   scroller.current?.scrollIntoView({ behavior: 'smooth' })
-  // }
-
-  // useEffect(() => {
-  //   const el = scroller
-  //   console.log(el.current)
-  //   if (el) {
-  //     // el.scrollIntoView()
-  //     scroller.current.scrollIntoView()
-  //   }
-  // }, [scroller])
-
-  // console.log('parent', scroller.current)
-
-  // useEffect(() => {
-  //   rollto()
-  // }, [])
-
-  // rollto 2
-
-  // const rollto = () => {}
-
-  // rollto 1
-  // const rollto = () => {
-  //   console.log('rerender')
-  //   const workshops = document.querySelector('#workshops')
-  //   const url = window.location.href
-  //   // const scroll = scroller.current.href
-  //   const hash = url.split('/')[3]
-
-  //   console.log('window', hash)
-
-  //   // if (scroll == url) {
-  //   //   console.log('if statement', scroller.current)
-  //   //   // scroller.current?.scrollIntoView({ block: 'start', inline: 'nearest' })
-  //   // }
-  // }
+  Scrollhash()
 
   function switch_menu(btn) {
     setShowMenu(!showMenu)
@@ -152,12 +100,9 @@ const BlogLayout = ({ children }) => {
                   {/* <a href="/#workshops" onClick={switch_menu}>
                     workshops
                   </a> */}
-                  <NavLink
-                    to={routes.home() + `#workshops`}
-                    onClick={switch_menu}
-                  >
+                  <Link to="/#workshops" onClick={switch_menu}>
                     workshops
-                  </NavLink>
+                  </Link>
                 </li>
                 <li>
                   <Link to={routes.about()} onClick={switch_menu}>
