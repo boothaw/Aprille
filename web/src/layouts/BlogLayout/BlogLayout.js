@@ -1,18 +1,12 @@
-import { useState, useEffect, useRef } from 'react'
+import { useState, useRef, useEffect } from 'react'
 
 import { useAuth } from '@redwoodjs/auth'
 import { Link, routes } from '@redwoodjs/router'
-
-// import Scrollhash from 'src/components/Scrollhash/Scrollhash'
 
 const BlogLayout = ({ children }) => {
   const { isAuthenticated, currentUser, logOut } = useAuth()
   const [showMenu, setShowMenu] = useState(false)
   const ref = useRef()
-
-  function switch_menu() {
-    setShowMenu(!showMenu)
-  }
 
   const OtherClick = (ref, callback) => {
     const handleClick = (e) => {
@@ -33,6 +27,10 @@ const BlogLayout = ({ children }) => {
   OtherClick(ref, () => {
     if (showMenu) setShowMenu(!showMenu)
   })
+
+  function switch_menu() {
+    setShowMenu(!showMenu)
+  }
 
   return (
     <>
