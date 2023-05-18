@@ -10,29 +10,36 @@ const BlogLayout = ({ children }) => {
   const [showMenu, setShowMenu] = useState(false)
   const ref = useRef()
 
+  useEffect(() => {
+    let element = document.getElementById('workshops')
+    console.log('ell', element)
+    // kkk
+  }, [])
+
+  // const OtherClick = (ref, callback) => {
+  //   const handleClick = (e) => {
+  //     if (ref.current && !ref.current.contains(e.target)) {
+  //       callback()
+  //     }
+  //   }
+
+  //   useEffect(() => {
+  //     document.addEventListener('click', handleClick)
+
+  //     return () => {
+  //       document.removeEventListener('click', handleClick)
+  //     }
+  //   })
+  // }
+
+  // OtherClick(ref, () => {
+  //   if (showMenu) setShowMenu(!showMenu)
+  // })
+
   function switch_menu() {
-    setShowMenu(!showMenu)
+    // setShowMenu(!showMenu)
+    console.log('menu')
   }
-
-  const OtherClick = (ref, callback) => {
-    const handleClick = (e) => {
-      if (ref.current && !ref.current.contains(e.target)) {
-        callback()
-      }
-    }
-
-    useEffect(() => {
-      document.addEventListener('click', handleClick)
-
-      return () => {
-        document.removeEventListener('click', handleClick)
-      }
-    })
-  }
-
-  OtherClick(ref, () => {
-    if (showMenu) setShowMenu(!showMenu)
-  })
 
   return (
     <>
@@ -49,6 +56,7 @@ const BlogLayout = ({ children }) => {
             }`}
           >
             <nav ref={ref} className="nav">
+              {/* <nav className="nav"> */}
               <ul>
                 <li>
                   <a href="/#photos" onClick={switch_menu}>

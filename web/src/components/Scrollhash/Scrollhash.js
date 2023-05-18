@@ -1,6 +1,6 @@
 import { useMemo, useEffect } from 'react'
 
-import { useLocation } from 'react-router-dom'
+import { useLocation } from '@redwoodjs/router'
 
 const Scrollhash = () => {
   let location = useLocation()

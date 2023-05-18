@@ -2,6 +2,7 @@ import { MetaTags } from '@redwoodjs/web'
 
 import ArticlesCell from 'src/components/ArticlesCell'
 import PhotosCell from 'src/components/PhotosCell/PhotosCell.js'
+import Scrollhash from 'src/components/Scrollhash/Scrollhash'
 import Wave from 'src/components/Wave/Wave'
 
 const HomePage = () => {
@@ -21,6 +22,7 @@ const HomePage = () => {
           <div id="screenprints">screenprints</div>
           <Wave></Wave>
           <div id="workshops">workshops</div>
+          <Scrollhash />
         </div>
       </>
     </>
