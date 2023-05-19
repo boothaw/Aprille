@@ -1,6 +1,3 @@
-// import { render } from '@react-email/render'
-// import nodemailer from 'nodemailer'
-
 import React, { useRef } from 'react'
 
 import emailjs from '@emailjs/browser'
@@ -43,9 +40,11 @@ const AboutPage = () => {
       .then(
         (result) => {
           // show the user a success message
+          console.log('email sent')
         },
         (error) => {
           // show the user an error
+          console.log(error)
         }
       )
 
