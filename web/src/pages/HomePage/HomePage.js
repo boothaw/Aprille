@@ -46,11 +46,11 @@ const HomePage = () => {
           </a>
           <PhotosCell></PhotosCell>
           <Wave></Wave>
-          <ArticlesCell></ArticlesCell>
-          <Wave></Wave>
           <div id="screenprints">screenprints</div>
           <Wave></Wave>
           <div id="workshops">workshops</div>
+          <Wave></Wave>
+          <ArticlesCell></ArticlesCell>
         </div>
       </>
     </>
