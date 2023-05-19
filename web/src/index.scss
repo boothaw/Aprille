@@ -1,6 +1,6 @@
 $off-white: rgb(248, 245, 237);
 $navy: rgb(32, 36, 88);
-$blue: hsl(207, 26%, 64%);
+$blue: rgb(139, 166, 187);
 $yellow: rgb(235, 156, 49);
 
 
@@ -143,7 +143,7 @@ input.error, textarea.error {
 	}
 
 	.logo-container{
-		background-color: #fff;
+		background-color: $off-white;
 		border-bottom-right-radius: 2em;
 		width: 80px;
 		height: 80px;
@@ -152,12 +152,16 @@ input.error, textarea.error {
 		align-items: center;
 		z-index: 5;
 
+
 		a{
 			width: 100%;
 			height: 100%;
 			display: flex;
 			justify-content: center;
 			align-items: center;
+			border-bottom-right-radius: 2em;
+			// border-bottom: 1px solid $blue;
+			// border-right: 1px solid $blue;
 		}
 	}
 
@@ -172,7 +176,7 @@ input.error, textarea.error {
 	}
 
 	.hamburger-container{
-		background-color: #fff;
+		background-color: $off-white;
 		border-bottom-left-radius: 2em;
 		z-index: 5;
 		transition: all ease .5s;
@@ -182,6 +186,8 @@ input.error, textarea.error {
 		justify-content: center;
 		align-items: center;
 		border: none;
+		// border-bottom: 1px solid $blue;
+		// border-left: 1px solid $blue;
 	}
 
 	.hamburger{
@@ -205,13 +211,17 @@ input.error, textarea.error {
 		opacity: 0;
 		display: flex;
     align-items: center;
-    background: #fff;
+    background: $off-white;
 		padding: 0 20px 0 20px;
 		border-bottom-left-radius: 2em;
 		display: none;
 	}
 
 	.nav-container.menu_active {
+		box-shadow: 0px 0px 5px rgba(139, 166, 187, .5);
+		border-bottom-left-radius: 2em;
+		transition: all ease .5s;
+
 		.hamburger-container{
 			border-radius: 0;
 		}
@@ -318,9 +328,11 @@ input.error, textarea.error {
 		display: flex;
 
 		a {
-			width: 40px;
-			height: 40px;
-			margin: 8px;
+			width: 48px;
+			height: 48px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
 			transition: all .5s ease;
 
 			&:hover svg{
