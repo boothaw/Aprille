@@ -13,6 +13,7 @@ import {
   FormError,
 } from '@redwoodjs/forms'
 import { MetaTags, useMutation } from '@redwoodjs/web'
+import { Toast } from '@redwoodjs/web/toast'
 import { Toaster, toast } from '@redwoodjs/web/toast'
 
 const CREATE_CONTACT = gql`
@@ -24,12 +25,11 @@ const CREATE_CONTACT = gql`
 `
 
 const AboutPage = () => {
-  const form = useRef()
+  // const form = useRef()
 
   const formMethods = useForm()
   const [create, { loading, error }] = useMutation(CREATE_CONTACT, {
     onCompleted: () => {
-      toast.success('Thank you for your message!')
       formMethods.reset()
     },
   })
@@ -38,9 +38,9 @@ const AboutPage = () => {
     emailjs
       .send('service_n4oomp8', 'template_yl07ra6', data, '_Tp0IwFf5UB99eAmt')
       .then(
-        (result) => {
+        () => {
           // show the user a success message
-          console.log('email sent')
+          toast.success('Thank you for your message!')
         },
         (error) => {
           // show the user an error
@@ -72,48 +72,59 @@ const AboutPage = () => {
           also rarely be seen without a film camera hanging from her neck, as
           film photography is just one of her other passions
         </p>
+
+        <h2>Say Hello!</h2>
+
+        <Form
+          className="contact-form"
+          onSubmit={onSubmit}
+          formMethods={formMethods}
+          error={error}
+        >
+          <FormError error={error} wrapperClassName="form-error" />
+          <Label errorClassName="error" name="name">
+            Name
+          </Label>
+          <TextField
+            placeholder="Your Name"
+            name="name"
+            errorClassName="error"
+            validation={{ required: true }}
+          />
+          <FieldError name="name" className="error" />
+
+          <Label errorClassName="error" name="email">
+            Email
+          </Label>
+          <TextField
+            placeholder="Your Email"
+            name="email"
+            errorClassName="error"
+            validation={{
+              required: true,
+              pattern: {
+                value: /^[^@]+@[^.]+\..+$/,
+                message: 'Please enter a valid email address',
+              },
+            }}
+          />
+          <FieldError name="email" className="error" />
+
+          <Label errorClassName="error" name="message">
+            Message
+          </Label>
+          <TextAreaField
+            placeholder="Your Message"
+            name="message"
+            errorClassName="error"
+            validation={{ required: true }}
+          />
+          <FieldError name="message" className="error" />
+
+          <Submit disabled={loading}>Submit</Submit>
+        </Form>
       </div>
       <Toaster></Toaster>
-      <Form onSubmit={onSubmit} formMethods={formMethods} error={error}>
-        <FormError error={error} wrapperClassName="form-error" />
-        <Label errorClassName="error" name="name">
-          Name
-        </Label>
-        <TextField
-          name="name"
-          errorClassName="error"
-          validation={{ required: true }}
-        />
-        <FieldError name="name" className="error" />
-
-        <Label errorClassName="error" name="email">
-          Email
-        </Label>
-        <TextField
-          name="email"
-          errorClassName="error"
-          validation={{
-            required: true,
-            pattern: {
-              value: /^[^@]+@[^.]+\..+$/,
-              message: 'Please enter a valid email address',
-            },
-          }}
-        />
-        <FieldError name="email" className="error" />
-
-        <Label errorClassName="error" name="message">
-          Message
-        </Label>
-        <TextAreaField
-          name="message"
-          errorClassName="error"
-          validation={{ required: true }}
-        />
-        <FieldError name="message" className="error" />
-
-        <Submit disabled={loading}>Send Message</Submit>
-      </Form>
     </>
   )
 }
