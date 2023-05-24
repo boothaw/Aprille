@@ -80,26 +80,6 @@ const BlogLayout = ({ children }) => {
                     </button>
                   )}
                 </li>
-                {/* <li className="hamburger-wave">
-                <div>
-                  <span>~</span>
-                  <span>~</span>
-                  <span>~</span>
-                </div>
-              </li> */}
-                {/* <li>
-                <Link to={routes.about()}>contact</Link>
-              </li> */}
-                {/* {isAuthenticated ? (
-                    <div>
-                      <span>Logged in as {currentUser.email}</span>{' '}
-                      <button type="button" onClick={logOut}>
-                        Logout
-                      </button>
-                    </div>
-                  ) : (
-                    <Link to={routes.login()}>Login</Link>
-                  )} */}
               </ul>
             </nav>
             <button className="hamburger-container" onClick={switch_menu}>
