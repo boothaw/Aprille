@@ -620,6 +620,17 @@ input.error, textarea.error {
 			color: $off-white;
 			border-radius: 20px;
 		}
+
+		.recaptcha{
+			display: none;
+			transition: all .5s ease;
+		}
+	}
+
+	.contact-form:hover, .contact-form:focus{
+		.recaptcha{
+			display: block;
+		}
 	}
 }
 
