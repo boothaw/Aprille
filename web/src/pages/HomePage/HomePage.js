@@ -44,13 +44,13 @@ const HomePage = () => {
             <h1>Aprille Zammit ~ Studio</h1>
             <p>Screenprinting, Photography, Adventure</p>
           </a>
-          <PhotosCell></PhotosCell>
+          {/* <PhotosCell></PhotosCell> */}
           <Wave></Wave>
           <div id="screenprints">screenprints</div>
           <Wave></Wave>
           <div id="workshops">workshops</div>
           <Wave></Wave>
-          <ArticlesCell></ArticlesCell>
+          {/* <ArticlesCell></ArticlesCell> */}
         </div>
       </>
     </>

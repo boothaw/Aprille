@@ -1,6 +1,7 @@
 import React, { useRef } from 'react'
 
 import emailjs from '@emailjs/browser'
+import ReCAPTCHA from 'react-google-recaptcha'
 
 import {
   Form,
@@ -120,8 +121,11 @@ const AboutPage = () => {
             validation={{ required: true }}
           />
           <FieldError name="message" className="error" />
-
           <Submit disabled={loading}>Submit</Submit>
+          {/* <ReCAPTCHA
+            className="recaptcha"
+            sitekey="`${process.env.REDWOOD_RECAPTCHA_APP_SITE_KEY}`"
+          /> */}
         </Form>
       </div>
       <Toaster></Toaster>
