@@ -146,8 +146,8 @@ input.error, textarea.error {
 	.logo-container{
 		background-color: $off-white;
 		border-bottom-right-radius: 2em;
-		width: 80px;
-		height: 80px;
+		width: 60px;
+		height: 60px;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -167,7 +167,7 @@ input.error, textarea.error {
 	}
 
 	.logo{
-		max-width: 40px;
+		max-width: 32px;
 	}
 
 	.nav-container{
@@ -181,8 +181,8 @@ input.error, textarea.error {
 		border-bottom-left-radius: 2em;
 		z-index: 5;
 		transition: all ease .5s;
-		height: 80px;
-    width: 80px;
+		height: 60px;
+    width: 60px;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -192,8 +192,8 @@ input.error, textarea.error {
 	}
 
 	.hamburger{
-		width: 40px;
-		height: 40px;
+		width: 32px;
+		height: 32px;
 		border-radius: 50%;
 		// border: 4px solid $navy;
 		display: flex;
@@ -227,7 +227,7 @@ input.error, textarea.error {
 			border-radius: 0;
 		}
 		.hamburger{
-			border: 4px solid $yellow;
+			// border: 4px solid $yellow;
 		}
 		.hamburger svg{
 			fill: $yellow;
@@ -472,7 +472,8 @@ input.error, textarea.error {
 
 	.photo-thumbnail{
 		max-height: 250px;
-		height: 16vw;
+		// height: 16vw;
+		height: 14em;
 		// this might work better
 		cursor: pointer;
 		position: relative;
@@ -563,7 +564,14 @@ input.error, textarea.error {
 
 .about-page{
 	max-width: 500px;
-		margin: auto;
+	margin: auto;
+	width: 95%;
+
+		.headshot{
+			width: 100%;
+			height: auto;
+			margin-bottom: 20px;
+		}
 
 	.contact-form{
 		width: 100%;
@@ -625,6 +633,7 @@ input.error, textarea.error {
 			display: none;
 			transition: all .5s ease;
 		}
+
 	}
 
 	.contact-form:hover, .contact-form:focus{
@@ -852,7 +861,6 @@ input.error, textarea.error {
 				font-size: .7em;
 			}
 		}
-
 	}
 }
 
