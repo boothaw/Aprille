@@ -167,7 +167,7 @@ input.error, textarea.error {
 	}
 
 	.logo{
-		max-width: 32px;
+		max-width: 30px;
 	}
 
 	.nav-container{
@@ -358,6 +358,7 @@ input.error, textarea.error {
 // blog general
 
 .blog-main{
+	// background-color: $blue;
 	// width: 90%;
 		// undo this
 	// padding: 140px 20px;
@@ -836,7 +837,7 @@ input.error, textarea.error {
 	.aprille-name {
 		position: static;
 		transform: none;
-		padding: 0 0 40px 0;
+		padding: 10px 0 40px 0;
 
 		h1{
 			font-size: 1.5em;
@@ -846,7 +847,7 @@ input.error, textarea.error {
 		}
 	}
 	.blog-main:has(.home){
-		padding-top: 20px;
+		padding-top: 0px;
 	}
 	.footer{
 		.footer-inner{
