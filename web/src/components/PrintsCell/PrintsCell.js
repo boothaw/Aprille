@@ -18,24 +18,27 @@ export const Failure = ({ error }) => (
 
 const shrinker = (url) => {
   const parts = url.split('/')
-  parts.splice(3, 0, 'resize=height:800')
+  parts.splice(3, 0, 'resize=height:1200')
   return parts.join('/')
 }
 
 export const Success = ({ screenprints }) => {
   return (
-    <div>
-      {screenprints.map((print) => {
+    <div
+      className="photography-section-grid screenprint-section-grid"
+      id="screenprints"
+    >
+      {screenprints.map((photo) => {
         return (
-          <div key={print.id}>
+          <div
+            className="photo-container photo-thumbnail print-container"
+            key={photo.id}
+          >
             <img
-              className="photo"
-              src={shrinker(print.url)}
-              alt={print.title}
+              className="photo print"
+              src={shrinker(photo.url)}
+              alt={photo.title}
             />
-            {/* <div className="hover-card">
-              <h2>{print.title}</h2>
-            </div> */}
           </div>
         )
       })}

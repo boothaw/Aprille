@@ -46,11 +46,10 @@ const HomePage = () => {
             <h1>Aprille Zammit ~ Studio</h1>
             <p>Screenprinting, Photography, Adventure</p>
           </a>
-          {/* <PhotosCell></PhotosCell> */}
           <Wave></Wave>
-          <div id="screenprints">
-            <PrintsCell></PrintsCell>
-          </div>
+          <PhotosCell></PhotosCell>
+          <Wave></Wave>
+          <PrintsCell></PrintsCell>
           <Wave></Wave>
           <div id="workshops">workshops</div>
           <Wave></Wave>

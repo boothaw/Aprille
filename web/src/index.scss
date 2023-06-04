@@ -551,6 +551,14 @@ input.error, textarea.error {
 	}
 }
 
+// screenprints section
+
+.screenprint-section-grid{
+	.photo-thumbnail{
+		height: 20em;
+	}
+}
+
 // projects section
 
 .projects-section{
@@ -876,10 +884,10 @@ input.error, textarea.error {
 
 #screenprints{
 	// height: 600px;
-	margin: auto;
-	width: 90%;
-	border: 2px solid $navy;
-	text-align: center;
+	// margin: auto;
+	// width: 90%;
+	// border: 2px solid $navy;
+	// text-align: center;
 }
 
 // workshops
