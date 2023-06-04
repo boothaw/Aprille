@@ -16,6 +16,12 @@ import BlogLayout from './layouts/BlogLayout/BlogLayout'
 const Routes = () => {
   return (
     <Router>
+      <Set wrap={ScaffoldLayout} title="Screenprints" titleTo="screenprints" buttonLabel="New Screenprint" buttonTo="newScreenprint">
+        <Route path="/screenprints/new" page={ScreenprintNewScreenprintPage} name="newScreenprint" />
+        <Route path="/screenprints/{id:Int}/edit" page={ScreenprintEditScreenprintPage} name="editScreenprint" />
+        <Route path="/screenprints/{id:Int}" page={ScreenprintScreenprintPage} name="screenprint" />
+        <Route path="/screenprints" page={ScreenprintScreenprintsPage} name="screenprints" />
+      </Set>
       <Set wrap={BlogLayout}>
         <Route path="/about" page={AboutPage} name="about" />
         <Route path="/" page={HomePage} name="home" />

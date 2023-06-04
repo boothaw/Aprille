@@ -5,6 +5,8 @@ import { MetaTags } from '@redwoodjs/web'
 
 import ArticlesCell from 'src/components/ArticlesCell'
 import PhotosCell from 'src/components/PhotosCell/PhotosCell.js'
+import PrintsCell from 'src/components/PrintsCell/PrintsCell.js'
+import ScreenprintsCell from 'src/components/Screenprint/ScreenprintsCell'
 import Wave from 'src/components/Wave/Wave'
 
 const HomePage = () => {
@@ -46,7 +48,9 @@ const HomePage = () => {
           </a>
           {/* <PhotosCell></PhotosCell> */}
           <Wave></Wave>
-          <div id="screenprints">screenprints</div>
+          <div id="screenprints">
+            <PrintsCell></PrintsCell>
+          </div>
           <Wave></Wave>
           <div id="workshops">workshops</div>
           <Wave></Wave>
