@@ -1,7 +1,6 @@
 import React, { useRef } from 'react'
 
 import emailjs from '@emailjs/browser'
-import ReCAPTCHA from 'react-google-recaptcha'
 
 import {
   Form,
@@ -61,6 +60,11 @@ const AboutPage = () => {
       <MetaTags title="Profile & Contact" description="About page" />
 
       <div className="about-page">
+        <img
+          className="headshot"
+          src="https://cdn.filestackcontent.com/resize=height:1200/n6BgW3YxTzi9cLyQMmhp"
+          alt="Aprille"
+        />
         <p>
           Aprille Zammit can often be found in her studio, covered in ink
           working on her next creative project. A graphic designer and DIY

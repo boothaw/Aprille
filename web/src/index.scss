@@ -146,8 +146,8 @@ input.error, textarea.error {
 	.logo-container{
 		background-color: $off-white;
 		border-bottom-right-radius: 2em;
-		width: 80px;
-		height: 80px;
+		width: 60px;
+		height: 60px;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -167,7 +167,7 @@ input.error, textarea.error {
 	}
 
 	.logo{
-		max-width: 40px;
+		max-width: 30px;
 	}
 
 	.nav-container{
@@ -181,8 +181,8 @@ input.error, textarea.error {
 		border-bottom-left-radius: 2em;
 		z-index: 5;
 		transition: all ease .5s;
-		height: 80px;
-    width: 80px;
+		height: 60px;
+    width: 60px;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -192,8 +192,8 @@ input.error, textarea.error {
 	}
 
 	.hamburger{
-		width: 40px;
-		height: 40px;
+		width: 32px;
+		height: 32px;
 		border-radius: 50%;
 		// border: 4px solid $navy;
 		display: flex;
@@ -227,7 +227,7 @@ input.error, textarea.error {
 			border-radius: 0;
 		}
 		.hamburger{
-			border: 4px solid $yellow;
+			// border: 4px solid $yellow;
 		}
 		.hamburger svg{
 			fill: $yellow;
@@ -264,7 +264,7 @@ input.error, textarea.error {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	padding-top: 10px;
+	padding-top: 8px;
 
 	h1 {
 		color: $yellow;
@@ -358,10 +358,11 @@ input.error, textarea.error {
 // blog general
 
 .blog-main{
+	// background-color: $blue;
 	// width: 90%;
 		// undo this
 	// padding: 140px 20px;
-	padding: 100px 0px;
+	padding: 80px 0px;
 	// max-width: 1600px;
 	// undo thes two
 	margin: auto;
@@ -401,6 +402,30 @@ input.error, textarea.error {
 	margin: 0 auto;
 	display: flex;
 	justify-content: center;
+	position: relative;
+
+
+	h2{
+		top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    position: absolute;
+    background-color: rgb(248, 245, 237);
+    padding: 10px 20px;
+    margin: auto;
+    color: rgb(235, 156, 49);
+    font-size: 1.2em;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 40%;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+	}
 }
 
 .login-page{
@@ -472,7 +497,8 @@ input.error, textarea.error {
 
 	.photo-thumbnail{
 		max-height: 250px;
-		height: 16vw;
+		// height: 16vw;
+		height: 14em;
 		// this might work better
 		cursor: pointer;
 		position: relative;
@@ -549,6 +575,14 @@ input.error, textarea.error {
 	}
 }
 
+// screenprints section
+
+.screenprint-section-grid{
+	.photo-thumbnail{
+		height: 20em;
+	}
+}
+
 // projects section
 
 .projects-section{
@@ -563,7 +597,14 @@ input.error, textarea.error {
 
 .about-page{
 	max-width: 500px;
-		margin: auto;
+	margin: auto;
+	width: 95%;
+
+		.headshot{
+			width: 100%;
+			height: auto;
+			margin-bottom: 20px;
+		}
 
 	.contact-form{
 		width: 100%;
@@ -625,6 +666,7 @@ input.error, textarea.error {
 			display: none;
 			transition: all .5s ease;
 		}
+
 	}
 
 	.contact-form:hover, .contact-form:focus{
@@ -827,7 +869,7 @@ input.error, textarea.error {
 	.aprille-name {
 		position: static;
 		transform: none;
-		padding: 0 0 40px 0;
+		padding: 10px 0 40px 0;
 
 		h1{
 			font-size: 1.5em;
@@ -837,7 +879,7 @@ input.error, textarea.error {
 		}
 	}
 	.blog-main:has(.home){
-		padding-top: 20px;
+		padding-top: 0px;
 	}
 	.footer{
 		.footer-inner{
@@ -852,7 +894,6 @@ input.error, textarea.error {
 				font-size: .7em;
 			}
 		}
-
 	}
 }
 
@@ -865,17 +906,10 @@ input.error, textarea.error {
 
 // screenprint
 
-#screenprints{
-	height: 600px;
-	margin: auto;
-	width: 90%;
-	border: 2px solid $navy;
-	text-align: center;
-}
 
 // workshops
 
-#workshops{
+.placeholder{
 	height: 600px;
 	margin: auto;
 	width: 90%;

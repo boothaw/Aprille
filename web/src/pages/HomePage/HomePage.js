@@ -3,8 +3,7 @@ import { useEffect, useState } from 'react'
 import { useLocation } from '@redwoodjs/router'
 import { MetaTags } from '@redwoodjs/web'
 
-import ArticlesCell from 'src/components/ArticlesCell'
-import PhotosCell from 'src/components/PhotosCell/PhotosCell.js'
+import PrintsCell from 'src/components/PrintsCell/PrintsCell.js'
 import Wave from 'src/components/Wave/Wave'
 
 const HomePage = () => {
@@ -44,12 +43,16 @@ const HomePage = () => {
             <h1>Aprille Zammit ~ Studio</h1>
             <p>Screenprinting, Photography, Adventure</p>
           </a>
+          <Wave title="photos"></Wave>
           {/* <PhotosCell></PhotosCell> */}
-          <Wave></Wave>
-          <div id="screenprints">screenprints</div>
-          <Wave></Wave>
-          <div id="workshops">workshops</div>
-          <Wave></Wave>
+          <div className="placeholder"></div>
+          <Wave title="screenprints"></Wave>
+          <PrintsCell></PrintsCell>
+          {/* <div className="placeholder"></div> */}
+          <Wave title="workshops"></Wave>
+          <div className="placeholder"></div>
+          <Wave title="projects"></Wave>
+          <div className="placeholder"></div>
           {/* <ArticlesCell></ArticlesCell> */}
         </div>
       </>

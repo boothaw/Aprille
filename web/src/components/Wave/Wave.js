@@ -1,6 +1,7 @@
-const Wave = (props) => {
+const Wave = (title) => {
   return (
-    <div className="wave-svg">
+    <div className="wave-svg" id={title.title}>
+      {title.title && <h2>{title.title}</h2>}
       <svg
         xmlns="http://www.w3.org/2000/svg"
         xmlnsXlink="http://www.w3.org/1999/xlink"
@@ -12,7 +13,7 @@ const Wave = (props) => {
         }}
         xmlSpace="preserve"
         viewBox="69.42 64 1141.96 34.07"
-        {...props}
+        {...title}
       >
         <style type="text/css">
           {

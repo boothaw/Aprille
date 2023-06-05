@@ -55,3 +55,9 @@ model Image {
   title String
   url   String
 }
+
+model Screenprint {
+  id    Int    @id @default(autoincrement())
+  title String
+  url   String
+}

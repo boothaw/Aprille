@@ -2,21 +2,21 @@ import { Link, routes } from '@redwoodjs/router'
 import { useMutation } from '@redwoodjs/web'
 import { toast } from '@redwoodjs/web/toast'
 
-import { QUERY } from 'src/components/Image/ImagesCell'
+import { QUERY } from 'src/components/Screenprint/ScreenprintsCell'
 import { truncate } from 'src/lib/formatters'
 
-const DELETE_IMAGE_MUTATION = gql`
-  mutation DeleteImageMutation($id: Int!) {
-    deleteImage(id: $id) {
+const DELETE_SCREENPRINT_MUTATION = gql`
+  mutation DeleteScreenprintMutation($id: Int!) {
+    deleteScreenprint(id: $id) {
       id
     }
   }
 `
 
-const ImagesList = ({ images }) => {
-  const [deleteImage] = useMutation(DELETE_IMAGE_MUTATION, {
+const ScreenprintsList = ({ screenprints }) => {
+  const [deleteScreenprint] = useMutation(DELETE_SCREENPRINT_MUTATION, {
     onCompleted: () => {
-      toast.success('Image deleted')
+      toast.success('Screenprint deleted')
     },
     onError: (error) => {
       toast.error(error.message)
@@ -29,8 +29,8 @@ const ImagesList = ({ images }) => {
   })
 
   const onDeleteClick = (id) => {
-    if (confirm('Are you sure you want to delete image ' + id + '?')) {
-      deleteImage({ variables: { id } })
+    if (confirm('Are you sure you want to delete screenprint ' + id + '?')) {
+      deleteScreenprint({ variables: { id } })
     }
   }
 
@@ -52,16 +52,16 @@ const ImagesList = ({ images }) => {
           </tr>
         </thead>
         <tbody>
-          {images.map((image) => (
-            <tr key={image.id}>
-              <td>{truncate(image.id)}</td>
-              <td>{truncate(image.title)}</td>
+          {screenprints.map((screenprint) => (
+            <tr key={screenprint.id}>
+              <td>{truncate(screenprint.id)}</td>
+              <td>{truncate(screenprint.title)}</td>
               <td>
                 {' '}
-                <a href={image.url} target="_blank" rel="noreferrer">
+                <a href={screenprint.url} target="_blank" rel="noreferrer">
                   <img
-                    alt={image.title}
-                    src={thumbnail(image.url)}
+                    alt={screenprint.title}
+                    src={thumbnail(screenprint.url)}
                     style={{ maxWidth: '50px' }}
                   />
                 </a>
@@ -69,24 +69,24 @@ const ImagesList = ({ images }) => {
               <td>
                 <nav className="rw-table-actions">
                   <Link
-                    to={routes.image({ id: image.id })}
-                    title={'Show image ' + image.id + ' detail'}
+                    to={routes.screenprint({ id: screenprint.id })}
+                    title={'Show screenprint ' + screenprint.id + ' detail'}
                     className="rw-button rw-button-small"
                   >
                     Show
                   </Link>
                   <Link
-                    to={routes.editImage({ id: image.id })}
-                    title={'Edit image ' + image.id}
+                    to={routes.editScreenprint({ id: screenprint.id })}
+                    title={'Edit screenprint ' + screenprint.id}
                     className="rw-button rw-button-small rw-button-blue"
                   >
                     Edit
                   </Link>
                   <button
                     type="button"
-                    title={'Delete image ' + image.id}
+                    title={'Delete screenprint ' + screenprint.id}
                     className="rw-button rw-button-small rw-button-red"
-                    onClick={() => onDeleteClick(image.id)}
+                    onClick={() => onDeleteClick(screenprint.id)}
                   >
                     Delete
                   </button>
@@ -100,4 +100,4 @@ const ImagesList = ({ images }) => {
   )
 }
 
-export default ImagesList
+export default ScreenprintsList
