@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react'
 import { useLocation } from '@redwoodjs/router'
 import { MetaTags } from '@redwoodjs/web'
 
+import PhotosCell from 'src/components/PhotosCell'
 import PrintsCell from 'src/components/PrintsCell/PrintsCell.js'
 import Wave from 'src/components/Wave/Wave'
 
