@@ -22,7 +22,7 @@ export const Success = ({ photos, exclude }) => {
   const photosRev = [...photos].reverse()
 
   return (
-    <div className="photography-section-grid" id="photos">
+    <div className="photography-section-grid">
       {photosRev
         .filter((photo) => photo.id !== exclude)
         .map((photo) => {

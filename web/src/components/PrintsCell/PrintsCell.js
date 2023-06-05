@@ -24,10 +24,7 @@ const shrinker = (url) => {
 
 export const Success = ({ screenprints }) => {
   return (
-    <div
-      className="photography-section-grid screenprint-section-grid"
-      id="screenprints"
-    >
+    <div className="photography-section-grid screenprint-section-grid">
       {screenprints.map((photo) => {
         return (
           <div

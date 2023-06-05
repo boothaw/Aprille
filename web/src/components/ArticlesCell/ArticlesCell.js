@@ -22,7 +22,7 @@ export const Failure = ({ error }) => (
 
 export const Success = ({ articles, exclude }) => {
   return (
-    <div className="projects-section" id="projects">
+    <div className="projects-section">
       {articles
         .filter((article) => article.id !== exclude)
         .map((article) => {
