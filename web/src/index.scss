@@ -788,11 +788,59 @@ input.error, textarea.error {
 		}
 }
 
-// testing
+// workshops
 
-.hecking{
-	font-size: 50px;
-	color: red;
+.workshops-section{
+	max-width: 900px;
+	width: 90%;
+	margin: 0 auto;
+
+	.workshops-inner{
+
+	}
+
+	h1{
+		max-width: 700px;
+		width: 90%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	a{
+		max-width: 700px;
+		width: 90%;
+		margin-left: auto;
+		margin-right: auto;
+		color: $yellow;
+		font-weight: bold;
+		display: block;
+		text-transform: uppercase;
+
+		&:hover{
+			color: $navy;
+		}
+	}
+
+	p{
+		max-width: 700px;
+		width: 90%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	p:nth-child(even){
+		// margin-right: 0;
+		// margin-left: auto;
+		// color: $navy;
+	}
+
+	.bold{
+		font-weight: bold;
+	}
+
+	.navy{
+		color: $navy;
+	}
 }
 
 // Animations
@@ -905,9 +953,6 @@ input.error, textarea.error {
 }
 
 // screenprint
-
-
-// workshops
 
 .placeholder{
 	height: 600px;
