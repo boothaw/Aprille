@@ -1,10 +1,14 @@
 import { useEffect, useState } from 'react'
 
+import { Link, routes } from '@redwoodjs/router'
 import { useLocation } from '@redwoodjs/router'
 import { MetaTags } from '@redwoodjs/web'
 
+import ArticlesCell from 'src/components/ArticlesCell'
+import PhotosCell from 'src/components/PhotosCell'
 import PrintsCell from 'src/components/PrintsCell/PrintsCell.js'
 import Wave from 'src/components/Wave/Wave'
+import Workshops from 'src/components/Workshops/Workshops'
 
 const HomePage = () => {
   const [element, setElement] = useState(null)
@@ -47,10 +51,16 @@ const HomePage = () => {
           {/* <PhotosCell></PhotosCell> */}
           <div className="placeholder"></div>
           <Wave title="screenprints"></Wave>
-          <PrintsCell></PrintsCell>
-          {/* <div className="placeholder"></div> */}
-          <Wave title="workshops"></Wave>
+          {/* <PrintsCell></PrintsCell> */}
           <div className="placeholder"></div>
+          <Wave title="workshops"></Wave>
+          <Workshops></Workshops>
+          {/* <PrintsCell></PrintsCell> */}
+          {/* <div className="placeholder">
+            <Link className="learn-more" to={routes.workshops()}>
+              See More
+            </Link>
+          </div> */}
           <Wave title="projects"></Wave>
           <div className="placeholder"></div>
           {/* <ArticlesCell></ArticlesCell> */}

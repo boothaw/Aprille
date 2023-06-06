@@ -18,7 +18,7 @@ body {
   font-size: 1.5em; /* currently ems cause chrome bug misinterpreting rems on body element */
   line-height: 1.6;
   font-weight: 400;
-  font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: 'Oswald', sans-serif;
 	background-color: $off-white;
 	margin: 0;
 }
@@ -384,7 +384,6 @@ input.error, textarea.error {
 	display:inline-block;
 	padding:40px;
 	font-size: 50px;
-	font-family:arial;
 	font-weight:bold;
 	margin: 0 auto;
 	display: flex;
@@ -788,11 +787,74 @@ input.error, textarea.error {
 		}
 }
 
-// testing
+// workshops
 
-.hecking{
-	font-size: 50px;
-	color: red;
+.learn-more{
+	max-width: 700px;
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+	color: $yellow;
+	font-weight: bold;
+	display: block;
+	text-transform: uppercase;
+
+	&:hover{
+		color: $navy;
+	}
+}
+
+.workshops-section{
+	max-width: 900px;
+	width: 90%;
+	margin: 0 auto;
+
+	.workshops-inner{
+
+	}
+
+	h1{
+		max-width: 700px;
+		width: 90%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.learn-more{
+		max-width: 700px;
+		width: 90%;
+		margin-left: auto;
+		margin-right: auto;
+		color: $yellow;
+		font-weight: bold;
+		display: block;
+		text-transform: uppercase;
+
+		&:hover{
+			color: $navy;
+		}
+	}
+
+	p{
+		max-width: 700px;
+		width: 90%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	p:nth-child(even){
+		// margin-right: 0;
+		// margin-left: auto;
+		// color: $navy;
+	}
+
+	.bold{
+		font-weight: bold;
+	}
+
+	.navy{
+		color: $navy;
+	}
 }
 
 // Animations
@@ -905,9 +967,6 @@ input.error, textarea.error {
 }
 
 // screenprint
-
-
-// workshops
 
 .placeholder{
 	height: 600px;
