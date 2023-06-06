@@ -18958,6 +18958,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"photoswipe@npm:^5.3.7":
+  version: 5.3.7
+  resolution: "photoswipe@npm:5.3.7"
+  checksum: f47da6c979053ab1445f3995fb73328c242f6b4746162583720ceff36c2a1cab9a29ad2b5e911957c87c81f9aeb1a41f4713a42d5db34f4384abf965ba99b2a4
+  languageName: node
+  linkType: hard
+
 "picocolors@npm:^0.2.1":
   version: 0.2.1
   resolution: "picocolors@npm:0.2.1"
@@ -20316,6 +20323,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-photoswipe-gallery@npm:^2.2.7":
+  version: 2.2.7
+  resolution: "react-photoswipe-gallery@npm:2.2.7"
+  peerDependencies:
+    photoswipe: ">= 5.2.2"
+    prop-types: ">= 15.7.0"
+    react: ">= 16.8.0"
+  checksum: 7001f3962b18e8bf09947a1c5bdfdf89cb8f57079cb238474e2505bf57a286245abdb63987b7116bcbb7bc2f0807ddf0bd8c200638e198d5991c6e96490c7b5a
+  languageName: node
+  linkType: hard
+
 "react-refresh@npm:0.14.0":
   version: 0.14.0
   resolution: "react-refresh@npm:0.14.0"
@@ -21039,7 +21057,9 @@ __metadata:
   resolution: "root-workspace-0b6124@workspace:."
   dependencies:
     "@redwoodjs/core": 3.8.0
+    photoswipe: ^5.3.7
     react-google-recaptcha: ^2.1.0
+    react-photoswipe-gallery: ^2.2.7
   languageName: unknown
   linkType: soft
 
