@@ -26,9 +26,9 @@ const shrinker = (url) => {
 }
 
 export const Success = ({ screenprints }) => {
-  const options = {
-    gallery: '#gallery--with-custom-caption',
-  }
+  // const options = {
+  //   gallery: '#gallery--with-custom-caption',
+  // }
   return (
     <div className="photography-section-grid screenprint-section-grid">
       <Gallery withCaption>
@@ -48,8 +48,9 @@ export const Success = ({ screenprints }) => {
                 max-height="100%"
               >
                 {({ ref, open }) => (
+                  /* eslint-disable */
                   <img
-                    className="photo print"
+                    tabIndex={0}
                     alt={photo.title}
                     ref={ref}
                     onClick={open}
