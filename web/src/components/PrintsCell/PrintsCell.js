@@ -25,7 +25,7 @@ const shrinker = (url) => {
 export const Success = ({ screenprints }) => {
   return (
     <div className="photography-section-grid screenprint-section-grid">
-      {screenprints.slice(0, 5).map((photo) => {
+      {screenprints.slice(0, 15).map((photo) => {
         return (
           <div
             className="photo-container photo-thumbnail print-container"

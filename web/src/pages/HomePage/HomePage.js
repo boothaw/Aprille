@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 
+import { Link, routes } from '@redwoodjs/router'
 import { useLocation } from '@redwoodjs/router'
 import { MetaTags } from '@redwoodjs/web'
 
@@ -54,7 +55,12 @@ const HomePage = () => {
           <div className="placeholder"></div>
           <Wave title="workshops"></Wave>
           <Workshops></Workshops>
-          {/* <div className="placeholder"></div> */}
+          {/* <PrintsCell></PrintsCell> */}
+          {/* <div className="placeholder">
+            <Link className="learn-more" to={routes.workshops()}>
+              See More
+            </Link>
+          </div> */}
           <Wave title="projects"></Wave>
           <div className="placeholder"></div>
           {/* <ArticlesCell></ArticlesCell> */}

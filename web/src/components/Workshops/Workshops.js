@@ -10,7 +10,7 @@ const Workshops = () => {
           the first time. It will be a fun day of learning the basic steps of
           screen printing while getting messy and creative.
         </p>
-        <p>
+        {/* <p>
           After a brief introduction to the history and various techniques
           available, we will go over the general process of preparing a screen,
           how to artwork your designs, creating your screen, and finally pulling
@@ -45,8 +45,10 @@ const Workshops = () => {
         <p>
           ~ you have 10 days to cancel your workshop from the date of booking.
           Failure to do so will not guarantee a full refund.
-        </p>
-        <Link to={routes.workshops()}>See More</Link>
+        </p> */}
+        <Link className="learn-more" to={routes.workshops()}>
+          Learn More
+        </Link>
       </div>
     </div>
   )
