@@ -49,11 +49,7 @@ export const Success = ({ screenprints }) => {
 
   return (
     <div className="photography-section-grid screenprint-section-grid">
-<<<<<<< HEAD
-      {screenprints.slice(0, 3).map((photo) => {
-=======
       {screenprints.slice(0, 15).map((photo) => {
->>>>>>> main
         return (
           <button
             className="photo-container photo-thumbnail print-container"
