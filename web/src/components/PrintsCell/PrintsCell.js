@@ -21,56 +21,46 @@ export const Failure = ({ error }) => (
 
 const shrinker = (url) => {
   const parts = url.split('/')
-  parts.splice(3, 0, 'resize=height:1200')
+  parts.splice(3, 0, 'resize=height:800')
   return parts.join('/')
 }
 
 export const Success = ({ screenprints }) => {
+  const options = {
+    gallery: '#gallery--with-custom-caption',
+  }
   return (
     <div className="photography-section-grid screenprint-section-grid">
-      {/* {screenprints.slice(0, 6).map((photo) => {
-        return (
-          <div
-            className="photo-container photo-thumbnail print-container"
-            key={photo.id}
-          >
-            <img
-              className="photo print"
-              src={shrinker(photo.url)}
-              alt={photo.title}
-            />
-          </div>
-        )
-      })} */}
-      <Gallery>
-        <Item
-          original="https://placekitten.com/1024/768?image=1"
-          thumbnail="https://placekitten.com/80/60?image=1"
-          width="1024"
-          height="768"
-        >
-          {({ ref, open }) => (
-            <img
-              ref={ref}
-              onClick={open}
-              src="https://placekitten.com/80/60?image=1"
-            />
-          )}
-        </Item>
-        <Item
-          original="https://placekitten.com/1024/768?image=2"
-          thumbnail="https://placekitten.com/80/60?image=2"
-          width="1024"
-          height="768"
-        >
-          {({ ref, open }) => (
-            <img
-              ref={ref}
-              onClick={open}
-              src="https://placekitten.com/80/60?image=2"
-            />
-          )}
-        </Item>
+      <Gallery withCaption>
+        {screenprints.slice(0, 4).map((photo) => {
+          console.log(photo.title)
+          return (
+            <div
+              className="photo-container photo-thumbnail print-container"
+              key={photo.id}
+            >
+              <Item
+                alt={photo.title}
+                original={shrinker(photo.url)}
+                thumbnail={shrinker(photo.url)}
+                caption={photo.title}
+                width="auto"
+                max-height="100%"
+              >
+                {({ ref, open }) => (
+                  <img
+                    className="photo print"
+                    alt={photo.title}
+                    ref={ref}
+                    onClick={open}
+                    onKeyDown={open}
+                    src={shrinker(photo.url)}
+                  />
+                )}
+              </Item>
+            </div>
+          )
+        })}
       </Gallery>
     </div>
   )

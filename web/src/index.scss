@@ -975,3 +975,16 @@ input.error, textarea.error {
 	border: 2px solid $yellow;
 	text-align: center;
 }
+
+
+.pswp__item {
+
+	.pswp__img{
+		object-fit: contain;
+	}
+
+	.pswp__default-caption{
+		// color: $off-white !important;
+		// border: 2px solid pink;
+	}
+}
