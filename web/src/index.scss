@@ -55,15 +55,15 @@ a:hover{
 }
 
 
-/* Larger than phablet */
-@media (min-width: 550px) {
-  h1 { font-size: 5.0rem; }
-  h2 { font-size: 4.2rem; }
-  h3 { font-size: 3.6rem; }
-  h4 { font-size: 3.0rem; }
-  h5 { font-size: 2.4rem; }
-  h6 { font-size: 1.5rem; }
-}
+// /* Larger than phablet */
+// @media (min-width: 550px) {
+//   h1 { font-size: 5.0rem; }
+//   h2 { font-size: 4.2rem; }
+//   h3 { font-size: 3.6rem; }
+//   h4 { font-size: 3.0rem; }
+//   h5 { font-size: 2.4rem; }
+//   h6 { font-size: 1.5rem; }
+// }
 
 p {
   margin-top: 0;
@@ -404,7 +404,7 @@ input.error, textarea.error {
 	position: relative;
 
 
-	h2{
+	h2,h1 {
 		top: 0;
     bottom: 0;
     left: 0;
@@ -425,6 +425,10 @@ input.error, textarea.error {
     align-items: center;
     height: fit-content;
 	}
+
+	h1{
+		font-size: 4.0rem;
+	}
 }
 
 .login-page{
@@ -439,6 +443,66 @@ input.error, textarea.error {
 	text-align: center;
 	font-weight: bold;
 	margin-bottom: 40px;
+}
+
+.copy-section{
+	max-width: 900px;
+	width: 90%;
+	margin: 0 auto;
+
+	.copy-section__inner{
+		width: 100%;
+		max-width: 500px;
+		margin: 0 auto;
+
+		p > .learn-more{
+			display: inline;
+		}
+	}
+
+	h1{
+		// max-width: 700px;
+		// width: 90%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.learn-more{
+		// max-width: 700px;
+		// width: 90%;
+		margin-left: auto;
+		margin-right: auto;
+		color: $yellow;
+		font-weight: bold;
+		display: block;
+		text-transform: uppercase;
+
+		&:hover{
+			color: $navy;
+		}
+	}
+
+	p{
+		// max-width: 700px;
+		// width: 90%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	p:nth-child(even){
+		// margin-right: 0;
+		// margin-left: auto;
+		// color: $navy;
+	}
+
+	.bold{
+		font-weight: bold;
+		text-transform: capitalize;
+	}
+
+	.navy{
+		color: $navy;
+	}
 }
 
 // admin styles
@@ -471,6 +535,9 @@ input.error, textarea.error {
 .home{
 	.photography-section-grid{
 		padding-bottom: 0;
+	}
+	.copy-section{
+		padding-bottom: 80px;
 	}
 }
 
@@ -617,15 +684,19 @@ input.error, textarea.error {
 // about page
 
 .about-page{
-	max-width: 500px;
-	margin: auto;
-	width: 95%;
+	// max-width: 500px;
+	// margin: auto;
+	// width: 95%;
 
-		.headshot{
-			width: 100%;
-			height: auto;
-			margin-bottom: 20px;
-		}
+	.copy-section__inner{
+
+	}
+
+	.headshot{
+		width: 100%;
+		height: auto;
+		margin-bottom: 20px;
+	}
 
 	.contact-form{
 		width: 100%;
@@ -748,7 +819,7 @@ input.error, textarea.error {
 			margin: 0 auto 20px auto;
 		}
 
-		h2{
+		h1{
 			text-transform: capitalize;
 			text-align: center;
 			font-weight: bold;
@@ -760,11 +831,11 @@ input.error, textarea.error {
 			margin: 0 auto;
 		}
 
-		h2 a{
+		h1 a{
 			color: $navy;
 			text-decoration: none;
 		}
-		h2 a:hover{
+		h1 a:hover{
 			color: $blue;
 		}
 
@@ -811,71 +882,10 @@ input.error, textarea.error {
 
 // workshops
 
-.learn-more{
-	max-width: 700px;
-	width: 90%;
-	margin-left: auto;
-	margin-right: auto;
-	color: $yellow;
-	font-weight: bold;
-	display: block;
-	text-transform: uppercase;
-
-	&:hover{
-		color: $navy;
-	}
-}
-
 .workshops-section{
-	max-width: 900px;
-	width: 90%;
-	margin: 0 auto;
 
 	.workshops-inner{
 
-	}
-
-	h1{
-		max-width: 700px;
-		width: 90%;
-		margin-left: auto;
-		margin-right: auto;
-	}
-
-	.learn-more{
-		max-width: 700px;
-		width: 90%;
-		margin-left: auto;
-		margin-right: auto;
-		color: $yellow;
-		font-weight: bold;
-		display: block;
-		text-transform: uppercase;
-
-		&:hover{
-			color: $navy;
-		}
-	}
-
-	p{
-		max-width: 700px;
-		width: 90%;
-		margin-left: auto;
-		margin-right: auto;
-	}
-
-	p:nth-child(even){
-		// margin-right: 0;
-		// margin-left: auto;
-		// color: $navy;
-	}
-
-	.bold{
-		font-weight: bold;
-	}
-
-	.navy{
-		color: $navy;
 	}
 }
 

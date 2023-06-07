@@ -54,7 +54,7 @@ const Article = ({ article }) => {
         <title>{article.title} | Projects</title>
       </Head>
       <header>
-        <h2>{article.title}</h2>
+        <h1>{article.title}</h1>
         <div className="title-line"></div>
       </header>
       <div className="article-body">
