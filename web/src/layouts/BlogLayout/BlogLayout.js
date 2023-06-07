@@ -4,7 +4,8 @@ import { useAuth } from '@redwoodjs/auth'
 import { Link, routes } from '@redwoodjs/router'
 
 const BlogLayout = ({ children }) => {
-  const { isAuthenticated, currentUser, logOut } = useAuth()
+  // const { isAuthenticated, currentUser, logOut } = useAuth()
+  const { isAuthenticated, logOut } = useAuth()
   const [showMenu, setShowMenu] = useState(false)
   const ref = useRef()
 
@@ -59,9 +60,6 @@ const BlogLayout = ({ children }) => {
                   </a>
                 </li>
                 <li>
-                  {/* <a href="/#screenprints" onClick={switch_menu}>
-                    screenprints
-                  </a> */}
                   <Link to={routes.screenprinting()} onClick={switch_menu}>
                     screenprinting
                   </Link>
@@ -76,13 +74,13 @@ const BlogLayout = ({ children }) => {
                     bio & contact
                   </Link>
                 </li>
-                <li>
+                {/* <li>
                   {isAuthenticated && (
                     <button type="button" onClick={logOut}>
                       Logout
                     </button>
                   )}
-                </li>
+                </li> */}
               </ul>
             </nav>
             <button className="hamburger-container" onClick={switch_menu}>
