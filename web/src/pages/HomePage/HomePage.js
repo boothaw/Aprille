@@ -7,6 +7,7 @@ import { MetaTags } from '@redwoodjs/web'
 import ArticlesCell from 'src/components/ArticlesCell'
 import PhotosCell from 'src/components/PhotosCell'
 import PrintsCell from 'src/components/PrintsCell/PrintsCell.js'
+import Screenprintcopy from 'src/components/Screenprintcopy/Screenprintcopy'
 import Wave from 'src/components/Wave/Wave'
 import Workshops from 'src/components/Workshops/Workshops'
 
@@ -47,10 +48,11 @@ const HomePage = () => {
             <h1>Aprille Zammit ~ Studio</h1>
             <p>Screenprinting, Photography, Adventure</p>
           </a>
-          <Wave title="photos"></Wave>
+          <Wave title="photography"></Wave>
           {/* <PhotosCell></PhotosCell> */}
           <div className="placeholder"></div>
-          <Wave title="screenprints"></Wave>
+          <Wave title="screenprinting"></Wave>
+          <Screenprintcopy></Screenprintcopy>
           <PrintsCell></PrintsCell>
           <div className="placeholder"></div>
           <Wave title="workshops"></Wave>

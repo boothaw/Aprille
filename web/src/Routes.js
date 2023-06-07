@@ -29,6 +29,7 @@ const Routes = () => {
         <Route path="/article/{id:Int}" page={ArticlePage} name="article" />
         <Route path="/photo/{id:Int}" page={PhotoPage} name="photo" />
         <Route path="/workshops" page={WorkshopsPage} name="workshops" />
+        <Route path="/screenprinting" page={ScreenprintingPage} name="screenprinting" />
       </Set>
 
       {/* administrative */}

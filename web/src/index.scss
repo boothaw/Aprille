@@ -441,6 +441,66 @@ input.error, textarea.error {
 	margin-bottom: 40px;
 }
 
+.copy-section{
+	max-width: 900px;
+	width: 90%;
+	margin: 0 auto;
+
+	.copy-section__inner{
+		width: 100%;
+		max-width: 500px;
+		margin: 0 auto;
+
+		p > .learn-more{
+			display: inline;
+		}
+	}
+
+	h1{
+		// max-width: 700px;
+		// width: 90%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.learn-more{
+		// max-width: 700px;
+		// width: 90%;
+		margin-left: auto;
+		margin-right: auto;
+		color: $yellow;
+		font-weight: bold;
+		display: block;
+		text-transform: uppercase;
+
+		&:hover{
+			color: $navy;
+		}
+	}
+
+	p{
+		// max-width: 700px;
+		// width: 90%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	p:nth-child(even){
+		// margin-right: 0;
+		// margin-left: auto;
+		// color: $navy;
+	}
+
+	.bold{
+		font-weight: bold;
+		text-transform: capitalize;
+	}
+
+	.navy{
+		color: $navy;
+	}
+}
+
 // admin styles
 
 .rw-scaffold{
@@ -471,6 +531,9 @@ input.error, textarea.error {
 .home{
 	.photography-section-grid{
 		padding-bottom: 0;
+	}
+	.copy-section{
+		padding-bottom: 80px;
 	}
 }
 
@@ -617,15 +680,19 @@ input.error, textarea.error {
 // about page
 
 .about-page{
-	max-width: 500px;
-	margin: auto;
-	width: 95%;
+	// max-width: 500px;
+	// margin: auto;
+	// width: 95%;
 
-		.headshot{
-			width: 100%;
-			height: auto;
-			margin-bottom: 20px;
-		}
+	.copy-section__inner{
+
+	}
+
+	.headshot{
+		width: 100%;
+		height: auto;
+		margin-bottom: 20px;
+	}
 
 	.contact-form{
 		width: 100%;
@@ -811,71 +878,10 @@ input.error, textarea.error {
 
 // workshops
 
-.learn-more{
-	max-width: 700px;
-	width: 90%;
-	margin-left: auto;
-	margin-right: auto;
-	color: $yellow;
-	font-weight: bold;
-	display: block;
-	text-transform: uppercase;
-
-	&:hover{
-		color: $navy;
-	}
-}
-
 .workshops-section{
-	max-width: 900px;
-	width: 90%;
-	margin: 0 auto;
 
 	.workshops-inner{
 
-	}
-
-	h1{
-		max-width: 700px;
-		width: 90%;
-		margin-left: auto;
-		margin-right: auto;
-	}
-
-	.learn-more{
-		max-width: 700px;
-		width: 90%;
-		margin-left: auto;
-		margin-right: auto;
-		color: $yellow;
-		font-weight: bold;
-		display: block;
-		text-transform: uppercase;
-
-		&:hover{
-			color: $navy;
-		}
-	}
-
-	p{
-		max-width: 700px;
-		width: 90%;
-		margin-left: auto;
-		margin-right: auto;
-	}
-
-	p:nth-child(even){
-		// margin-right: 0;
-		// margin-left: auto;
-		// color: $navy;
-	}
-
-	.bold{
-		font-weight: bold;
-	}
-
-	.navy{
-		color: $navy;
 	}
 }
 

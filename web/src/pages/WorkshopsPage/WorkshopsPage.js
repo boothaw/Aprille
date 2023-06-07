@@ -1,13 +1,16 @@
 import { MetaTags } from '@redwoodjs/web'
 
+import Wave from 'src/components/Wave/Wave'
+
 const WorkshopsPage = () => {
   return (
     <>
       <MetaTags title="Workshops" description="Workshops page" />
 
-      <div className="workshops-section">
-        <div className="workshops-inner">
-          <h1>Workshops</h1>
+      <div className="workshops-section copy-section">
+        <Wave title="workshops"></Wave>
+
+        <div className="workshops-inner copy-section__inner">
           <p>
             <span className="bold navy">Our Beginner Workshop</span> is perfect
             for someone who wants to experience the magic of screen printing for

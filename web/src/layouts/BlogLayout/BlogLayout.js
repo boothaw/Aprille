@@ -59,9 +59,12 @@ const BlogLayout = ({ children }) => {
                   </a>
                 </li>
                 <li>
-                  <a href="/#screenprints" onClick={switch_menu}>
+                  {/* <a href="/#screenprints" onClick={switch_menu}>
                     screenprints
-                  </a>
+                  </a> */}
+                  <Link to={routes.screenprinting()} onClick={switch_menu}>
+                    screenprinting
+                  </Link>
                 </li>
                 <li>
                   <a href="/#workshops" onClick={switch_menu}>

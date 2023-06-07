@@ -2,8 +2,8 @@ import { Link, routes } from '@redwoodjs/router'
 
 const Workshops = () => {
   return (
-    <div className="workshops-section">
-      <div className="workshops-inner">
+    <div className="workshops-section copy-section">
+      <div className="workshops-inner copy-section__inner">
         <p>
           <span className="bold navy">Our Beginner Workshop</span> is perfect
           for someone who wants to experience the magic of screen printing for
