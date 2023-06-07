@@ -48,14 +48,14 @@ const HomePage = () => {
             <h1>Aprille Zammit ~ Studio</h1>
             <p>Screenprinting, Photography, Adventure</p>
           </a>
-          <Wave title="photography"></Wave>
+          <Wave subtitle="photography"></Wave>
           {/* <PhotosCell></PhotosCell> */}
           {/* <div className="placeholder"></div> */}
-          <Wave title="screenprinting"></Wave>
+          <Wave subtitle="screenprinting"></Wave>
           <Screenprintcopy></Screenprintcopy>
           {/* <PrintsCell></PrintsCell> */}
           {/* <div className="placeholder"></div> */}
-          <Wave title="workshops"></Wave>
+          <Wave subtitle="workshops"></Wave>
           <Workshops></Workshops>
           {/* <PrintsCell></PrintsCell> */}
           {/* <div className="placeholder">
@@ -63,9 +63,9 @@ const HomePage = () => {
               See More
             </Link>
           </div> */}
-          <Wave title="projects"></Wave>
+          <Wave subtitle="projects"></Wave>
           {/* <div className="placeholder"></div> */}
-          {/* <ArticlesCell></ArticlesCell> */}
+          <ArticlesCell></ArticlesCell>
         </div>
       </>
     </>

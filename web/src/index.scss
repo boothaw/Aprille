@@ -55,15 +55,15 @@ a:hover{
 }
 
 
-/* Larger than phablet */
-@media (min-width: 550px) {
-  h1 { font-size: 5.0rem; }
-  h2 { font-size: 4.2rem; }
-  h3 { font-size: 3.6rem; }
-  h4 { font-size: 3.0rem; }
-  h5 { font-size: 2.4rem; }
-  h6 { font-size: 1.5rem; }
-}
+// /* Larger than phablet */
+// @media (min-width: 550px) {
+//   h1 { font-size: 5.0rem; }
+//   h2 { font-size: 4.2rem; }
+//   h3 { font-size: 3.6rem; }
+//   h4 { font-size: 3.0rem; }
+//   h5 { font-size: 2.4rem; }
+//   h6 { font-size: 1.5rem; }
+// }
 
 p {
   margin-top: 0;
@@ -404,7 +404,7 @@ input.error, textarea.error {
 	position: relative;
 
 
-	h2{
+	h2,h1 {
 		top: 0;
     bottom: 0;
     left: 0;
@@ -424,6 +424,10 @@ input.error, textarea.error {
     justify-content: center;
     align-items: center;
     height: fit-content;
+	}
+
+	h1{
+		font-size: 4.0rem;
 	}
 }
 
@@ -815,7 +819,7 @@ input.error, textarea.error {
 			margin: 0 auto 20px auto;
 		}
 
-		h2{
+		h1{
 			text-transform: capitalize;
 			text-align: center;
 			font-weight: bold;
@@ -827,11 +831,11 @@ input.error, textarea.error {
 			margin: 0 auto;
 		}
 
-		h2 a{
+		h1 a{
 			color: $navy;
 			text-decoration: none;
 		}
-		h2 a:hover{
+		h1 a:hover{
 			color: $blue;
 		}
 

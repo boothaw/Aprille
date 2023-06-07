@@ -1,7 +1,9 @@
-const Wave = (title) => {
+const Wave = (props) => {
+  console.log(props.subtitle)
   return (
-    <div className="wave-svg" id={title.title}>
-      {title.title && <h2>{title.title}</h2>}
+    <div className="wave-svg" id={(props?.subtitle, props?.subtitle)}>
+      {props?.subtitle && <h2>{props?.subtitle}</h2>}
+      {props?.title && <h1>{props?.title}</h1>}
       <svg
         xmlns="http://www.w3.org/2000/svg"
         xmlnsXlink="http://www.w3.org/1999/xlink"
@@ -13,7 +15,8 @@ const Wave = (title) => {
         }}
         xmlSpace="preserve"
         viewBox="69.42 64 1141.96 34.07"
-        {...title}
+        // {...props?.subtitle}
+        // {...props?.title}
       >
         <style type="text/css">
           {

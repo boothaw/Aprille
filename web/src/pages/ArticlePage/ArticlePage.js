@@ -10,7 +10,7 @@ const ArticlePage = ({ id }) => {
       <MetaTags title="Projects" description="Projects Page" />
 
       <ArticleCell id={id} />
-      <Wave title="More Like This"></Wave>
+      <Wave subtitle="More Like This"></Wave>
       <ArticlesCell exclude={id}></ArticlesCell>
     </>
   )

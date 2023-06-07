@@ -10,7 +10,7 @@ const PhotoPage = ({ id }) => {
       <MetaTags title="Photography" description="Photography Page" />
       <div className="photo-page">
         <PhotoCell id={id}></PhotoCell>
-        <Wave title="More Like This"></Wave>
+        <Wave subtitle="More Like This"></Wave>
         <PhotosCell exclude={id}></PhotosCell>
       </div>
     </>
