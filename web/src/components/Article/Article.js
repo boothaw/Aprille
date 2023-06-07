@@ -1,5 +1,7 @@
 import { Head } from '@redwoodjs/web'
 
+import Wave from 'src/components/Wave/Wave'
+
 const Article = ({ article }) => {
   const shrinker = (url) => {
     const parts = url.split('/')
@@ -53,10 +55,11 @@ const Article = ({ article }) => {
       <Head>
         <title>{article.title} | Projects</title>
       </Head>
-      <header>
+      {/* <header>
         <h1>{article.title}</h1>
         <div className="title-line"></div>
-      </header>
+      </header> */}
+      <Wave title={article.title}></Wave>
       <div className="article-body">
         <div className="article-copy">
           {article.body && article.body !== '' && <p>{article.body}</p>}

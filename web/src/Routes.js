@@ -22,6 +22,7 @@ const Routes = () => {
         <Route path="/screenprints/{id:Int}" page={ScreenprintScreenprintPage} name="screenprint" />
         <Route path="/screenprints" page={ScreenprintScreenprintsPage} name="screenprints" />
       </Set>
+
       <Set wrap={BlogLayout}>
         <Route path="/" page={HomePage} name="home" />
         <Route path="/about" page={AboutPage} name="about" />

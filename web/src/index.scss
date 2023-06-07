@@ -362,7 +362,7 @@ input.error, textarea.error {
 	// width: 90%;
 		// undo this
 	// padding: 140px 20px;
-	padding: 80px 0px;
+	padding: 0 0 80px 0px;
 	// max-width: 1600px;
 	// undo thes two
 	margin: auto;
@@ -533,6 +533,8 @@ input.error, textarea.error {
 //home
 
 .home{
+	padding-top: 40px;
+
 	.photography-section-grid{
 		padding-bottom: 0;
 	}
@@ -622,6 +624,8 @@ input.error, textarea.error {
 // individual photo page -- photocell
 
 .photo-page{
+	// padding-top: 80px;
+
 	.photo-container{
 		display: flex;
 		flex-direction: column;
