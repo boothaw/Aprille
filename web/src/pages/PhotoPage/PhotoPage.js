@@ -5,14 +5,12 @@ import PhotosCell from 'src/components/PhotosCell'
 import Wave from 'src/components/Wave/Wave'
 
 const PhotoPage = ({ id }) => {
-  console.log({ id })
   return (
     <>
       <MetaTags title="Photography" description="Photography Page" />
       <div className="photo-page">
         <PhotoCell id={id}></PhotoCell>
-        <Wave></Wave>
-        <h2 className="additional-work-title">More...</h2>
+        <Wave title="More Like This"></Wave>
         <PhotosCell exclude={id}></PhotosCell>
       </div>
     </>

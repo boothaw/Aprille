@@ -70,9 +70,9 @@ const AboutPage = () => {
             alt="Aprille"
           />
           <p>
-            <span className="navy">Aprille Zammit</span> can often be found in
-            her studio, covered in ink working on her next creative project. A
-            graphic designer and DIY screen printer who chose to follow her
+            <span className="navy bold">Aprille Zammit</span> can often be found
+            in her studio, covered in ink working on her next creative project.
+            A graphic designer and DIY screen printer who chose to follow her
             passion and devote much more time to this craft. Having studied at
             VCU in Richmond Virginia for 4 years, Aprille has always been in a
             rich creative environment and her dream is to help create a more

@@ -21,7 +21,7 @@ const TermsAndConditionsPage = () => {
             pebblesnail at seabass with faucet snail. Black clown goby, tilefish
             catshark sea grap.
           </p>
-          <p className="bold navy">Important Things</p>
+          <p className="bold navy">Important Things:</p>
           <p>
             Starfish, banana wrasse starfish wobbegong shark, grouper batfish
             ear snail are at the bottom. Floating ear snail fishy grow, amazing
@@ -29,7 +29,7 @@ const TermsAndConditionsPage = () => {
             snail fishy grow, amazing cold blooded seabass goatfish lionfish
             painted comber.
           </p>
-          <p className="bold navy">Other Stuff</p>
+          <p className="bold navy">Other Stuff:</p>
           <p>
             Quagga mussel grey whale mermaid appeared. Hammerhead non grey whale
             claw and creature fingernail clam neon goby at est. Colorful

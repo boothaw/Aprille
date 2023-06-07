@@ -50,11 +50,11 @@ const HomePage = () => {
           </a>
           <Wave title="photography"></Wave>
           {/* <PhotosCell></PhotosCell> */}
-          <div className="placeholder"></div>
+          {/* <div className="placeholder"></div> */}
           <Wave title="screenprinting"></Wave>
           <Screenprintcopy></Screenprintcopy>
-          <PrintsCell></PrintsCell>
-          <div className="placeholder"></div>
+          {/* <PrintsCell></PrintsCell> */}
+          {/* <div className="placeholder"></div> */}
           <Wave title="workshops"></Wave>
           <Workshops></Workshops>
           {/* <PrintsCell></PrintsCell> */}
@@ -64,7 +64,7 @@ const HomePage = () => {
             </Link>
           </div> */}
           <Wave title="projects"></Wave>
-          <div className="placeholder"></div>
+          {/* <div className="placeholder"></div> */}
           {/* <ArticlesCell></ArticlesCell> */}
         </div>
       </>
