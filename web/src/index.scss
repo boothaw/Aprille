@@ -659,6 +659,20 @@ input.error, textarea.error {
 	}
 }
 
+.pswp__bg{
+	background: $navy !important;
+	opacity: .8 !important;
+
+	.pswp__icn-shadow{
+		stroke: 0;
+	}
+}
+
+.pswp__icn{
+	fill: $off-white !important;
+	border: 0 !important;
+}
+
 .pswp__item {
 
 	.pswp__img{
