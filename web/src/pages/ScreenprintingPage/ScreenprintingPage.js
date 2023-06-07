@@ -56,7 +56,7 @@ const ScreenprintingPage = () => {
           </p>
           <p>
             Please read the{' '}
-            <Link className="learn-more" to={routes.workshops()}>
+            <Link className="learn-more" to={routes.termsAndConditions()}>
               Terms & Conditions
             </Link>
             .

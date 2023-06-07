@@ -23,13 +23,14 @@ const Routes = () => {
         <Route path="/screenprints" page={ScreenprintScreenprintsPage} name="screenprints" />
       </Set>
       <Set wrap={BlogLayout}>
-        <Route path="/about" page={AboutPage} name="about" />
         <Route path="/" page={HomePage} name="home" />
+        <Route path="/about" page={AboutPage} name="about" />
         <Route path="/contact" page={ContactPage} name="contact" />
         <Route path="/article/{id:Int}" page={ArticlePage} name="article" />
         <Route path="/photo/{id:Int}" page={PhotoPage} name="photo" />
         <Route path="/workshops" page={WorkshopsPage} name="workshops" />
         <Route path="/screenprinting" page={ScreenprintingPage} name="screenprinting" />
+        <Route path="/terms-and-conditions" page={TermsAndConditionsPage} name="termsAndConditions" />
       </Set>
 
       {/* administrative */}
