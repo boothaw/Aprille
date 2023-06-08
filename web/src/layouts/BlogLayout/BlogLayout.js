@@ -50,6 +50,21 @@ const BlogLayout = ({ children }) => {
             <nav ref={ref} className="nav">
               <ul>
                 <li>
+                  <Link to={routes.screenprinting()} onClick={switch_menu}>
+                    screenprinting
+                  </Link>
+                </li>
+                <li>
+                  <Link to={routes.workshops()}>workshops</Link>
+                </li>
+                <li>
+                  <Link to={routes.about()} onClick={switch_menu}>
+                    bio & contact
+                  </Link>
+                </li>
+              </ul>
+              {/* <ul>
+                <li>
                   <a href="/#photos" onClick={switch_menu}>
                     photography
                   </a>
@@ -74,14 +89,14 @@ const BlogLayout = ({ children }) => {
                     bio & contact
                   </Link>
                 </li>
-                {/* <li>
+              </ul> */}
+              {/* <li>
                   {isAuthenticated && (
                     <button type="button" onClick={logOut}>
                       Logout
                     </button>
                   )}
                 </li> */}
-              </ul>
             </nav>
             <button className="hamburger-container" onClick={switch_menu}>
               <div className="hamburger">
