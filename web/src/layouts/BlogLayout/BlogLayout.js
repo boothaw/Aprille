@@ -62,6 +62,19 @@ const BlogLayout = ({ children }) => {
                     bio & contact
                   </Link>
                 </li>
+                <li>
+                  <Link to={routes.screenprinting()} onClick={switch_menu}>
+                    screenprinting
+                  </Link>
+                </li>
+                <li>
+                  <Link to={routes.workshops()}>workshops</Link>
+                </li>
+                <li>
+                  <Link to={routes.about()} onClick={switch_menu}>
+                    bio & contact
+                  </Link>
+                </li>
               </ul>
               {/* <ul>
                 <li>
