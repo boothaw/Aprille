@@ -12,6 +12,7 @@ export const QUERY = gql`
     }
   }
 `
+//
 
 export const Loading = () => <div>Loading...</div>
 
