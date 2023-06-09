@@ -24,6 +24,8 @@ const ScreenprintForm = (props) => {
     // console.info(response)
   }
 
+  // console.log(props?.screenprint?.description)
+
   return (
     <div className="rw-form-wrapper">
       <Form onSubmit={onSubmit} error={props.error}>
@@ -33,7 +35,6 @@ const ScreenprintForm = (props) => {
           titleClassName="rw-form-error-title"
           listClassName="rw-form-error-list"
         />
-
         <Label
           name="title"
           className="rw-label"
@@ -41,7 +42,6 @@ const ScreenprintForm = (props) => {
         >
           Title
         </Label>
-
         <TextField
           name="title"
           defaultValue={props.screenprint?.title}
@@ -49,9 +49,7 @@ const ScreenprintForm = (props) => {
           errorClassName="rw-input rw-input-error"
           validation={{ required: true }}
         />
-
         <FieldError name="title" className="rw-field-error" />
-
         {/* <Label
           name="url"
           className="rw-label"
@@ -69,7 +67,6 @@ const ScreenprintForm = (props) => {
         />
 
         <FieldError name="url" className="rw-field-error" /> */}
-
         {/* <Label
           name="description"
           className="rw-label"
@@ -77,17 +74,14 @@ const ScreenprintForm = (props) => {
         >
           Description
         </Label>
-
         <TextField
           name="description"
           defaultValue={props.screenprint?.description}
           className="rw-input"
           errorClassName="rw-input rw-input-error"
           validation={{ required: true }}
-        />
-
-        <FieldError name="title" className="rw-field-error" /> */}
-
+        /> */}
+        <FieldError name="title" className="rw-field-error" />
         <PickerInline
           apikey={process.env.REDWOOD_ENV_FILESTACK_API_KEY}
           onSuccess={onFileUpload}
@@ -96,7 +90,6 @@ const ScreenprintForm = (props) => {
             style={{ display: url ? 'none' : 'block', height: '500px' }}
           ></div>
         </PickerInline>
-
         {url && (
           <div>
             <img
@@ -112,7 +105,6 @@ const ScreenprintForm = (props) => {
             </button>
           </div>
         )}
-
         <div className="rw-button-group">
           <Submit disabled={props.loading} className="rw-button rw-button-blue">
             Save
