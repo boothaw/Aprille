@@ -8,12 +8,10 @@ export const QUERY = gql`
       id
       title
       url
-      description
+      # description
     }
   }
 `
-//
-
 export const Loading = () => <div>Loading...</div>
 
 export const Empty = () => {
