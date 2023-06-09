@@ -1,4 +1,5 @@
 import { navigate, routes } from '@redwoodjs/router'
+
 import { useMutation } from '@redwoodjs/web'
 import { toast } from '@redwoodjs/web/toast'
 
@@ -23,7 +24,7 @@ const UPDATE_SCREENPRINT_MUTATION = gql`
       id
       title
       url
-      # description
+      description
     }
   }
 `

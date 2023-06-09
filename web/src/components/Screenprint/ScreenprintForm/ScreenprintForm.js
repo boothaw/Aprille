@@ -1,7 +1,3 @@
-import { useState } from 'react'
-
-import { PickerInline } from 'filestack-react'
-
 import {
   Form,
   FormError,
@@ -12,19 +8,9 @@ import {
 } from '@redwoodjs/forms'
 
 const ScreenprintForm = (props) => {
-  const [url, setUrl] = useState(props?.image?.url)
-
   const onSubmit = (data) => {
-    const dataWithUrl = Object.assign(data, { url })
-    props.onSave(dataWithUrl, props?.image?.id)
+    props.onSave(data, props?.screenprint?.id)
   }
-
-  const onFileUpload = (response) => {
-    setUrl(response.filesUploaded[0].url)
-    // console.info(response)
-  }
-
-  // console.log(props?.screenprint?.description)
 
   return (
     <div className="rw-form-wrapper">
@@ -35,6 +21,7 @@ const ScreenprintForm = (props) => {
           titleClassName="rw-form-error-title"
           listClassName="rw-form-error-list"
         />
+
         <Label
           name="title"
           className="rw-label"
@@ -42,6 +29,7 @@ const ScreenprintForm = (props) => {
         >
           Title
         </Label>
+
         <TextField
           name="title"
           defaultValue={props.screenprint?.title}
@@ -49,8 +37,10 @@ const ScreenprintForm = (props) => {
           errorClassName="rw-input rw-input-error"
           validation={{ required: true }}
         />
+
         <FieldError name="title" className="rw-field-error" />
-        {/* <Label
+
+        <Label
           name="url"
           className="rw-label"
           errorClassName="rw-label rw-label-error"
@@ -66,45 +56,25 @@ const ScreenprintForm = (props) => {
           validation={{ required: true }}
         />
 
-        <FieldError name="url" className="rw-field-error" /> */}
-        {/* <Label
+        <FieldError name="url" className="rw-field-error" />
+
+        <Label
           name="description"
           className="rw-label"
           errorClassName="rw-label rw-label-error"
         >
           Description
         </Label>
+
         <TextField
           name="description"
           defaultValue={props.screenprint?.description}
           className="rw-input"
           errorClassName="rw-input rw-input-error"
-          validation={{ required: true }}
-        /> */}
-        <FieldError name="title" className="rw-field-error" />
-        <PickerInline
-          apikey={process.env.REDWOOD_ENV_FILESTACK_API_KEY}
-          onSuccess={onFileUpload}
-        >
-          <div
-            style={{ display: url ? 'none' : 'block', height: '500px' }}
-          ></div>
-        </PickerInline>
-        {url && (
-          <div>
-            <img
-              alt={url}
-              src={url}
-              style={{ display: 'block', margin: '2rem 0' }}
-            />
-            <button
-              onClick={() => setUrl(null)}
-              className="rw-button rw-button-blue"
-            >
-              Replace Image
-            </button>
-          </div>
-        )}
+        />
+
+        <FieldError name="description" className="rw-field-error" />
+
         <div className="rw-button-group">
           <Submit disabled={props.loading} className="rw-button rw-button-blue">
             Save

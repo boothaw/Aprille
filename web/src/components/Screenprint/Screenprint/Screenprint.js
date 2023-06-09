@@ -51,6 +51,10 @@ const Screenprint = ({ screenprint }) => {
               <th>Url</th>
               <td>{screenprint.url}</td>
             </tr>
+            <tr>
+              <th>Description</th>
+              <td>{screenprint.description}</td>
+            </tr>
           </tbody>
         </table>
       </div>
