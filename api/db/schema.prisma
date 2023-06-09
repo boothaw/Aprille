@@ -60,4 +60,5 @@ model Screenprint {
   id    Int    @id @default(autoincrement())
   title String
   url   String
+	description String?
 }

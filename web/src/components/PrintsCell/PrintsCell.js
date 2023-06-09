@@ -7,6 +7,7 @@ export const QUERY = gql`
       id
       title
       url
+      description
     }
   }
 `
@@ -31,8 +32,20 @@ export const Success = ({ screenprints }) => {
   // }
   return (
     <div className="photography-section-grid screenprint-section-grid">
-      <Gallery withCaption>
-        {screenprints.slice(0, 20).map((photo) => {
+      {screenprints.slice(0, 4).map((photo) => {
+        console.log(photo.title)
+        return (
+          <div
+            className="photo-container photo-thumbnail print-container"
+            key={photo.id}
+          >
+            <h3>{photo.title}</h3>
+            <p>{photo.description}!</p>
+          </div>
+        )
+      })}
+      {/* <Gallery withCaption>
+        {screenprints.slice(0, 4).map((photo) => {
           console.log(photo.title)
           return (
             <div
@@ -48,8 +61,7 @@ export const Success = ({ screenprints }) => {
                 max-height="100%"
               >
                 {({ ref, open }) => (
-                  /* eslint-disable */
-                  <img
+                   <img
                     tabIndex={0}
                     alt={photo.title}
                     ref={ref}
@@ -62,7 +74,7 @@ export const Success = ({ screenprints }) => {
             </div>
           )
         })}
-      </Gallery>
+      </Gallery> */}
     </div>
   )
 }
