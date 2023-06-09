@@ -70,6 +70,24 @@ const ScreenprintForm = (props) => {
 
         <FieldError name="url" className="rw-field-error" /> */}
 
+        {/* <Label
+          name="description"
+          className="rw-label"
+          errorClassName="rw-label rw-label-error"
+        >
+          Description
+        </Label>
+
+        <TextField
+          name="description"
+          defaultValue={props.screenprint?.description}
+          className="rw-input"
+          errorClassName="rw-input rw-input-error"
+          validation={{ required: true }}
+        />
+
+        <FieldError name="title" className="rw-field-error" /> */}
+
         <PickerInline
           apikey={process.env.REDWOOD_ENV_FILESTACK_API_KEY}
           onSuccess={onFileUpload}

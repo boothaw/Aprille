@@ -7,7 +7,7 @@ export const QUERY = gql`
       id
       title
       url
-      # description
+      description
     }
   }
 `
