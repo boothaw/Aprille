@@ -11,6 +11,7 @@ export const QUERY = gql`
       id
       title
       url
+      description
     }
   }
 `
@@ -23,6 +24,7 @@ const UPDATE_SCREENPRINT_MUTATION = gql`
       id
       title
       url
+      description
     }
   }
 `

@@ -3,7 +3,7 @@ export const schema = gql`
     id: Int!
     title: String!
     url: String!
-    description: String!
+    description: String
   }
 
   type Query {
@@ -14,11 +14,13 @@ export const schema = gql`
   input CreateScreenprintInput {
     title: String!
     url: String!
+    description: String
   }
 
   input UpdateScreenprintInput {
     title: String
     url: String
+    description: String
   }
 
   type Mutation {
