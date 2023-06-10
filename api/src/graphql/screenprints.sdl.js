@@ -3,21 +3,24 @@ export const schema = gql`
     id: Int!
     title: String!
     url: String!
+    description: String
   }
 
   type Query {
-    screenprints: [Screenprint!]! @requireAuth
-    screenprint(id: Int!): Screenprint @requireAuth
+    screenprints: [Screenprint!]! @skipAuth
+    screenprint(id: Int!): Screenprint @skipAuth
   }
 
   input CreateScreenprintInput {
     title: String!
     url: String!
+    description: String
   }
 
   input UpdateScreenprintInput {
     title: String
     url: String
+    description: String
   }
 
   type Mutation {

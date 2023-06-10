@@ -52,7 +52,7 @@ const HomePage = () => {
           {/* <PhotosCell></PhotosCell> */}
           {/* <div className="placeholder"></div> */}
           <Wave subtitle="screenprinting"></Wave>
-          {/* <Screenprintcopy></Screenprintcopy> */}
+          <Screenprintcopy></Screenprintcopy>
           {/* <PrintsCell></PrintsCell> */}
           {/* <div className="placeholder"></div> */}
           <Wave subtitle="workshops"></Wave>

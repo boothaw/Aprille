@@ -48,6 +48,7 @@ const ScreenprintsList = ({ screenprints }) => {
             <th>Id</th>
             <th>Title</th>
             <th>Url</th>
+            <th>Description</th>
             <th>&nbsp;</th>
           </tr>
         </thead>
@@ -66,6 +67,7 @@ const ScreenprintsList = ({ screenprints }) => {
                   />
                 </a>
               </td>
+              <td>{truncate(screenprint.description)}</td>
               <td>
                 <nav className="rw-table-actions">
                   <Link

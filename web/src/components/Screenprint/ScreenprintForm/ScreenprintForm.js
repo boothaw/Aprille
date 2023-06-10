@@ -16,7 +16,7 @@ const ScreenprintForm = (props) => {
 
   const onSubmit = (data) => {
     const dataWithUrl = Object.assign(data, { url })
-    props.onSave(dataWithUrl, props?.image?.id)
+    props.onSave(dataWithUrl, props?.screenprint?.id)
   }
 
   const onFileUpload = (response) => {
@@ -70,15 +70,41 @@ const ScreenprintForm = (props) => {
 
         <FieldError name="url" className="rw-field-error" /> */}
 
+        <Label
+          name="description"
+          className="rw-label"
+          errorClassName="rw-label rw-label-error"
+        >
+          Description
+        </Label>
+
+        <TextField
+          name="description"
+          defaultValue={props.screenprint?.description}
+          className="rw-input"
+          errorClassName="rw-input rw-input-error"
+        />
+
+        <FieldError name="description" className="rw-field-error" />
+
+        <FieldError name="title" className="rw-field-error" />
+
+        <Label
+          name="url"
+          className="rw-label"
+          errorClassName="rw-label rw-label-error"
+        >
+          Image -- {props.screenprint?.url}
+        </Label>
+
         <PickerInline
           apikey={process.env.REDWOOD_ENV_FILESTACK_API_KEY}
-          onSuccess={onFileUpload}
+          onUploadDone={onFileUpload}
         >
           <div
             style={{ display: url ? 'none' : 'block', height: '500px' }}
           ></div>
         </PickerInline>
-
         {url && (
           <div>
             <img

@@ -7,6 +7,7 @@ export const QUERY = gql`
       id
       title
       url
+      description
     }
   }
 `
@@ -32,8 +33,7 @@ export const Success = ({ screenprints }) => {
   return (
     <div className="photography-section-grid screenprint-section-grid">
       <Gallery withCaption>
-        {screenprints.slice(0, 20).map((photo) => {
-          console.log(photo.title)
+        {screenprints.slice(10, 15).map((photo) => {
           return (
             <div
               className="photo-container photo-thumbnail print-container"
@@ -43,12 +43,11 @@ export const Success = ({ screenprints }) => {
                 alt={photo.title}
                 original={shrinker(photo.url)}
                 thumbnail={shrinker(photo.url)}
-                caption={photo.title}
+                caption={photo?.description || photo.title}
                 width="auto"
                 max-height="100%"
               >
                 {({ ref, open }) => (
-                  /* eslint-disable */
                   <img
                     tabIndex={0}
                     alt={photo.title}

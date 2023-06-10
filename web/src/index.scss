@@ -272,6 +272,9 @@ textarea.error {
 
     .hamburger-container {
       border-radius: 0;
+      height: auto;
+      width: 100%;
+      max-width: 60px;
     }
     .hamburger {
       // border: 4px solid $yellow;
@@ -307,6 +310,7 @@ textarea.error {
   flex-direction: column;
   align-items: center;
   padding-top: 8px;
+  width: 100%;
 
   h1 {
     color: $yellow;
@@ -463,7 +467,7 @@ textarea.error {
     justify-content: center;
     align-items: center;
     height: fit-content;
-    max-width: 50%;
+    // max-width: 50%;
   }
 
   h1 {
@@ -573,7 +577,7 @@ textarea.error {
 //home
 
 .home {
-  padding-top: 0px;
+  padding-top: 40px;
 
   .photography-section-grid {
     padding-bottom: 0;
@@ -720,11 +724,12 @@ textarea.error {
   .pswp__img {
     object-fit: contain;
   }
+}
 
-  .pswp__default-caption {
-    // color: $off-white !important;
-    // border: 2px solid pink;
-  }
+.pswp__default-caption {
+  color: $off-white !important;
+  max-width: 700px;
+  margin: auto;
 }
 
 // projects section
@@ -1024,11 +1029,15 @@ textarea.error {
     padding-top: 0px;
   }
   .wave-svg {
-    padding: 40px 0;
+    // padding: 40px 0;
+
+    h1 {
+      font-size: 2.5rem;
+    }
   }
   .aprille-name {
-    position: static;
-    transform: none;
+    // position: static;
+    // transform: none;
     padding: 10px 0 40px 0;
 
     h1 {
