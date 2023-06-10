@@ -34,6 +34,9 @@ export const Success = ({ screenprints }) => {
   return (
     <div className="photography-section-grid screenprint-section-grid">
       {screenprints.slice(0, 4).map((photo) => {
+        {
+          /* console.log(photo.title) */
+        }
         return (
           <div
             className="photo-container photo-thumbnail print-container"

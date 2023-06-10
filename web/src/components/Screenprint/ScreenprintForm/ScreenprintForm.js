@@ -1,3 +1,7 @@
+import { useState } from 'react'
+
+import { PickerInline } from 'filestack-react'
+
 import {
   Form,
   FormError,
@@ -8,8 +12,16 @@ import {
 } from '@redwoodjs/forms'
 
 const ScreenprintForm = (props) => {
+  const [url, setUrl] = useState(props?.image?.url)
+
   const onSubmit = (data) => {
-    props.onSave(data, props?.screenprint?.id)
+    const dataWithUrl = Object.assign(data, { url })
+    props.onSave(dataWithUrl, props?.image?.id)
+  }
+
+  const onFileUpload = (response) => {
+    setUrl(response.filesUploaded[0].url)
+    // console.info(response)
   }
 
   return (
@@ -40,7 +52,7 @@ const ScreenprintForm = (props) => {
 
         <FieldError name="title" className="rw-field-error" />
 
-        <Label
+        {/* <Label
           name="url"
           className="rw-label"
           errorClassName="rw-label rw-label-error"
@@ -56,7 +68,7 @@ const ScreenprintForm = (props) => {
           validation={{ required: true }}
         />
 
-        <FieldError name="url" className="rw-field-error" />
+        <FieldError name="url" className="rw-field-error" /> */}
 
         <Label
           name="description"
@@ -72,6 +84,31 @@ const ScreenprintForm = (props) => {
           className="rw-input"
           errorClassName="rw-input rw-input-error"
         />
+
+        <FieldError name="title" className="rw-field-error" />
+        <PickerInline
+          apikey={process.env.REDWOOD_ENV_FILESTACK_API_KEY}
+          onSuccess={onFileUpload}
+        >
+          <div
+            style={{ display: url ? 'none' : 'block', height: '500px' }}
+          ></div>
+        </PickerInline>
+        {url && (
+          <div>
+            <img
+              alt={url}
+              src={url}
+              style={{ display: 'block', margin: '2rem 0' }}
+            />
+            <button
+              onClick={() => setUrl(null)}
+              className="rw-button rw-button-blue"
+            >
+              Replace Image
+            </button>
+          </div>
+        )}
 
         <FieldError name="description" className="rw-field-error" />
 

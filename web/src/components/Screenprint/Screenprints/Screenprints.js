@@ -34,6 +34,12 @@ const ScreenprintsList = ({ screenprints }) => {
     }
   }
 
+  const thumbnail = (url) => {
+    const parts = url.split('/')
+    parts.splice(3, 0, 'resize=width:100')
+    return parts.join('/')
+  }
+
   return (
     <div className="rw-segment rw-table-wrapper-responsive">
       <table className="rw-table">
@@ -51,7 +57,16 @@ const ScreenprintsList = ({ screenprints }) => {
             <tr key={screenprint.id}>
               <td>{truncate(screenprint.id)}</td>
               <td>{truncate(screenprint.title)}</td>
-              <td>{truncate(screenprint.url)}</td>
+              <td>
+                {' '}
+                <a href={screenprint.url} target="_blank" rel="noreferrer">
+                  <img
+                    alt={screenprint.title}
+                    src={thumbnail(screenprint.url)}
+                    style={{ maxWidth: '50px' }}
+                  />
+                </a>
+              </td>
               <td>{truncate(screenprint.description)}</td>
               <td>
                 <nav className="rw-table-actions">
