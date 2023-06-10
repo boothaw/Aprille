@@ -7,8 +7,8 @@ export const schema = gql`
   }
 
   type Query {
-    screenprints: [Screenprint!]! @requireAuth
-    screenprint(id: Int!): Screenprint @requireAuth
+    screenprints: [Screenprint!]! @skipAuth
+    screenprint(id: Int!): Screenprint @skipAuth
   }
 
   input CreateScreenprintInput {
