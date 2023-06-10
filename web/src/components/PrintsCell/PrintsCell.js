@@ -30,23 +30,10 @@ export const Success = ({ screenprints }) => {
   // const options = {
   //   gallery: '#gallery--with-custom-caption',
   // }
-  console.log(screenprints[0])
   return (
     <div className="photography-section-grid screenprint-section-grid">
-      {screenprints.slice(0, 4).map((photo) => {
-        return (
-          <div
-            className="photo-container photo-thumbnail print-container"
-            key={photo.id}
-          >
-            <h3>{photo.title}</h3>
-            <p>{photo.description}!</p>
-          </div>
-        )
-      })}
-      {/* <Gallery withCaption>
-        {screenprints.slice(0, 4).map((photo) => {
-          console.log(photo.title)
+      <Gallery withCaption>
+        {screenprints.slice(10, 15).map((photo) => {
           return (
             <div
               className="photo-container photo-thumbnail print-container"
@@ -56,12 +43,12 @@ export const Success = ({ screenprints }) => {
                 alt={photo.title}
                 original={shrinker(photo.url)}
                 thumbnail={shrinker(photo.url)}
-                caption={photo.title}
+                caption={photo?.description || photo.title}
                 width="auto"
                 max-height="100%"
               >
                 {({ ref, open }) => (
-                   <img
+                  <img
                     tabIndex={0}
                     alt={photo.title}
                     ref={ref}
@@ -74,7 +61,7 @@ export const Success = ({ screenprints }) => {
             </div>
           )
         })}
-      </Gallery> */}
+      </Gallery>
     </div>
   )
 }
