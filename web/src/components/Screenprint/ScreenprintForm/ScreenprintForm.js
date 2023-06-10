@@ -85,6 +85,8 @@ const ScreenprintForm = (props) => {
           errorClassName="rw-input rw-input-error"
         />
 
+        <FieldError name="description" className="rw-field-error" />
+
         <FieldError name="title" className="rw-field-error" />
         <PickerInline
           apikey={process.env.REDWOOD_ENV_FILESTACK_API_KEY}
@@ -109,8 +111,6 @@ const ScreenprintForm = (props) => {
             </button>
           </div>
         )}
-
-        <FieldError name="description" className="rw-field-error" />
 
         <div className="rw-button-group">
           <Submit disabled={props.loading} className="rw-button rw-button-blue">
