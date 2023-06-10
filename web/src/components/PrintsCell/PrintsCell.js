@@ -48,6 +48,7 @@ export const Success = ({ screenprints }) => {
                 max-height="100%"
               >
                 {({ ref, open }) => (
+                  /* eslint-disable */
                   <img
                     tabIndex={0}
                     alt={photo.title}
