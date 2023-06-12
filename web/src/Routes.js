@@ -16,13 +16,6 @@ import BlogLayout from './layouts/BlogLayout/BlogLayout'
 const Routes = () => {
   return (
     <Router>
-      <Set wrap={ScaffoldLayout} title="Screenprints" titleTo="screenprints" buttonLabel="New Screenprint" buttonTo="newScreenprint">
-        <Route path="/screenprints/new" page={ScreenprintNewScreenprintPage} name="newScreenprint" />
-        <Route path="/screenprints/{id:Int}/edit" page={ScreenprintEditScreenprintPage} name="editScreenprint" />
-        <Route path="/screenprints/{id:Int}" page={ScreenprintScreenprintPage} name="screenprint" />
-        <Route path="/screenprints" page={ScreenprintScreenprintsPage} name="screenprints" />
-      </Set>
-
       <Set wrap={BlogLayout}>
         <Route path="/" page={HomePage} name="home" />
         <Route path="/about" page={AboutPage} name="about" />
@@ -61,6 +54,12 @@ const Routes = () => {
           <Route path="/admin/images/{id:Int}/edit" page={ImageEditImagePage} name="editImage" />
           <Route path="/admin/images/{id:Int}" page={ImageImagePage} name="image" />
           <Route path="/admin/images" page={ImageImagesPage} name="images" />
+        </Set>
+        <Set wrap={ScaffoldLayout} title="Screenprints" titleTo="screenprints" buttonLabel="New Screenprint" buttonTo="newScreenprint">
+          <Route path="/admin/screenprints/new" page={ScreenprintNewScreenprintPage} name="newScreenprint" />
+          <Route path="/admin/screenprints/{id:Int}/edit" page={ScreenprintEditScreenprintPage} name="editScreenprint" />
+          <Route path="/admin/screenprints/{id:Int}" page={ScreenprintScreenprintPage} name="screenprint" />
+          <Route path="/admin/screenprints" page={ScreenprintScreenprintsPage} name="screenprints" />
         </Set>
       </Private>
       <Set wrap={ScaffoldLayout} title="Posts" titleTo="posts" buttonLabel="New Post" buttonTo="newPost"></Set>
