@@ -133,9 +133,9 @@ const LoginPage = ({ type }) => {
         PIN next time.
       </p>
       <div className="rw-button-group">
-        <button className="rw-button rw-button-blue" onClick={onRegister}>
+        {/* <button className="rw-button rw-button-blue" onClick={onRegister}>
           Turn On
-        </button>
+        </button> */}
         <button className="rw-button" onClick={onSkip}>
           Skip for now
         </button>

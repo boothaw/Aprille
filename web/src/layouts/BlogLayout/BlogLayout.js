@@ -74,13 +74,13 @@ const BlogLayout = ({ children }) => {
                     bio & contact
                   </Link>
                 </li>
-                {/* <li>
+                <li>
                   {isAuthenticated && (
                     <button type="button" onClick={logOut}>
                       Logout
                     </button>
                   )}
-                </li> */}
+                </li>
               </ul>
             </nav>
             <button className="hamburger-container" onClick={switch_menu}>

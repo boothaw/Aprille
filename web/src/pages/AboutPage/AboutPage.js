@@ -80,7 +80,7 @@ const AboutPage = () => {
             her inspiration from nature and the oceans, being a lover of any and
             all water-related sports. She can also rarely be seen without a film
             camera hanging from her neck, as film photography is just one of her
-            other passions
+            other passions.
           </p>
 
           <h2>Say Hello!</h2>
