@@ -49,7 +49,7 @@ const BlogLayout = ({ children }) => {
           >
             <nav ref={ref} className="nav">
               <ul>
-                <li>
+                {/* <li>
                   <a href="/#photos" onClick={switch_menu}>
                     photography
                   </a>
@@ -58,6 +58,11 @@ const BlogLayout = ({ children }) => {
                   <a href="/#projects" onClick={switch_menu}>
                     projects
                   </a>
+                </li> */}
+                <li>
+                  <Link to={routes.home()} onClick={switch_menu}>
+                    portfolio
+                  </Link>
                 </li>
                 <li>
                   <Link to={routes.screenprinting()} onClick={switch_menu}>
@@ -74,13 +79,13 @@ const BlogLayout = ({ children }) => {
                     bio & contact
                   </Link>
                 </li>
-                <li>
+                {/* <li>
                   {isAuthenticated && (
                     <button type="button" onClick={logOut}>
                       logout
                     </button>
                   )}
-                </li>
+                </li> */}
               </ul>
             </nav>
             <button className="hamburger-container" onClick={switch_menu}>
