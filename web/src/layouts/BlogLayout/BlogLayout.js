@@ -70,10 +70,15 @@ const BlogLayout = ({ children }) => {
                   </Link>
                 </li>
                 <li>
+                  <Link to={routes.workshops()} onClick={switch_menu}>
+                    workshops
+                  </Link>
+                </li>
+                {/* <li>
                   <a href="/#workshops" onClick={switch_menu}>
                     workshops
                   </a>
-                </li>
+                </li> */}
                 <li>
                   <Link to={routes.about()} onClick={switch_menu}>
                     bio & contact
