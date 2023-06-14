@@ -47,7 +47,7 @@ const Workshops = () => {
           Failure to do so will not guarantee a full refund.
         </p> */}
         <Link className="learn-more" to={routes.workshops()}>
-          Learn More
+          Experience The Magic
         </Link>
       </div>
     </div>

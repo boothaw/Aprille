@@ -4,6 +4,7 @@ import { Link, routes } from '@redwoodjs/router'
 import { useLocation } from '@redwoodjs/router'
 import { MetaTags } from '@redwoodjs/web'
 
+import AboutCopy from 'src/components/AboutCopy/AboutCopy'
 import ArticlesCell from 'src/components/ArticlesCell'
 import PhotosCell from 'src/components/PhotosCell'
 import PrintsCell from 'src/components/PrintsCell/PrintsCell.js'
@@ -67,6 +68,7 @@ const HomePage = () => {
           {/* <div className="placeholder"></div> */}
           {/* <ArticlesCell></ArticlesCell> */}
           <Wave subtitle="bio & contact"></Wave>
+          <AboutCopy></AboutCopy>
         </div>
       </>
     </>

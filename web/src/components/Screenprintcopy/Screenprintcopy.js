@@ -15,7 +15,7 @@ const Screenprintcopy = () => {
         </p>
 
         <Link className="learn-more" to={routes.screenprinting()}>
-          Learn More
+          Start Printing
         </Link>
       </div>
     </div>
