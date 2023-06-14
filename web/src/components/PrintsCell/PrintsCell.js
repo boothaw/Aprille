@@ -27,12 +27,9 @@ const shrinker = (url) => {
 }
 
 export const Success = ({ screenprints }) => {
-  // const options = {
-  //   gallery: '#gallery--with-custom-caption',
-  // }
   return (
     <div className="photography-section-grid screenprint-section-grid">
-      <Gallery withCaption>
+      <Gallery>
         {screenprints.slice(10, 15).map((photo) => {
           return (
             <div
@@ -43,20 +40,22 @@ export const Success = ({ screenprints }) => {
                 alt={photo.title}
                 original={shrinker(photo.url)}
                 thumbnail={shrinker(photo.url)}
-                caption={photo?.description || photo.title}
                 width="auto"
                 max-height="100%"
               >
                 {({ ref, open }) => (
-                  /* eslint-disable */
-                  <img
-                    tabIndex={0}
-                    alt={photo.title}
+                  <div
+                    role="presentation"
                     ref={ref}
                     onClick={open}
                     onKeyDown={open}
-                    src={shrinker(photo.url)}
-                  />
+                    className="photo-container photo-thumbnail print-container"
+                  >
+                    <img alt={photo.title} src={shrinker(photo.url)} />
+                    <div className="hover-card">
+                      <h2>{photo.title}</h2>
+                    </div>
+                  </div>
                 )}
               </Item>
             </div>
