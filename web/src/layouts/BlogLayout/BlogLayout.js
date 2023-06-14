@@ -77,7 +77,7 @@ const BlogLayout = ({ children }) => {
                 <li>
                   {isAuthenticated && (
                     <button type="button" onClick={logOut}>
-                      Logout
+                      logout
                     </button>
                   )}
                 </li>
