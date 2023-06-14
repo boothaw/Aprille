@@ -30,7 +30,7 @@ export const Success = ({ screenprints }) => {
   return (
     <div className="photography-section-grid screenprint-section-grid">
       <Gallery>
-        {screenprints.slice(10, 15).map((photo) => {
+        {screenprints.slice(0, 25).map((photo) => {
           return (
             <div
               className="photo-container photo-thumbnail print-container"

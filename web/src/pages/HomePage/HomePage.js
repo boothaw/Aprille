@@ -53,7 +53,7 @@ const HomePage = () => {
           {/* <div className="placeholder"></div> */}
           <Wave subtitle="screenprinting"></Wave>
           <Screenprintcopy></Screenprintcopy>
-          <PrintsCell></PrintsCell>
+          {/* <PrintsCell></PrintsCell> */}
           {/* <div className="placeholder"></div> */}
           <Wave subtitle="workshops"></Wave>
           <Workshops></Workshops>
@@ -66,6 +66,7 @@ const HomePage = () => {
           <Wave subtitle="projects"></Wave>
           {/* <div className="placeholder"></div> */}
           {/* <ArticlesCell></ArticlesCell> */}
+          <Wave subtitle="bio & contact"></Wave>
         </div>
       </>
     </>
