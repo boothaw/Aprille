@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useRef } from 'react'
 
 import emailjs from '@emailjs/browser'
+import ReCAPTCHA from 'react-google-recaptcha'
 
 import {
   Form,
@@ -27,7 +28,7 @@ const CREATE_CONTACT = gql`
 `
 
 const AboutPage = () => {
-  // const form = useRef()
+  const recaptchaRef = useRef()
 
   const formMethods = useForm()
   const [create, { loading, error }] = useMutation(CREATE_CONTACT, {
@@ -36,7 +37,11 @@ const AboutPage = () => {
     },
   })
 
-  const onSubmit = (data) => {
+  const onSubmit = async (data) => {
+    // const token = await recaptchaRef.current.executeAsync()
+
+    // console.log(token)
+
     emailjs
       .send('service_n4oomp8', 'template_yl07ra6', data, '_Tp0IwFf5UB99eAmt')
       .then(
@@ -132,9 +137,10 @@ const AboutPage = () => {
             <FieldError name="message" className="error" />
             <Submit disabled={loading}>Submit</Submit>
             {/* <ReCAPTCHA
-            className="recaptcha"
-            sitekey="`${process.env.REDWOOD_RECAPTCHA_APP_SITE_KEY}`"
-          /> */}
+              ref={recaptchaRef}
+              // size="invisible"
+              sitekey="6LeInjUmAAAAAN8OOWg2l1HOotiCLjqMYhivL834"
+            /> */}
           </Form>
         </div>
       </div>
