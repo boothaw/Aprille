@@ -16,6 +16,16 @@ import BlogLayout from './layouts/BlogLayout/BlogLayout'
 const Routes = () => {
   return (
     <Router>
+      <Set wrap={ScaffoldLayout} title="Works" titleTo="works" buttonLabel="New Work" buttonTo="newWork">
+        <Route path="/works/new" page={WorkNewWorkPage} name="newWork" />
+        <Route path="/works/{id:Int}/edit" page={WorkEditWorkPage} name="editWork" />
+        <Route path="/works/{id:Int}" page={WorkWorkPage} name="work" />
+        <Route path="/works" page={WorkWorksPage} name="works" />
+      </Set>
+      <Set wrap={ScaffoldLayout} title="Works" titleTo="works" buttonLabel="New Work" buttonTo="newWork">
+      </Set>
+      <Set wrap={ScaffoldLayout} title="ClientWorks" titleTo="clientWorks" buttonLabel="New ClientWork" buttonTo="newClientWork">
+      </Set>
       <Set wrap={BlogLayout}>
         <Route path="/" page={HomePage} name="home" />
         <Route path="/about" page={AboutPage} name="about" />

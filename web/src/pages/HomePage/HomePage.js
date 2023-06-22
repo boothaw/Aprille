@@ -10,6 +10,7 @@ import PhotosCell from 'src/components/PhotosCell'
 import PrintsCell from 'src/components/PrintsCell/PrintsCell.js'
 import Screenprintcopy from 'src/components/Screenprintcopy/Screenprintcopy'
 import Wave from 'src/components/Wave/Wave'
+import WorkprintsCell from 'src/components/WorkprintsCell'
 import Workshops from 'src/components/Workshops/Workshops'
 
 const HomePage = () => {
@@ -58,7 +59,7 @@ const HomePage = () => {
           {/* <div className="placeholder"></div> */}
           <Wave subtitle="workshops"></Wave>
           <Workshops></Workshops>
-          {/* <PrintsCell></PrintsCell> */}
+          <WorkprintsCell></WorkprintsCell>
           {/* <div className="placeholder">
             <Link className="learn-more" to={routes.workshops()}>
               See More
