@@ -38,28 +38,32 @@ const AboutPage = () => {
   })
 
   const onSubmit = async (data) => {
-    // const token = await recaptchaRef.current.executeAsync()
+    const token = await recaptchaRef.current.executeAsync()
 
-    // console.log(token)
+    console.log('token', token)
 
-    emailjs
-      .send('service_n4oomp8', 'template_yl07ra6', data, '_Tp0IwFf5UB99eAmt')
-      .then(
-        () => {
-          // show the user a success message
-          toast.success('Thank you for your message!')
+    if (token) {
+      emailjs
+        .send('service_n4oomp8', 'template_yl07ra6', data, '_Tp0IwFf5UB99eAmt')
+        .then(
+          () => {
+            // show the user a success message
+            toast.success('Thank you for your message!')
+          },
+          (error) => {
+            // show the user an error
+            console.log(error)
+          }
+        )
+
+      create({
+        variables: {
+          input: data,
         },
-        (error) => {
-          // show the user an error
-          console.log(error)
-        }
-      )
-
-    create({
-      variables: {
-        input: data,
-      },
-    })
+      })
+    } else {
+      toast.error('Sorry, you look like a robot. Try again later.')
+    }
   }
 
   return (
@@ -136,11 +140,11 @@ const AboutPage = () => {
             />
             <FieldError name="message" className="error" />
             <Submit disabled={loading}>Submit</Submit>
-            {/* <ReCAPTCHA
+            <ReCAPTCHA
               ref={recaptchaRef}
-              // size="invisible"
+              size="invisible"
               sitekey="6LeInjUmAAAAAN8OOWg2l1HOotiCLjqMYhivL834"
-            /> */}
+            />
           </Form>
         </div>
       </div>
