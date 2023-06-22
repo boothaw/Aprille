@@ -1,6 +1,7 @@
 import { MetaTags } from '@redwoodjs/web'
 
 import Wave from 'src/components/Wave/Wave'
+import WorkprintsCell from 'src/components/WorkprintsCell'
 
 const WorkshopsPage = () => {
   return (
@@ -55,6 +56,8 @@ const WorkshopsPage = () => {
           </p>
         </div>
       </div>
+      <Wave subtitle="Student Work"></Wave>
+      <WorkprintsCell></WorkprintsCell>
     </>
   )
 }

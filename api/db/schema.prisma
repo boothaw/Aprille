@@ -62,3 +62,10 @@ model Screenprint {
   url   String
 	description String?
 }
+
+model Work {
+  id    Int    @id @default(autoincrement())
+  title String
+  url   String
+	description String?
+}
