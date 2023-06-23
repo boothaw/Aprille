@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useRef, useState } from 'react'
 
 import emailjs from '@emailjs/browser'
+import ReCAPTCHA from 'react-google-recaptcha'
 
 import {
   Form,
@@ -27,35 +28,48 @@ const CREATE_CONTACT = gql`
 `
 
 const AboutPage = () => {
-  // const form = useRef()
-
+  // const [showCaptcha, setShowCaptcha] = useState(false)
+  const recaptchaRef = useRef()
   const formMethods = useForm()
+
   const [create, { loading, error }] = useMutation(CREATE_CONTACT, {
     onCompleted: () => {
       formMethods.reset()
     },
   })
 
-  const onSubmit = (data) => {
-    emailjs
-      .send('service_n4oomp8', 'template_yl07ra6', data, '_Tp0IwFf5UB99eAmt')
-      .then(
-        () => {
-          // show the user a success message
-          toast.success('Thank you for your message!')
-        },
-        (error) => {
-          // show the user an error
-          console.log(error)
-        }
-      )
+  const onSubmit = async (data) => {
+    const token = await recaptchaRef.current.executeAsync()
 
-    create({
-      variables: {
-        input: data,
-      },
-    })
+    // console.log(token)
+
+    if (token) {
+      emailjs
+        .send('service_n4oomp8', 'template_yl07ra6', data, '_Tp0IwFf5UB99eAmt')
+        .then(
+          () => {
+            // show the user a success message
+            toast.success('Thank you for your message!')
+          },
+          (error) => {
+            // show the user an error
+            console.log(error)
+          }
+        )
+
+      create({
+        variables: {
+          input: data,
+        },
+      })
+    } else {
+      toast.error('Sorry, you look like a robot. Try again later.')
+    }
   }
+
+  // function showReCaptcha() {
+  //   !showCaptcha ? setShowCaptcha(true) : setShowCaptcha(true)
+  // }
 
   return (
     <>
@@ -88,6 +102,7 @@ const AboutPage = () => {
           <Form
             className="contact-form"
             onSubmit={onSubmit}
+            // onClick={showReCaptcha}
             formMethods={formMethods}
             error={error}
           >
@@ -131,10 +146,14 @@ const AboutPage = () => {
             />
             <FieldError name="message" className="error" />
             <Submit disabled={loading}>Submit</Submit>
-            {/* <ReCAPTCHA
-            className="recaptcha"
-            sitekey="`${process.env.REDWOOD_RECAPTCHA_APP_SITE_KEY}`"
-          /> */}
+            <ReCAPTCHA
+              // className={`${
+              //   showCaptcha ? 'active-recaptcha' : 'hidden-recaptcha'
+              // }`}
+              ref={recaptchaRef}
+              size="invisible"
+              sitekey="6LeInjUmAAAAAN8OOWg2l1HOotiCLjqMYhivL834"
+            />
           </Form>
         </div>
       </div>

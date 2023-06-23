@@ -411,6 +411,7 @@ textarea.error {
         fill: $blue;
         color: $blue;
         transition: all 0.5s ease;
+        // background-color: $off-white;
       }
     }
   }
@@ -838,6 +839,16 @@ textarea.error {
     .recaptcha {
       display: block;
     }
+  }
+
+  .grecaptcha-badge {
+    display: none !important;
+  }
+  .active-recaptcha {
+    display: block;
+  }
+  .hidden-recaptcha {
+    display: none;
   }
 }
 

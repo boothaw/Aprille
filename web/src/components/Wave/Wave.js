@@ -1,5 +1,4 @@
 const Wave = (props) => {
-  console.log(props.subtitle)
   return (
     <div className="wave-svg" id={(props?.subtitle, props?.subtitle)}>
       {props?.subtitle && <h2>{props?.subtitle}</h2>}
