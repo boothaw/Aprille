@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 
 import emailjs from '@emailjs/browser'
 import ReCAPTCHA from 'react-google-recaptcha'
@@ -28,9 +28,10 @@ const CREATE_CONTACT = gql`
 `
 
 const AboutPage = () => {
+  // const [showCaptcha, setShowCaptcha] = useState(false)
   const recaptchaRef = useRef()
-
   const formMethods = useForm()
+
   const [create, { loading, error }] = useMutation(CREATE_CONTACT, {
     onCompleted: () => {
       formMethods.reset()
@@ -40,7 +41,7 @@ const AboutPage = () => {
   const onSubmit = async (data) => {
     const token = await recaptchaRef.current.executeAsync()
 
-    console.log('token', token)
+    // console.log(token)
 
     if (token) {
       emailjs
@@ -65,6 +66,10 @@ const AboutPage = () => {
       toast.error('Sorry, you look like a robot. Try again later.')
     }
   }
+
+  // function showReCaptcha() {
+  //   !showCaptcha ? setShowCaptcha(true) : setShowCaptcha(true)
+  // }
 
   return (
     <>
@@ -97,6 +102,7 @@ const AboutPage = () => {
           <Form
             className="contact-form"
             onSubmit={onSubmit}
+            // onClick={showReCaptcha}
             formMethods={formMethods}
             error={error}
           >
@@ -141,6 +147,9 @@ const AboutPage = () => {
             <FieldError name="message" className="error" />
             <Submit disabled={loading}>Submit</Submit>
             <ReCAPTCHA
+              // className={`${
+              //   showCaptcha ? 'active-recaptcha' : 'hidden-recaptcha'
+              // }`}
               ref={recaptchaRef}
               size="invisible"
               sitekey="6LeInjUmAAAAAN8OOWg2l1HOotiCLjqMYhivL834"

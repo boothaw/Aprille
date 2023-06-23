@@ -29,7 +29,7 @@ const BlogLayout = ({ children }) => {
     if (showMenu) setShowMenu(!showMenu)
   })
 
-  function switch_menu() {
+  function switchMenu() {
     setShowMenu(!showMenu)
   }
 
@@ -50,37 +50,37 @@ const BlogLayout = ({ children }) => {
             <nav ref={ref} className="nav">
               <ul>
                 {/* <li>
-                  <a href="/#photos" onClick={switch_menu}>
+                  <a href="/#photos" onClick={switchMenu}>
                     photography
                   </a>
                 </li>
                 <li>
-                  <a href="/#projects" onClick={switch_menu}>
+                  <a href="/#projects" onClick={switchMenu}>
                     projects
                   </a>
                 </li> */}
                 <li>
-                  <Link to={routes.home()} onClick={switch_menu}>
+                  <Link to={routes.home()} onClick={switchMenu}>
                     portfolio
                   </Link>
                 </li>
                 <li>
-                  <Link to={routes.screenprinting()} onClick={switch_menu}>
+                  <Link to={routes.screenprinting()} onClick={switchMenu}>
                     screenprinting
                   </Link>
                 </li>
                 <li>
-                  <Link to={routes.workshops()} onClick={switch_menu}>
+                  <Link to={routes.workshops()} onClick={switchMenu}>
                     workshops
                   </Link>
                 </li>
                 {/* <li>
-                  <a href="/#workshops" onClick={switch_menu}>
+                  <a href="/#workshops" onClick={switchMenu}>
                     workshops
                   </a>
                 </li> */}
                 <li>
-                  <Link to={routes.about()} onClick={switch_menu}>
+                  <Link to={routes.about()} onClick={switchMenu}>
                     bio & contact
                   </Link>
                 </li>
@@ -93,7 +93,7 @@ const BlogLayout = ({ children }) => {
                 </li> */}
               </ul>
             </nav>
-            <button className="hamburger-container" onClick={switch_menu}>
+            <button className="hamburger-container" onClick={switchMenu}>
               <div className="hamburger">
                 <svg
                   id="Layer_1"
