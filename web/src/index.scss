@@ -415,6 +415,21 @@ textarea.error {
   position: relative;
 }
 
+.learn-more {
+  margin-left: auto;
+  margin-right: auto;
+  color: $yellow;
+  font-weight: bold;
+  display: block;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  &:hover {
+    color: $navy;
+    cursor: pointer;
+  }
+}
+
 .waves-loading {
   background: radial-gradient(100% 58% at top, $blue 99%, $navy)
       calc(0 * 100% / 3) 0,
@@ -507,19 +522,6 @@ textarea.error {
   h1 {
     margin-left: auto;
     margin-right: auto;
-  }
-
-  .learn-more {
-    margin-left: auto;
-    margin-right: auto;
-    color: $yellow;
-    font-weight: bold;
-    display: block;
-    text-transform: uppercase;
-
-    &:hover {
-      color: $navy;
-    }
   }
 
   p {
@@ -846,8 +848,16 @@ textarea.error {
     justify-content: center;
     flex-direction: column;
 
-    svg {
-      height: 100%;
+    .wave-svg {
+      svg {
+        height: 100%;
+      }
+    }
+
+    .learn-more {
+      text-align: center;
+      margin-top: -40px;
+      z-index: 2;
     }
   }
 }

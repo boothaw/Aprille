@@ -33,7 +33,6 @@ const Routes = () => {
         <Route path="/workshops" page={WorkshopsPage} name="workshops" />
         <Route path="/screenprinting" page={ScreenprintingPage} name="screenprinting" />
         <Route path="/terms-and-conditions" page={TermsAndConditionsPage} name="termsAndConditions" />
-        <Route notfound page={NotFoundPage} />
       </Set>
 
       {/* administrative */}
@@ -41,6 +40,7 @@ const Routes = () => {
       {/* <Route path="/signup" page={SignupPage} name="signup" /> */}
       <Route path="/forgot-password" page={ForgotPasswordPage} name="forgotPassword" />
       <Route path="/reset-password" page={ResetPasswordPage} name="resetPassword" />
+      <Route notfound page={NotFoundPage} />
 
       {/* logged in */}
       <Private unauthenticated="home">
