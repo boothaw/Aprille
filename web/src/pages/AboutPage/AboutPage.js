@@ -28,7 +28,7 @@ const CREATE_CONTACT = gql`
 `
 
 const AboutPage = () => {
-  // const [showCaptcha, setShowCaptcha] = useState(false)
+  const [showCaptcha, setShowCaptcha] = useState(false)
   const recaptchaRef = useRef()
   const formMethods = useForm()
 
@@ -41,11 +41,14 @@ const AboutPage = () => {
   const onSubmit = async (data) => {
     const token = await recaptchaRef.current.executeAsync()
 
-    // console.log(token)
-
     if (token) {
       emailjs
-        .send('service_n4oomp8', 'template_yl07ra6', data, '_Tp0IwFf5UB99eAmt')
+        .send(
+          process.env.EMAIL_JS_SERVICE_KEY,
+          process.env.EMAIL_JS_TEMPLATE_KEY,
+          data,
+          '_Tp0IwFf5UB99eAmt'
+        )
         .then(
           () => {
             // show the user a success message
@@ -67,9 +70,9 @@ const AboutPage = () => {
     }
   }
 
-  // function showReCaptcha() {
-  //   !showCaptcha ? setShowCaptcha(true) : setShowCaptcha(true)
-  // }
+  function showReCaptcha() {
+    !showCaptcha ? setShowCaptcha(true) : setShowCaptcha(true)
+  }
 
   return (
     <>
@@ -97,64 +100,66 @@ const AboutPage = () => {
             other passions.
           </p>
 
-          <h2>Say Hello!</h2>
+          <div className="form-section">
+            <h2>Say Hello!</h2>
 
-          <Form
-            className="contact-form"
-            onSubmit={onSubmit}
-            // onClick={showReCaptcha}
-            formMethods={formMethods}
-            error={error}
-          >
-            <FormError error={error} wrapperClassName="form-error" />
-            <Label errorClassName="error" name="name">
-              Name
-            </Label>
-            <TextField
-              placeholder="Your Name"
-              name="name"
-              errorClassName="error"
-              validation={{ required: true }}
-            />
-            <FieldError name="name" className="error" />
+            <Form
+              className="contact-form"
+              onSubmit={onSubmit}
+              // onClick={showReCaptcha}
+              formMethods={formMethods}
+              error={error}
+            >
+              <FormError error={error} wrapperClassName="form-error" />
+              <Label errorClassName="error" name="name">
+                Name
+              </Label>
+              <TextField
+                placeholder="Your Name"
+                name="name"
+                errorClassName="error"
+                validation={{ required: true }}
+              />
+              <FieldError name="name" className="error" />
 
-            <Label errorClassName="error" name="email">
-              Email
-            </Label>
-            <TextField
-              placeholder="Your Email"
-              name="email"
-              errorClassName="error"
-              validation={{
-                required: true,
-                pattern: {
-                  value: /^[^@]+@[^.]+\..+$/,
-                  message: 'Please enter a valid email address',
-                },
-              }}
-            />
-            <FieldError name="email" className="error" />
+              <Label errorClassName="error" name="email">
+                Email
+              </Label>
+              <TextField
+                placeholder="Your Email"
+                name="email"
+                errorClassName="error"
+                validation={{
+                  required: true,
+                  pattern: {
+                    value: /^[^@]+@[^.]+\..+$/,
+                    message: 'Please enter a valid email address',
+                  },
+                }}
+              />
+              <FieldError name="email" className="error" />
 
-            <Label errorClassName="error" name="message">
-              Message
-            </Label>
-            <TextAreaField
-              placeholder="Your Message"
-              name="message"
-              errorClassName="error"
-              validation={{ required: true }}
-            />
-            <FieldError name="message" className="error" />
-            <Submit disabled={loading}>Submit</Submit>
-            <ReCAPTCHA
-              // className={`${
-              //   showCaptcha ? 'active-recaptcha' : 'hidden-recaptcha'
-              // }`}
-              ref={recaptchaRef}
-              size="invisible"
-              sitekey="6LeInjUmAAAAAN8OOWg2l1HOotiCLjqMYhivL834"
-            />
-          </Form>
+              <Label errorClassName="error" name="message">
+                Message
+              </Label>
+              <TextAreaField
+                placeholder="Your Message"
+                name="message"
+                errorClassName="error"
+                validation={{ required: true }}
+              />
+              <FieldError name="message" className="error" />
+              <Submit disabled={loading}>Submit</Submit>
+              <ReCAPTCHA
+                // className={`${
+                //   showCaptcha ? 'active-recaptcha' : 'hidden-recaptcha'
+                // }`}
+                ref={recaptchaRef}
+                size="invisible"
+                sitekey="6LeInjUmAAAAAN8OOWg2l1HOotiCLjqMYhivL834"
+              />
+            </Form>
+          </div>
         </div>
       </div>
       <Toaster></Toaster>

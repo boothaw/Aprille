@@ -743,6 +743,13 @@ textarea.error {
   // width: 95%;
 
   .copy-section__inner {
+    p:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  .form-section {
+    padding-top: 60px;
   }
 
   .contact-form {
