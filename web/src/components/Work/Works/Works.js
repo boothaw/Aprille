@@ -34,6 +34,12 @@ const WorksList = ({ works }) => {
     }
   }
 
+  const thumbnail = (url) => {
+    const parts = url.split('/')
+    parts.splice(3, 0, 'resize=width:100')
+    return parts.join('/')
+  }
+
   return (
     <div className="rw-segment rw-table-wrapper-responsive">
       <table className="rw-table">
@@ -41,8 +47,8 @@ const WorksList = ({ works }) => {
           <tr>
             <th>Id</th>
             <th>Title</th>
-            <th>Url</th>
-            <th>Description</th>
+            <th>Image</th>
+            {/* <th>Description</th> */}
             <th>&nbsp;</th>
           </tr>
         </thead>
@@ -51,8 +57,18 @@ const WorksList = ({ works }) => {
             <tr key={work.id}>
               <td>{truncate(work.id)}</td>
               <td>{truncate(work.title)}</td>
-              <td>{truncate(work.url)}</td>
-              <td>{truncate(work.description)}</td>
+              {/* <td>{truncate(work.url)}</td> */}
+              <td>
+                {' '}
+                <a href={work.url} target="_blank" rel="noreferrer">
+                  <img
+                    alt={work.title}
+                    src={thumbnail(work.url)}
+                    style={{ maxWidth: '50px' }}
+                  />
+                </a>
+              </td>
+              {/* <td>{truncate(work.description)}</td> */}
               <td>
                 <nav className="rw-table-actions">
                   <Link
