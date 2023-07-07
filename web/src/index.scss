@@ -117,6 +117,10 @@ textarea {
   display: block;
   outline: none;
 }
+input::placeholder,
+textarea::placeholder {
+  color: $blue;
+}
 label {
   margin-top: 1rem;
 }
