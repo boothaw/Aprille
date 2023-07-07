@@ -28,7 +28,7 @@ const CREATE_CONTACT = gql`
 `
 
 const AboutPage = () => {
-  const [showCaptcha, setShowCaptcha] = useState(false)
+  // const [showCaptcha, setShowCaptcha] = useState(false)
   const recaptchaRef = useRef()
   const formMethods = useForm()
 
@@ -70,9 +70,9 @@ const AboutPage = () => {
     }
   }
 
-  function showReCaptcha() {
-    !showCaptcha ? setShowCaptcha(true) : setShowCaptcha(true)
-  }
+  // function showReCaptcha() {
+  //   !showCaptcha ? setShowCaptcha(true) : setShowCaptcha(true)
+  // }
 
   return (
     <>
