@@ -22,10 +22,8 @@ const Routes = () => {
         <Route path="/works/{id:Int}" page={WorkWorkPage} name="work" />
         <Route path="/works" page={WorkWorksPage} name="works" />
       </Set>
-      <Set wrap={ScaffoldLayout} title="Works" titleTo="works" buttonLabel="New Work" buttonTo="newWork">
-      </Set>
-      <Set wrap={ScaffoldLayout} title="ClientWorks" titleTo="clientWorks" buttonLabel="New ClientWork" buttonTo="newClientWork">
-      </Set>
+      <Set wrap={ScaffoldLayout} title="Works" titleTo="works" buttonLabel="New Work" buttonTo="newWork"></Set>
+      <Set wrap={ScaffoldLayout} title="ClientWorks" titleTo="clientWorks" buttonLabel="New ClientWork" buttonTo="newClientWork"></Set>
       <Set wrap={BlogLayout}>
         <Route path="/" page={HomePage} name="home" />
         <Route path="/about" page={AboutPage} name="about" />
@@ -35,6 +33,7 @@ const Routes = () => {
         <Route path="/workshops" page={WorkshopsPage} name="workshops" />
         <Route path="/screenprinting" page={ScreenprintingPage} name="screenprinting" />
         <Route path="/terms-and-conditions" page={TermsAndConditionsPage} name="termsAndConditions" />
+        <Route notfound page={NotFoundPage} />
       </Set>
 
       {/* administrative */}
@@ -42,7 +41,6 @@ const Routes = () => {
       {/* <Route path="/signup" page={SignupPage} name="signup" /> */}
       <Route path="/forgot-password" page={ForgotPasswordPage} name="forgotPassword" />
       <Route path="/reset-password" page={ResetPasswordPage} name="resetPassword" />
-      <Route notfound page={NotFoundPage} />
 
       {/* logged in */}
       <Private unauthenticated="home">

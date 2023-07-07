@@ -157,12 +157,6 @@ textarea.error {
 }
 
 .blog-header {
-  // background-color: $off-white;
-  // height: 100vh;
-  // padding: 20px;
-  // display: flex;
-  // flex-direction: column;
-  // align-items: center;
   position: fixed;
   top: 0;
   right: 0;
@@ -198,8 +192,6 @@ textarea.error {
       justify-content: center;
       align-items: center;
       border-bottom-right-radius: 2em;
-      // border-bottom: 1px solid $blue;
-      // border-right: 1px solid $blue;
     }
   }
 
@@ -229,19 +221,15 @@ textarea.error {
     justify-content: center;
     align-items: center;
     border: none;
-    // border-bottom: 1px solid $blue;
-    // border-left: 1px solid $blue;
   }
 
   .hamburger {
     width: 32px;
     height: 32px;
     border-radius: 50%;
-    // border: 4px solid $navy;
     display: flex;
     justify-content: center;
     align-items: center;
-    // margin: 20px;
   }
 
   .hamburger svg {
@@ -288,11 +276,7 @@ textarea.error {
     .hamburger-container {
       border-radius: 0;
       height: auto;
-      // width: 100%;
       max-width: 60px;
-    }
-    .hamburger {
-      // border: 4px solid $yellow;
     }
     .hamburger svg {
       fill: $yellow;
@@ -484,7 +468,6 @@ textarea.error {
     justify-content: center;
     align-items: center;
     height: fit-content;
-    // max-width: 50%;
   }
 
   h1 {
@@ -522,15 +505,11 @@ textarea.error {
   }
 
   h1 {
-    // max-width: 700px;
-    // width: 90%;
     margin-left: auto;
     margin-right: auto;
   }
 
   .learn-more {
-    // max-width: 700px;
-    // width: 90%;
     margin-left: auto;
     margin-right: auto;
     color: $yellow;
@@ -544,16 +523,11 @@ textarea.error {
   }
 
   p {
-    // max-width: 700px;
-    // width: 90%;
     margin-left: auto;
     margin-right: auto;
   }
 
   p:nth-child(even) {
-    // margin-right: 0;
-    // margin-left: auto;
-    // color: $navy;
   }
 
   .bold {
@@ -856,6 +830,26 @@ textarea.error {
   width: 100%;
   height: auto;
   margin-bottom: 20px;
+}
+
+// 404 page
+
+.not-found-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+
+  section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    svg {
+      height: 100%;
+    }
+  }
 }
 
 // article thumbnail

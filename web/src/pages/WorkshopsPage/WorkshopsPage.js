@@ -57,7 +57,7 @@ const WorkshopsPage = () => {
         </div>
       </div>
       <Wave subtitle="Student Work"></Wave>
-      <WorkprintsCell></WorkprintsCell>
+      {/* <WorkprintsCell></WorkprintsCell> */}
     </>
   )
 }

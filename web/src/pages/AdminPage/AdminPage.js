@@ -12,7 +12,7 @@ const AdminPage = () => {
           <Link to={routes.images()}>Update Images</Link>
           <Link to={routes.projects()}>Update Projects</Link>
           <Link to={routes.screenprints()}>Update Screenprints</Link>
-          <Link to={routes.images()}>Update Workshops</Link>
+          {/* <Link to={routes.images()}>Update Workshops</Link> */}
         </div>
       </div>
     </>

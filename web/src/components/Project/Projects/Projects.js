@@ -45,7 +45,7 @@ const ProjectsList = ({ projects }) => {
             <th>Body2</th>
             <th>Body3</th> */}
             <th>Created at</th>
-            <th>Url</th>
+            {/* <th>Url</th> */}
             {/* <th>Url2</th>
             <th>Url3</th>
             <th>Url4</th>
@@ -65,7 +65,7 @@ const ProjectsList = ({ projects }) => {
               <td>{truncate(project.body2)}</td>
               <td>{truncate(project.body3)}</td> */}
               <td>{timeTag(project.createdAt)}</td>
-              <td>{truncate(project.url)}</td>
+              {/* <td>{truncate(project.url)}</td> */}
               {/* <td>{truncate(project.url2)}</td>
               <td>{truncate(project.url3)}</td>
               <td>{truncate(project.url4)}</td>

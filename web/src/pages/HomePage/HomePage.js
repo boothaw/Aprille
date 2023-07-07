@@ -51,7 +51,7 @@ const HomePage = () => {
             <p>Screenprinting, Photography, Adventure</p>
           </a>
           <Wave subtitle="photography"></Wave>
-          {/* <PhotosCell></PhotosCell> */}
+          <PhotosCell></PhotosCell>
           {/* <div className="placeholder"></div> */}
           <Wave subtitle="screenprinting"></Wave>
           <Screenprintcopy></Screenprintcopy>
@@ -59,7 +59,7 @@ const HomePage = () => {
           {/* <div className="placeholder"></div> */}
           <Wave subtitle="workshops"></Wave>
           <Workshops></Workshops>
-          <WorkprintsCell></WorkprintsCell>
+          {/* <WorkprintsCell></WorkprintsCell> */}
           {/* <div className="placeholder">
             <Link className="learn-more" to={routes.workshops()}>
               See More
