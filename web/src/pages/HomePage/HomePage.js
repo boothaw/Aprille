@@ -51,7 +51,7 @@ const HomePage = () => {
             <p>Screenprinting, Photography, Adventure</p>
           </a>
           <Wave subtitle="photography"></Wave>
-          <PhotosCell></PhotosCell>
+          {/* <PhotosCell></PhotosCell> */}
           {/* <div className="placeholder"></div> */}
           <Wave subtitle="screenprinting"></Wave>
           <Screenprintcopy></Screenprintcopy>

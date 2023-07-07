@@ -858,6 +858,11 @@ textarea.error {
       text-align: center;
       margin-top: -40px;
       z-index: 2;
+      color: $blue;
+
+      &:hover {
+        color: $yellow;
+      }
     }
   }
 }
