@@ -1,3 +1,4 @@
+import LoadingWave from '../LoadingWave/LoadingWave'
 import Photo from '../Photo/Photo'
 
 export const QUERY = gql`
@@ -10,7 +11,7 @@ export const QUERY = gql`
   }
 `
 
-export const Loading = () => <div>Loading...</div>
+export const Loading = () => <LoadingWave></LoadingWave>
 
 export const Empty = () => <div>Empty</div>
 

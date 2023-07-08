@@ -6,6 +6,7 @@ import { MetaTags } from '@redwoodjs/web'
 
 import AboutCopy from 'src/components/AboutCopy/AboutCopy'
 import ArticlesCell from 'src/components/ArticlesCell'
+import LoadingWave from 'src/components/LoadingWave/LoadingWave'
 import PhotosCell from 'src/components/PhotosCell'
 import PrintsCell from 'src/components/PrintsCell/PrintsCell.js'
 import Screenprintcopy from 'src/components/Screenprintcopy/Screenprintcopy'

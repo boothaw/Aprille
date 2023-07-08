@@ -2,6 +2,7 @@ import { Gallery, Item } from 'react-photoswipe-gallery'
 
 // import PhotoThumb from '../PhotoThumb/PhotoThumb'
 import 'photoswipe/dist/photoswipe.css'
+import LoadingWave from '../LoadingWave/LoadingWave'
 
 export const QUERY = gql`
   query PhotosQuery {
@@ -13,7 +14,7 @@ export const QUERY = gql`
   }
 `
 
-export const Loading = () => <div>Loading...</div>
+export const Loading = () => <LoadingWave></LoadingWave>
 
 export const Empty = () => <div>Empty</div>
 

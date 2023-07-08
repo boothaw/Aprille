@@ -1,3 +1,4 @@
+import LoadingWave from 'src/components/LoadingWave/LoadingWave'
 import Work from 'src/components/Work/Work'
 
 export const QUERY = gql`
@@ -11,7 +12,7 @@ export const QUERY = gql`
   }
 `
 
-export const Loading = () => <div>Loading...</div>
+export const Loading = () => <LoadingWave></LoadingWave>
 
 export const Empty = () => <div>Work not found</div>
 

@@ -2,6 +2,7 @@ import { navigate, routes } from '@redwoodjs/router'
 import { useMutation } from '@redwoodjs/web'
 import { toast } from '@redwoodjs/web/toast'
 
+import LoadingWave from 'src/components/LoadingWave/LoadingWave'
 import ScreenprintForm from 'src/components/Screenprint/ScreenprintForm'
 
 export const QUERY = gql`
@@ -28,7 +29,7 @@ const UPDATE_SCREENPRINT_MUTATION = gql`
   }
 `
 
-export const Loading = () => <div>Loading...</div>
+export const Loading = () => <LoadingWave></LoadingWave>
 
 export const Failure = ({ error }) => (
   <div className="rw-cell-error">{error?.message}</div>
