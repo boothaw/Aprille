@@ -47,7 +47,7 @@ const ImagesList = ({ images }) => {
           <tr>
             <th>Id</th>
             <th>Title</th>
-            <th>Url</th>
+            <th>Image</th>
             <th>&nbsp;</th>
           </tr>
         </thead>

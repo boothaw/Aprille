@@ -1,6 +1,7 @@
 import { Link, routes } from '@redwoodjs/router'
 
 import Images from 'src/components/Image/Images'
+import LoadingWave from 'src/components/LoadingWave/LoadingWave'
 
 export const QUERY = gql`
   query FindImages {
@@ -12,7 +13,7 @@ export const QUERY = gql`
   }
 `
 
-export const Loading = () => <div>Loading...</div>
+export const Loading = () => <LoadingWave></LoadingWave>
 
 export const Empty = () => {
   return (

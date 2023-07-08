@@ -16,16 +16,7 @@ import BlogLayout from './layouts/BlogLayout/BlogLayout'
 const Routes = () => {
   return (
     <Router>
-      <Set wrap={ScaffoldLayout} title="Works" titleTo="works" buttonLabel="New Work" buttonTo="newWork">
-        <Route path="/works/new" page={WorkNewWorkPage} name="newWork" />
-        <Route path="/works/{id:Int}/edit" page={WorkEditWorkPage} name="editWork" />
-        <Route path="/works/{id:Int}" page={WorkWorkPage} name="work" />
-        <Route path="/works" page={WorkWorksPage} name="works" />
-      </Set>
-      <Set wrap={ScaffoldLayout} title="Works" titleTo="works" buttonLabel="New Work" buttonTo="newWork">
-      </Set>
-      <Set wrap={ScaffoldLayout} title="ClientWorks" titleTo="clientWorks" buttonLabel="New ClientWork" buttonTo="newClientWork">
-      </Set>
+      {/* public facing */}
       <Set wrap={BlogLayout}>
         <Route path="/" page={HomePage} name="home" />
         <Route path="/about" page={AboutPage} name="about" />
@@ -71,9 +62,15 @@ const Routes = () => {
           <Route path="/admin/screenprints/{id:Int}" page={ScreenprintScreenprintPage} name="screenprint" />
           <Route path="/admin/screenprints" page={ScreenprintScreenprintsPage} name="screenprints" />
         </Set>
+        <Set wrap={ScaffoldLayout} title="Works" titleTo="works" buttonLabel="New Work" buttonTo="newWork">
+          <Route path="/admin/works/new" page={WorkNewWorkPage} name="newWork" />
+          <Route path="/admin/works/{id:Int}/edit" page={WorkEditWorkPage} name="editWork" />
+          <Route path="/admin/works/{id:Int}" page={WorkWorkPage} name="work" />
+          <Route path="/admin/works" page={WorkWorksPage} name="works" />
+        </Set>
+        {/* <Set wrap={ScaffoldLayout} title="Works" titleTo="works" buttonLabel="New Work" buttonTo="newWork"></Set>
+        <Set wrap={ScaffoldLayout} title="ClientWorks" titleTo="clientWorks" buttonLabel="New ClientWork" buttonTo="newClientWork"></Set> */}
       </Private>
-      <Set wrap={ScaffoldLayout} title="Posts" titleTo="posts" buttonLabel="New Post" buttonTo="newPost"></Set>
-      {/* public facing */}
     </Router>
   )
 }

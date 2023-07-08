@@ -1,9 +1,9 @@
 import { navigate, routes } from '@redwoodjs/router'
-
 import { useMutation } from '@redwoodjs/web'
 import { toast } from '@redwoodjs/web/toast'
 
 import ImageForm from 'src/components/Image/ImageForm'
+import LoadingWave from 'src/components/LoadingWave/LoadingWave'
 
 export const QUERY = gql`
   query EditImageById($id: Int!) {
@@ -24,7 +24,7 @@ const UPDATE_IMAGE_MUTATION = gql`
   }
 `
 
-export const Loading = () => <div>Loading...</div>
+export const Loading = () => <LoadingWave></LoadingWave>
 
 export const Failure = ({ error }) => (
   <div className="rw-cell-error">{error?.message}</div>

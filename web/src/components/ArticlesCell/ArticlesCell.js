@@ -1,4 +1,5 @@
 import ArticleThumb from '../ArticleThumb/ArticleThumb'
+import LoadingWave from '../LoadingWave/LoadingWave'
 
 export const QUERY = gql`
   query ArticlesQuery {
@@ -10,9 +11,7 @@ export const QUERY = gql`
   }
 `
 
-export const Loading = () => (
-  <div className="waves-loading">The Waves Are Calling</div>
-)
+export const Loading = () => <LoadingWave></LoadingWave>
 
 export const Empty = () => <div>Uhh not ready yet</div>
 

@@ -1,4 +1,5 @@
 import Article from '../Article/Article'
+import LoadingWave from '../LoadingWave/LoadingWave'
 
 export const QUERY = gql`
   query FindArticleQuery($id: Int!) {
@@ -21,7 +22,7 @@ export const QUERY = gql`
   }
 `
 
-export const Loading = () => <div>Loading...</div>
+export const Loading = () => <LoadingWave></LoadingWave>
 
 export const Empty = () => <div>Emptyyy</div>
 

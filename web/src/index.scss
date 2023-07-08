@@ -117,6 +117,10 @@ textarea {
   display: block;
   outline: none;
 }
+input::placeholder,
+textarea::placeholder {
+  color: $blue;
+}
 label {
   margin-top: 1rem;
 }
@@ -157,12 +161,6 @@ textarea.error {
 }
 
 .blog-header {
-  // background-color: $off-white;
-  // height: 100vh;
-  // padding: 20px;
-  // display: flex;
-  // flex-direction: column;
-  // align-items: center;
   position: fixed;
   top: 0;
   right: 0;
@@ -198,8 +196,6 @@ textarea.error {
       justify-content: center;
       align-items: center;
       border-bottom-right-radius: 2em;
-      // border-bottom: 1px solid $blue;
-      // border-right: 1px solid $blue;
     }
   }
 
@@ -229,19 +225,15 @@ textarea.error {
     justify-content: center;
     align-items: center;
     border: none;
-    // border-bottom: 1px solid $blue;
-    // border-left: 1px solid $blue;
   }
 
   .hamburger {
     width: 32px;
     height: 32px;
     border-radius: 50%;
-    // border: 4px solid $navy;
     display: flex;
     justify-content: center;
     align-items: center;
-    // margin: 20px;
   }
 
   .hamburger svg {
@@ -288,11 +280,7 @@ textarea.error {
     .hamburger-container {
       border-radius: 0;
       height: auto;
-      // width: 100%;
       max-width: 60px;
-    }
-    .hamburger {
-      // border: 4px solid $yellow;
     }
     .hamburger svg {
       fill: $yellow;
@@ -431,6 +419,71 @@ textarea.error {
   position: relative;
 }
 
+.learn-more {
+  margin-left: auto;
+  margin-right: auto;
+  color: $yellow;
+  font-weight: bold;
+  display: block;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  &:hover {
+    color: $navy;
+    cursor: pointer;
+  }
+}
+
+.loading-wave {
+  margin: 1em auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  span {
+    font-size: 2.4rem;
+    color: $yellow;
+    // display: table-cell;
+    font-weight: bold;
+    padding: 0 6px;
+    line-height: 80px;
+    animation: wave 1.5s infinite;
+  }
+  span:nth-child(1) {
+    animation-delay: 0s;
+  }
+  span:nth-child(2) {
+    animation-delay: 0.1s;
+  }
+  span:nth-child(3) {
+    animation-delay: 0.2s;
+  }
+  span:nth-child(4) {
+    animation-delay: 0.3s;
+  }
+  span:nth-child(5) {
+    animation-delay: 0.4s;
+  }
+  span:nth-child(6) {
+    animation-delay: 0.5s;
+  }
+  span:nth-child(7) {
+    animation-delay: 0.6s;
+  }
+}
+
+@keyframes wave {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-30px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
 .waves-loading {
   background: radial-gradient(100% 58% at top, $blue 99%, $navy)
       calc(0 * 100% / 3) 0,
@@ -451,7 +504,7 @@ textarea.error {
   display: flex;
   justify-content: center;
   width: 100%;
-  animation: move 1s infinite linear, up 5s infinite linear alternate;
+  animation: move 5s infinite linear, up 5s infinite linear alternate;
 }
 
 .wave-svg {
@@ -484,7 +537,6 @@ textarea.error {
     justify-content: center;
     align-items: center;
     height: fit-content;
-    // max-width: 50%;
   }
 
   h1 {
@@ -522,38 +574,16 @@ textarea.error {
   }
 
   h1 {
-    // max-width: 700px;
-    // width: 90%;
     margin-left: auto;
     margin-right: auto;
-  }
-
-  .learn-more {
-    // max-width: 700px;
-    // width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-    color: $yellow;
-    font-weight: bold;
-    display: block;
-    text-transform: uppercase;
-
-    &:hover {
-      color: $navy;
-    }
   }
 
   p {
-    // max-width: 700px;
-    // width: 90%;
     margin-left: auto;
     margin-right: auto;
   }
 
   p:nth-child(even) {
-    // margin-right: 0;
-    // margin-left: auto;
-    // color: $navy;
   }
 
   .bold {
@@ -767,6 +797,13 @@ textarea.error {
   // width: 95%;
 
   .copy-section__inner {
+    p:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  .form-section {
+    padding-top: 60px;
   }
 
   .contact-form {
@@ -856,6 +893,48 @@ textarea.error {
   width: 100%;
   height: auto;
   margin-bottom: 20px;
+}
+
+// 404 page
+
+.not-found-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+
+  section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: -80px;
+
+    .wave-svg {
+      svg {
+        height: 100%;
+      }
+    }
+
+    p {
+      text-align: center;
+      color: $yellow;
+      margin-top: -60px;
+      margin-bottom: 0;
+      z-index: 2;
+    }
+
+    .learn-more {
+      text-align: center;
+      margin-top: 20px;
+      z-index: 3;
+      color: $blue;
+
+      &:hover {
+        color: $yellow;
+      }
+    }
+  }
 }
 
 // article thumbnail

@@ -1,8 +1,8 @@
 import { navigate, routes } from '@redwoodjs/router'
-
 import { useMutation } from '@redwoodjs/web'
 import { toast } from '@redwoodjs/web/toast'
 
+import LoadingWave from 'src/components/LoadingWave/LoadingWave'
 import WorkForm from 'src/components/Work/WorkForm'
 
 export const QUERY = gql`
@@ -26,7 +26,7 @@ const UPDATE_WORK_MUTATION = gql`
   }
 `
 
-export const Loading = () => <div>Loading...</div>
+export const Loading = () => <LoadingWave></LoadingWave>
 
 export const Failure = ({ error }) => (
   <div className="rw-cell-error">{error?.message}</div>

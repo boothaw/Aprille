@@ -1,5 +1,6 @@
 import { Link, routes } from '@redwoodjs/router'
 
+import LoadingWave from 'src/components/LoadingWave/LoadingWave'
 import Screenprints from 'src/components/Screenprint/Screenprints'
 
 export const QUERY = gql`
@@ -13,7 +14,7 @@ export const QUERY = gql`
   }
 `
 
-export const Loading = () => <div>Loading...</div>
+export const Loading = () => <LoadingWave></LoadingWave>
 
 export const Empty = () => {
   return (
