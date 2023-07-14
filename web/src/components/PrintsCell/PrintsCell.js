@@ -53,7 +53,11 @@ export const Success = ({ screenprints }) => {
                     onKeyDown={open}
                     className="photo-container photo-thumbnail print-container"
                   >
-                    <img alt={photo.title} src={shrinker(photo.url)} />
+                    <img
+                      loading="lazy"
+                      alt={photo.title}
+                      src={shrinker(photo.url)}
+                    />
                     <div className="hover-card">
                       <h2>{photo.title}</h2>
                     </div>

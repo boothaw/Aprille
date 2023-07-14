@@ -5,6 +5,7 @@ const AboutCopy = () => {
     <div className="copy-section">
       <div className="copy-section__inner">
         <img
+          loading="lazy"
           className="headshot"
           src="https://cdn.filestackcontent.com/resize=height:1200/n6BgW3YxTzi9cLyQMmhp"
           alt="Aprille"

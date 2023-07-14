@@ -59,7 +59,12 @@ export const Success = ({ photos, exclude }) => {
                     onKeyDown={open}
                     className="photo-container photo-thumbnail print-container"
                   >
-                    <img className="photo" alt={photo.title} src={photo.url} />
+                    <img
+                      loading="lazy"
+                      className="photo"
+                      alt={photo.title}
+                      src={photo.url}
+                    />
                     <div className="hover-card">
                       <h2>{photo.title}</h2>
                     </div>

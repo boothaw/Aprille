@@ -15,6 +15,7 @@ const ArticleThumb = ({ article }) => {
     >
       <Link to={routes.article({ id: article.id })}>
         <img
+          loading="lazy"
           className="featured-image"
           src={shrinker(article.url)}
           alt={article.title}

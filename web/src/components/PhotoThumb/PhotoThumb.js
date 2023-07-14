@@ -15,7 +15,12 @@ const PhotoThumb = ({ photo }) => {
       className="photo-container photo-thumbnail"
       key={photo.id}
     >
-      <img className="photo" src={shrinker(photo.url)} alt={photo.title} />
+      <img
+        loading="lazy"
+        className="photo"
+        src={shrinker(photo.url)}
+        alt={photo.title}
+      />
       <div className="hover-card">
         <h2>{photo.title}</h2>
       </div>
