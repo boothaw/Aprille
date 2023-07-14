@@ -60,6 +60,7 @@ const ImagesList = ({ images }) => {
                 {' '}
                 <a href={image.url} target="_blank" rel="noreferrer">
                   <img
+                    loading="lazy"
                     alt={image.title}
                     src={thumbnail(image.url)}
                     style={{ maxWidth: '50px' }}

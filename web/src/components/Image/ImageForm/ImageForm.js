@@ -64,6 +64,7 @@ const ImageForm = (props) => {
         {url && (
           <div>
             <img
+              loading="lazy"
               alt={url}
               src={url}
               style={{ display: 'block', margin: '2rem 0' }}

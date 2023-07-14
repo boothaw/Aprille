@@ -3,7 +3,7 @@ import { Link, routes } from '@redwoodjs/router'
 const ArticleThumb = ({ article }) => {
   const shrinker = (url) => {
     const parts = url.split('/')
-    parts.splice(3, 0, 'resize=height:1200')
+    parts.splice(3, 0, 'resize=height:800')
     return parts.join('/')
   }
 
@@ -15,6 +15,7 @@ const ArticleThumb = ({ article }) => {
     >
       <Link to={routes.article({ id: article.id })}>
         <img
+          loading="lazy"
           className="featured-image"
           src={shrinker(article.url)}
           alt={article.title}

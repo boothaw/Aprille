@@ -52,15 +52,16 @@ const HomePage = () => {
             <p>Screenprinting, Photography, Adventure</p>
           </a>
           <Wave subtitle="photography"></Wave>
-          {/* <PhotosCell></PhotosCell> */}
+          <PhotosCell></PhotosCell>
           {/* <div className="placeholder"></div> */}
           <Wave subtitle="screenprinting"></Wave>
           <Screenprintcopy></Screenprintcopy>
-          {/* <PrintsCell></PrintsCell> */}
+
+          <PrintsCell></PrintsCell>
           {/* <div className="placeholder"></div> */}
           <Wave subtitle="workshops"></Wave>
           <Workshops></Workshops>
-          {/* <WorkprintsCell></WorkprintsCell> */}
+          <WorkprintsCell></WorkprintsCell>
           {/* <div className="placeholder">
             <Link className="learn-more" to={routes.workshops()}>
               See More
@@ -68,7 +69,7 @@ const HomePage = () => {
           </div> */}
           <Wave subtitle="projects"></Wave>
           {/* <div className="placeholder"></div> */}
-          {/* <ArticlesCell></ArticlesCell> */}
+          <ArticlesCell></ArticlesCell>
           <Wave subtitle="bio & contact"></Wave>
           <AboutCopy></AboutCopy>
         </div>

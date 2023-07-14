@@ -61,6 +61,7 @@ const ScreenprintsList = ({ screenprints }) => {
                 {' '}
                 <a href={screenprint.url} target="_blank" rel="noreferrer">
                   <img
+                    loading="lazy"
                     alt={screenprint.title}
                     src={thumbnail(screenprint.url)}
                     style={{ maxWidth: '50px' }}

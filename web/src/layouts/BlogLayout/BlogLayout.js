@@ -39,7 +39,12 @@ const BlogLayout = ({ children }) => {
         <div className="blog-header__inner">
           <div className="logo-container">
             <Link to={routes.home()}>
-              <img className="logo" src="/LOGO_colour.png" alt="logo" />
+              <img
+                loading="lazy"
+                className="logo"
+                src="/LOGO_colour.png"
+                alt="logo"
+              />
             </Link>
           </div>
           <div
