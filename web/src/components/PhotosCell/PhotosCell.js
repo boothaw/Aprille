@@ -24,7 +24,13 @@ export const Failure = ({ error }) => (
 
 const shrinker = (url) => {
   const parts = url.split('/')
-  parts.splice(3, 0, 'resize=height:800')
+  parts.splice(3, 0, 'resize=height:600')
+  return parts.join('/')
+}
+
+const gallerySized = (url) => {
+  const parts = url.split('/')
+  parts.splice(3, 0, 'resize=height:1400')
   return parts.join('/')
 }
 
@@ -46,7 +52,7 @@ export const Success = ({ photos, exclude }) => {
             <div className="photo-container photo-thumbnail" key={photo.id}>
               <Item
                 alt={photo.title}
-                original={photo.url}
+                original={gallerySized(photo.url)}
                 thumbnail={shrinker(photo.url)}
                 width="auto"
                 max-height="100%"
@@ -63,7 +69,7 @@ export const Success = ({ photos, exclude }) => {
                       loading="lazy"
                       className="photo"
                       alt={photo.title}
-                      src={photo.url}
+                      src={shrinker(photo.url)}
                     />
                     <div className="hover-card">
                       <h2>{photo.title}</h2>

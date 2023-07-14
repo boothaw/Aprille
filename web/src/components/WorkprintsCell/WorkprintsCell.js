@@ -22,9 +22,15 @@ export const Failure = ({ error }) => (
   <div style={{ color: 'red' }}>Error: {error?.message}</div>
 )
 
-const shrinker = (url) => {
+const thumbnailed = (url) => {
   const parts = url.split('/')
-  parts.splice(3, 0, 'resize=height:800')
+  parts.splice(3, 0, 'resize=height:600')
+  return parts.join('/')
+}
+
+const gallerySized = (url) => {
+  const parts = url.split('/')
+  parts.splice(3, 0, 'resize=height:1400')
   return parts.join('/')
 }
 
@@ -40,8 +46,8 @@ export const Success = ({ prints }) => {
             >
               <Item
                 alt={photo.title}
-                original={shrinker(photo.url)}
-                thumbnail={shrinker(photo.url)}
+                original={gallerySized(photo.url)}
+                thumbnail={thumbnailed(photo.url)}
                 width="auto"
                 max-height="100%"
               >
@@ -56,7 +62,7 @@ export const Success = ({ prints }) => {
                     <img
                       loading="lazy"
                       alt={photo.title}
-                      src={shrinker(photo.url)}
+                      src={thumbnailed(photo.url)}
                     />
                     <div className="hover-card">
                       <h2>{photo.title}</h2>
