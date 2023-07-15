@@ -584,6 +584,18 @@ textarea.error {
   .back-to-dash {
     a {
       font-weight: bold;
+      font-family: Oswald, sans-serif;
+      font-size: 1em;
+    }
+
+    button {
+      margin-left: 20px;
+      background-color: transparent;
+      border: none;
+      color: #eb9c31;
+      font-family: Oswald, sans-serif;
+      font-size: 1em;
+      font-weight: bold;
     }
   }
 }

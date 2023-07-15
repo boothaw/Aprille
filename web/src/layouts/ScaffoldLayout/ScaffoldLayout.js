@@ -1,3 +1,4 @@
+import { useAuth } from '@redwoodjs/auth'
 import { Link, routes } from '@redwoodjs/router'
 import { Toaster } from '@redwoodjs/web/toast'
 
@@ -8,11 +9,18 @@ const ScaffoldLayout = ({
   buttonTo,
   children,
 }) => {
+  const { isAuthenticated, logOut } = useAuth()
+
   return (
     <div className="rw-scaffold">
       <div className="back-to-dash">
         {' '}
         <Link to={routes.admin()}>Back To Admin Dashboard</Link>
+        {isAuthenticated && (
+          <button type="button" onClick={logOut}>
+            logout
+          </button>
+        )}
       </div>
       <Toaster toastOptions={{ className: 'rw-toast', duration: 6000 }} />
       <header className="rw-header">
