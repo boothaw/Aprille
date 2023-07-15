@@ -13,7 +13,7 @@ export const QUERY = gql`
 
 export const Loading = () => <LoadingWave></LoadingWave>
 
-export const Empty = () => <div>Uhh not ready yet</div>
+export const Empty = () => <div>Nothing here yet</div>
 
 export const Failure = ({ error }) => (
   <div style={{ color: 'red' }}>Error: {error?.message}</div>
