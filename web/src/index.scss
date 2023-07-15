@@ -1126,10 +1126,16 @@ textarea.error {
     padding-top: 0px;
   }
   .wave-svg {
+    background-image: url(web/public/wave-cropped.png);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+
     h1 {
       font-size: 2.5rem;
     }
     svg {
+      display: none;
       path {
         stroke-width: 10 !important;
         height: 100%;
