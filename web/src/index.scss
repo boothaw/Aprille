@@ -1023,11 +1023,12 @@ textarea.error {
       flex-direction: column;
 
       img {
-        height: 40vw;
+        border: 20px solid #fff;
+        width: calc(90% - 40px);
+        max-width: 900px;
+        margin-bottom: 80px;
         margin-left: auto;
         margin-right: auto;
-        margin-bottom: 80px;
-        border: 40px solid #fff;
       }
 
       img:last-of-type {
