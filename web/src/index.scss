@@ -230,6 +230,8 @@ textarea.error {
     fill: $navy;
     stroke: $navy;
     margin: 4px;
+    overflow: visible;
+    height: 100%;
   }
 
   .nav-container .nav {
@@ -519,6 +521,10 @@ textarea.error {
 
   h1 {
     font-size: 4rem;
+  }
+
+  svg {
+    height: 100%;
   }
 }
 

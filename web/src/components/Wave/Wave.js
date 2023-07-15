@@ -14,8 +14,7 @@ const Wave = (props) => {
         }}
         xmlSpace="preserve"
         viewBox="69.42 64 1141.96 34.07"
-        // {...props?.subtitle}
-        // {...props?.title}
+        preserveAspectRatio="none"
       >
         <style type="text/css">
           {
