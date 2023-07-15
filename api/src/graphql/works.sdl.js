@@ -7,8 +7,8 @@ export const schema = gql`
   }
 
   type Query {
-    works: [Work!]! @requireAuth
-    work(id: Int!): Work @requireAuth
+    works: [Work!]! @skipAuth
+    work(id: Int!): Work @skipAuth
   }
 
   input CreateWorkInput {
