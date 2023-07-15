@@ -59,6 +59,7 @@ const AboutPage = () => {
           (error) => {
             // show the user an error
             console.log(error)
+            toast.error(error.message)
           }
         )
 

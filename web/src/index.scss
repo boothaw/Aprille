@@ -231,7 +231,7 @@ textarea.error {
     stroke: $navy;
     margin: 4px;
     overflow: visible;
-    // height: 100%;
+    height: 100%;
   }
 
   .nav-container .nav {
@@ -525,6 +525,10 @@ textarea.error {
 
   svg {
     height: 100%;
+
+    path {
+      fill: pink;
+    }
   }
 }
 
@@ -1124,6 +1128,11 @@ textarea.error {
   .wave-svg {
     h1 {
       font-size: 2.5rem;
+    }
+    svg {
+      path {
+        stroke-width: 10 !important;
+      }
     }
   }
   .aprille-name {
