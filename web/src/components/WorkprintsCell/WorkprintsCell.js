@@ -24,13 +24,13 @@ export const Failure = ({ error }) => (
 
 const thumbnailed = (url) => {
   const parts = url.split('/')
-  parts.splice(3, 0, 'resize=height:600')
+  parts.splice(3, 0, 'resize=height:300')
   return parts.join('/')
 }
 
 const gallerySized = (url) => {
   const parts = url.split('/')
-  parts.splice(3, 0, 'resize=height:1400')
+  parts.splice(3, 0, 'resize=height:1200')
   return parts.join('/')
 }
 

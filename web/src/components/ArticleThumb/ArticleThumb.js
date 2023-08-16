@@ -3,7 +3,7 @@ import { Link, routes } from '@redwoodjs/router'
 const ArticleThumb = ({ article }) => {
   const shrinker = (url) => {
     const parts = url.split('/')
-    parts.splice(3, 0, 'resize=height:800')
+    parts.splice(3, 0, 'resize=height:400')
     return parts.join('/')
   }
 

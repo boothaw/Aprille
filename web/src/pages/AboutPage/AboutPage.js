@@ -88,7 +88,7 @@ const AboutPage = () => {
           <img
             loading="lazy"
             className="headshot"
-            src="https://cdn.filestackcontent.com/resize=height:1200/n6BgW3YxTzi9cLyQMmhp"
+            src="https://cdn.filestackcontent.com/resize=height:500/n6BgW3YxTzi9cLyQMmhp"
             alt="Aprille"
           />
           <p>

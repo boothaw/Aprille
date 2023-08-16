@@ -747,7 +747,7 @@ textarea.error {
 }
 
 .pswp__bg {
-  background: $navy !important;
+  background-color: $navy !important;
   opacity: 0.8 !important;
 
   .pswp__icn-shadow {
@@ -763,6 +763,7 @@ textarea.error {
 .pswp__item {
   .pswp__img {
     object-fit: contain;
+    background-color: transparent;
   }
 }
 
