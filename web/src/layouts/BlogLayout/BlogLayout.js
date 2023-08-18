@@ -98,7 +98,11 @@ const BlogLayout = ({ children }) => {
                 </li>
               </ul>
             </nav>
-            <button className="hamburger-container" onClick={switchMenu}>
+            <button
+              aria-label="mobile hamburger menu"
+              className="hamburger-container"
+              onClick={switchMenu}
+            >
               <div className="hamburger">
                 <svg
                   id="Layer_1"

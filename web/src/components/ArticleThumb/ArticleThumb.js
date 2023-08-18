@@ -18,7 +18,7 @@ const ArticleThumb = ({ article }) => {
           loading="lazy"
           className="featured-image"
           src={shrinker(article.url)}
-          alt={article.title}
+          alt={'Project Title: ' + article.title + article.id}
         />
         <header>
           <h2>{article.title}</h2>
