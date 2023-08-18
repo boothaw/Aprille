@@ -7,7 +7,7 @@ const AboutCopy = () => {
         <img
           loading="lazy"
           className="headshot"
-          src="https://cdn.filestackcontent.com/resize=height:600/n6BgW3YxTzi9cLyQMmhp"
+          src="https://cdn.filestackcontent.com/resize=height:400/n6BgW3YxTzi9cLyQMmhp"
           alt="Aprille"
         />
         <p>
