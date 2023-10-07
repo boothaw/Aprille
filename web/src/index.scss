@@ -655,6 +655,9 @@ textarea.error {
 
 // photography page/section -- photoscell
 
+.photography-page {
+}
+
 .photography-section-grid {
   display: flex;
   flex-wrap: wrap;
@@ -743,6 +746,10 @@ textarea.error {
   .photo {
     max-width: 1200px;
     width: 100%;
+  }
+
+  .copy-section {
+    display: none;
   }
 }
 
