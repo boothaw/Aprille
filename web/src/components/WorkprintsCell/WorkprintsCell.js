@@ -36,7 +36,7 @@ const gallerySized = (url) => {
 
 export const Success = ({ prints, filter }) => {
   return (
-    <div className="photography-section-grid screenprint-section-grid">
+    <div className="photography-section-grid screenprint-section-grid work-prints">
       <Gallery>
         {prints.slice(0, filter).map((photo) => {
           return (
