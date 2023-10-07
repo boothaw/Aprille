@@ -22,7 +22,8 @@ const Routes = () => {
         <Route path="/about" page={AboutPage} name="about" />
         <Route path="/contact" page={ContactPage} name="contact" />
         <Route path="/article/{id:Int}" page={ArticlePage} name="article" />
-        <Route path="/photo/{id:Int}" page={PhotoPage} name="photo" />
+        {/* <Route path="/photo/{id:Int}" page={PhotoPage} name="photo" /> */}
+        <Route path="/photography" page={PhotographyPage} name="photography" />
         <Route path="/workshops" page={WorkshopsPage} name="workshops" />
         <Route path="/screenprinting" page={ScreenprintingPage} name="screenprinting" />
         <Route path="/terms-and-conditions" page={TermsAndConditionsPage} name="termsAndConditions" />
@@ -30,7 +31,7 @@ const Routes = () => {
 
       {/* administrative */}
       <Route path="/login" page={LoginPage} name="login" />
-      <Route path="/signup" page={SignupPage} name="signup" />
+      {/* <Route path="/signup" page={SignupPage} name="signup" /> */}
       <Route path="/forgot-password" page={ForgotPasswordPage} name="forgotPassword" />
       <Route path="/reset-password" page={ResetPasswordPage} name="resetPassword" />
       <Route notfound page={NotFoundPage} />

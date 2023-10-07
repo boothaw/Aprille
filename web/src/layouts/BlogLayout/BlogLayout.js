@@ -70,6 +70,11 @@ const BlogLayout = ({ children }) => {
                   </Link>
                 </li>
                 <li>
+                  <Link to={routes.photography()} onClick={switchMenu}>
+                    photography
+                  </Link>
+                </li>
+                <li>
                   <Link to={routes.screenprinting()} onClick={switchMenu}>
                     screenprinting
                   </Link>

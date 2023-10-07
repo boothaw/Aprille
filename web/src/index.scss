@@ -632,6 +632,14 @@ textarea.error {
   .copy-section {
     padding-bottom: 80px;
   }
+  .photography-section .copy-section {
+    padding-bottom: 0;
+    padding-top: 80px;
+
+    a {
+      text-align: center;
+    }
+  }
 }
 
 // form stuff
@@ -686,13 +694,6 @@ textarea.error {
       color: #fff;
       text-transform: lowercase;
     }
-
-    &:hover {
-      .hover-card {
-        animation: fadeIn 0.5s;
-        opacity: 1;
-      }
-    }
   }
 
   .photo {
@@ -742,6 +743,13 @@ textarea.error {
       height: 100%;
       min-height: 200px;
       vertical-align: middle;
+    }
+
+    &:hover {
+      .hover-card {
+        animation: fadeIn 0.5s;
+        opacity: 1;
+      }
     }
   }
 }
