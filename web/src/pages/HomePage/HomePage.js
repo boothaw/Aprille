@@ -57,10 +57,10 @@ const HomePage = () => {
           <Wave subtitle="screenprinting"></Wave>
           <Screenprintcopy></Screenprintcopy>
 
-          <PrintsCell filter="1"></PrintsCell>
+          <PrintsCell filter="12"></PrintsCell>
           <Wave subtitle="workshops"></Wave>
           <Workshops></Workshops>
-          <WorkprintsCell filter="1"></WorkprintsCell>
+          <WorkprintsCell filter="12"></WorkprintsCell>
           {/* <div className="placeholder">
             <Link className="learn-more" to={routes.workshops()}>
               See More
