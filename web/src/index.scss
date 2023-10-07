@@ -632,6 +632,14 @@ textarea.error {
   .copy-section {
     padding-bottom: 80px;
   }
+  .photography-section .copy-section {
+    padding-bottom: 0;
+    padding-top: 40px;
+
+    a {
+      text-align: center;
+    }
+  }
 }
 
 // form stuff
@@ -706,6 +714,16 @@ textarea.error {
   }
 }
 
+.photography-section {
+  .photo-thumbnail {
+    &:hover {
+      .hover-card {
+        display: none;
+      }
+    }
+  }
+}
+
 // individual photo page -- photocell
 
 .photo-page {
@@ -747,8 +765,8 @@ textarea.error {
 }
 
 .pswp__bg {
-  background-color: $navy !important;
-  opacity: 0.8 !important;
+  background-color: $off-white !important;
+  opacity: 0.9 !important;
 
   .pswp__icn-shadow {
     stroke: 0;
@@ -756,19 +774,28 @@ textarea.error {
 }
 
 .pswp__icn {
-  fill: $off-white !important;
+  fill: $yellow !important;
   border: 0 !important;
+  opacity: 0.7;
 }
 
 .pswp__item {
   .pswp__img {
     object-fit: contain;
     background-color: transparent;
+    padding: 20px 10px;
   }
 }
 
+.pswp__counter {
+  color: $yellow !important;
+  // text-shadow: none !important;
+  font-weight: bold !important;
+  opacity: 0.7 !important;
+}
+
 .pswp__default-caption {
-  color: $off-white !important;
+  color: $yellow !important;
   max-width: 700px;
   margin: auto;
 }
@@ -933,6 +960,7 @@ textarea.error {
   max-width: 500px;
   width: 90%;
   transition: all 0.5s ease;
+  position: relative;
 
   a {
     display: flex;
@@ -941,25 +969,61 @@ textarea.error {
     height: 100%;
   }
 
-  :hover {
-    h2 {
-      color: $yellow;
-    }
+  // :hover {
+  //   h2 {
+  //     color: $yellow;
+  //   }
+  // }
+
+  .hover-card {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: absolute;
+    bottom: 0px;
+    top: 0px;
+    left: auto;
+    right: auto;
+    width: 100%;
+    height: 100%;
+    background-color: $yellow;
+    opacity: 0;
   }
 
   h2 {
-    transition: all 0.5s ease;
-    text-transform: lowercase;
-    font-size: 2em;
+    text-align: center;
+    font-size: 1.5em;
     font-weight: bold;
+    width: 60%;
+    margin-left: auto;
+    margin-right: 5%;
+    margin-bottom: 4%;
     text-align: end;
-    margin-bottom: 0;
-    margin-top: 4px;
+    color: #fff;
+    text-transform: lowercase;
   }
-  h2 a {
-    color: $navy;
-    text-decoration: none;
+
+  &:hover {
+    .hover-card {
+      animation: fadeIn 0.5s;
+      opacity: 1;
+    }
   }
+
+  // h2 {
+  //   transition: all 0.5s ease;
+  //   text-transform: lowercase;
+  //   font-size: 2em;
+  //   font-weight: bold;
+  //   text-align: end;
+  //   margin-bottom: 0;
+  //   margin-top: 4px;
+  // }
+
+  // h2 a {
+  //   color: $navy;
+  //   text-decoration: none;
+  // }
 
   .featured-image {
     max-width: 100%;
@@ -1043,6 +1107,16 @@ textarea.error {
 
 .workshops-section {
   .workshops-inner {
+  }
+}
+
+.work-prints {
+  .photo-thumbnail {
+    &:hover {
+      .hover-card {
+        display: none;
+      }
+    }
   }
 }
 

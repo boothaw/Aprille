@@ -34,11 +34,11 @@ const gallerySized = (url) => {
   return parts.join('/')
 }
 
-export const Success = ({ prints }) => {
+export const Success = ({ prints, filter }) => {
   return (
-    <div className="photography-section-grid screenprint-section-grid">
+    <div className="photography-section-grid screenprint-section-grid work-prints">
       <Gallery>
-        {prints.slice(0, 25).map((photo) => {
+        {prints.slice(0, filter).map((photo) => {
           return (
             <div
               className="photo-container photo-thumbnail print-container"

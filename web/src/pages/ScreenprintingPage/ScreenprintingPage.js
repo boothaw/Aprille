@@ -64,7 +64,7 @@ const ScreenprintingPage = () => {
         </div>
         <Wave subtitle="Work"></Wave>
       </div>
-      <PrintsCell></PrintsCell>
+      <PrintsCell fitler="-1"></PrintsCell>
     </>
   )
 }

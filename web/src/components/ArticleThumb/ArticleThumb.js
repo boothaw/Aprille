@@ -20,9 +20,9 @@ const ArticleThumb = ({ article }) => {
           src={shrinker(article.url)}
           alt={'Project Title: ' + article.title + article.id}
         />
-        <header>
+        <div className="hover-card">
           <h2>{article.title}</h2>
-        </header>
+        </div>
       </Link>
     </article>
   )
