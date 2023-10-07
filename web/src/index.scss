@@ -1192,6 +1192,9 @@ textarea.error {
 
 /* Larger still */
 @media (max-width: 900px) {
+  .hover-card {
+    display: none !important;
+  }
   .blog-header {
     .nav-container {
       .nav {
