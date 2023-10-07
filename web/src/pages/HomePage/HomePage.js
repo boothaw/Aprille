@@ -67,7 +67,7 @@ const HomePage = () => {
             </Link>
           </div> */}
           <Wave subtitle="projects"></Wave>
-          {/* <ArticlesCell></ArticlesCell> */}
+          <ArticlesCell></ArticlesCell>
           <Wave subtitle="bio & contact"></Wave>
           <AboutCopy></AboutCopy>
         </div>

@@ -634,7 +634,7 @@ textarea.error {
   }
   .photography-section .copy-section {
     padding-bottom: 0;
-    padding-top: 80px;
+    padding-top: 40px;
 
     a {
       text-align: center;
@@ -960,6 +960,7 @@ textarea.error {
   max-width: 500px;
   width: 90%;
   transition: all 0.5s ease;
+  position: relative;
 
   a {
     display: flex;
@@ -968,25 +969,61 @@ textarea.error {
     height: 100%;
   }
 
-  :hover {
-    h2 {
-      color: $yellow;
-    }
+  // :hover {
+  //   h2 {
+  //     color: $yellow;
+  //   }
+  // }
+
+  .hover-card {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: absolute;
+    bottom: 0px;
+    top: 0px;
+    left: auto;
+    right: auto;
+    width: 100%;
+    height: 100%;
+    background-color: $yellow;
+    opacity: 0;
   }
 
   h2 {
-    transition: all 0.5s ease;
-    text-transform: lowercase;
-    font-size: 2em;
+    text-align: center;
+    font-size: 1.5em;
     font-weight: bold;
+    width: 60%;
+    margin-left: auto;
+    margin-right: 5%;
+    margin-bottom: 4%;
     text-align: end;
-    margin-bottom: 0;
-    margin-top: 4px;
+    color: #fff;
+    text-transform: lowercase;
   }
-  h2 a {
-    color: $navy;
-    text-decoration: none;
+
+  &:hover {
+    .hover-card {
+      animation: fadeIn 0.5s;
+      opacity: 1;
+    }
   }
+
+  // h2 {
+  //   transition: all 0.5s ease;
+  //   text-transform: lowercase;
+  //   font-size: 2em;
+  //   font-weight: bold;
+  //   text-align: end;
+  //   margin-bottom: 0;
+  //   margin-top: 4px;
+  // }
+
+  // h2 a {
+  //   color: $navy;
+  //   text-decoration: none;
+  // }
 
   .featured-image {
     max-width: 100%;
