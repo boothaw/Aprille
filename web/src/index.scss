@@ -1012,13 +1012,13 @@ textarea.error {
     text-align: center;
     font-size: 1.5em;
     font-weight: bold;
-    width: 60%;
+    width: 100%;
     margin-left: auto;
-    margin-right: 5%;
+    margin-right: auto;
     margin-bottom: 4%;
-    text-align: end;
     color: #fff;
     text-transform: lowercase;
+    text-align: center;
   }
 
   &:hover {
