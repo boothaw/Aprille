@@ -41,8 +41,8 @@ const AboutPage = () => {
   const onSubmit = async (data) => {
     const token = await recaptchaRef.current.executeAsync()
 
-    console.log('service id/key', process.env.EMAIL_JS_SERVICE_KEY)
-    console.log('service template', process.env.EMAIL_JS_TEMPLATE_KEY)
+    // console.log('service id/key', process.env.EMAIL_JS_SERVICE_KEY)
+    // console.log('service template', process.env.EMAIL_JS_TEMPLATE_KEY)
 
     if (token) {
       emailjs
