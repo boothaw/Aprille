@@ -64,9 +64,9 @@ export const Success = ({ screenprints, filter }) => {
                       alt={photo.title}
                       src={shrinker(photo.url)}
                     />
-                    <div className="hover-card">
+                    {/* <div className="hover-card">
                       <h2>{photo.title}</h2>
-                    </div>
+                    </div> */}
                   </div>
                 )}
               </Item>

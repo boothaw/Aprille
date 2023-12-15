@@ -559,6 +559,17 @@ textarea.error {
     p > .learn-more {
       display: inline;
     }
+
+    p > span {
+      color: $yellow;
+    }
+    p > a {
+      color: $yellow;
+      cursor: pointer;
+    }
+    p > a:hover {
+      color: $navy;
+    }
   }
 
   h1 {
