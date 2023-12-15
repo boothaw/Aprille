@@ -92,17 +92,73 @@ const AboutPage = () => {
             alt="Aprille"
           />
           <p>
-            <span className="navy bold">Aprille Zammit</span> can often be found
-            in her studio, covered in ink working on her next creative project.
-            A graphic designer and DIY screen printer who chose to follow her
-            passion and devote much more time to this craft. Having studied at
-            VCU in Richmond Virginia for 4 years, Aprille has always been in a
-            rich creative environment and her dream is to help create a more
-            vibrant and active creative community in Malta. She finds most of
-            her inspiration from nature and the oceans, being a lover of any and
-            all water-related sports. She can also rarely be seen without a film
-            camera hanging from her neck, as film photography is just one of her
-            other passions.
+            <span className="navy bold">Aprille Zammit</span> is an artist who
+            channels her passions into various media. The disciplines closest to
+            her heart are screen printing and film photography. She attained a
+            BFA in graphic design and printmaking at Virginia Commonwealth
+            University in the USA, where her interest in screen printing
+            blossomed. After spending a few years working in Virginia she
+            returned to Malta and founded her screen printing studio.
+          </p>
+          <p>
+            Her art is almost entirely inspired by nature, with reverence for
+            the sea. Her work often invokes a feeling of hope and appreciation
+            for what we have, a tribute to the ever-changing present. She
+            believes the creative process should be free-flowing, like the sea,
+            where one is unrestricted and able to play around with ideas,
+            creating space for them to form.
+          </p>
+          <p>
+            <a
+              target="__blank"
+              href="https://www.linkedin.com/in/aprille-zammit-129b59128/"
+            >
+              More Detailed Background
+            </a>
+          </p>
+
+          <h2>Exhibitions/Publications: </h2>
+          <p>
+            <a target="__blank" href="">
+              CARMENCITA BEST OF 2022,
+            </a>{' '}
+            film photo selected and published, Carmencita, Spain, 2023
+          </p>
+          <p>
+            <span>MARA 2, </span>
+            Interdisciplinary exhibition, Valletta, 2023
+          </p>
+          <p>
+            <span>Between Layers,</span> Collaborative exhibition with Rose
+            Nygaard, Arts on Main, Gloucester VA, 2023
+          </p>
+          <p>
+            <span>FUSE,</span> Refraction, Public installation, Valletta, Group
+            Exhibition, Funded by Valletta Cultural Agency, 2021
+          </p>
+          <p>
+            <span>FOTOBOOK #02,</span> 3 photos published, Editor: Zvezdan
+            Reljic, 2020 Surfvisuals online essay publication -{' '}
+            <a
+              href="https://surfvisuals.com.au/blogs/yours/april-zammit"
+              target="__blank"
+            >
+              The Turbulent & Wonderful Rides,{' '}
+            </a>
+            2019
+          </p>
+          <p>
+            <span>2nd Annual Open Juried Art</span> - Arts on Main, Gloucester
+            VA, Group exhibition 2019
+          </p>
+
+          <p>
+            <span>Action Planet Exhibition,</span> Spazju Kreattiv, Group
+            exhibition, 2018
+          </p>
+          <p>
+            <span>Senior Show 2016,</span> Main Street Richmond, BA Group
+            exhibition, 2016
           </p>
 
           <div className="form-section">
