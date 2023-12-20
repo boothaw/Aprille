@@ -43,6 +43,7 @@ const AboutPage = () => {
 
     console.log('service id/key', process.env.EMAIL_JS_SERVICE_KEY)
     console.log('service template', process.env.EMAIL_JS_TEMPLATE_KEY)
+    console.log('DB', process.env.DATABASE_URL)
 
     if (token) {
       emailjs
