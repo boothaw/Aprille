@@ -41,11 +41,15 @@ const AboutPage = () => {
   const onSubmit = async (data) => {
     const token = await recaptchaRef.current.executeAsync()
 
-    console.log('service id/key', process.env.EMAIL_JS_SERVICE_KEY)
+    const emailKey = process.env.EMAIL_JS_SERVICE_KEY
+    const db = process.env.DATABASE_URL
+    const secret = process.env.REDWOOD_ENV_SESSION_SECRET
+
+    console.log('service id/key', emailKey)
     console.log('service template', process.env.EMAIL_JS_TEMPLATE_KEY)
-    console.log('DB', process.env.DATABASE_URL)
+    console.log('DB', db)
     console.log('secret 1', process.env.SESSION_SECRET)
-    console.log('secret 2', process.env.REDWOOD_ENV_SESSION_SECRET)
+    console.log('secret 2', secret)
 
     if (token) {
       emailjs
