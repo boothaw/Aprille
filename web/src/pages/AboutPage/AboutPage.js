@@ -44,6 +44,8 @@ const AboutPage = () => {
     console.log('service id/key', process.env.EMAIL_JS_SERVICE_KEY)
     console.log('service template', process.env.EMAIL_JS_TEMPLATE_KEY)
     console.log('DB', process.env.DATABASE_URL)
+    console.log('secret 1', process.env.SESSION_SECRET)
+    console.log('secret 2', process.env.REDWOOD_ENV_SESSION_SECRET)
 
     if (token) {
       emailjs
