@@ -38,23 +38,39 @@ const AboutPage = () => {
     },
   })
 
+  const exports = async function (event, context) {
+    const value = process.env.DATABASE_URL
+
+    console.log('handler run', value)
+
+    return {
+      statusCode: 200,
+      body: JSON.stringify({
+        message: `Value of MY_IMPORTANT_VARIABLE is ${value}.`,
+      }),
+    }
+  }
+
   const onSubmit = async (data) => {
     const token = await recaptchaRef.current.executeAsync()
+
+    exports('e', 'cct')
 
     console.log('service id/key', process.env.EMAIL_JS_SERVICE_KEY)
     console.log('service template', process.env.EMAIL_JS_TEMPLATE_KEY)
     console.log('DB', process.env.DATABASE_URL)
     console.log('secret 1', process.env.SESSION_SECRET)
     console.log('secret 2', process.env.REDWOOD_ENV_SESSION_SECRET)
+    // console.log('netflify env', Netlify.env.get('DATABASE_URL'))
 
     if (token) {
       emailjs
-        .send(
-          process.env.EMAIL_JS_SERVICE_KEY,
-          process.env.EMAIL_JS_TEMPLATE_KEY,
-          data,
-          '_Tp0IwFf5UB99eAmt'
-        )
+        .send
+        // process.env.EMAIL_JS_SERVICE_KEY,
+        // process.env.EMAIL_JS_TEMPLATE_KEY,
+        // data,
+        // '_Tp0IwFf5UB99eAmt'
+        ()
         .then(
           () => {
             // show the user a success message
