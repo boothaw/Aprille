@@ -65,12 +65,12 @@ const AboutPage = () => {
 
     if (token) {
       emailjs
-        .send
-        // process.env.EMAIL_JS_SERVICE_KEY,
-        // process.env.EMAIL_JS_TEMPLATE_KEY,
-        // data,
-        // '_Tp0IwFf5UB99eAmt'
-        ()
+        .send(
+          process.env.EMAIL_JS_SERVICE_KEY,
+          process.env.EMAIL_JS_TEMPLATE_KEY,
+          data,
+          '_Tp0IwFf5UB99eAmt'
+        )
         .then(
           () => {
             // show the user a success message
