@@ -20,9 +20,10 @@ export const Loading = () => <LoadingWave></LoadingWave>
 
 export const Empty = () => <div>Empty</div>
 
-export const Failure = ({ error }) => (
-  <div style={{ color: 'red' }}>Error: {error?.message}</div>
-)
+export const Failure = ({ error }) => {
+  console.log('Error:', { error })
+  ;<div style={{ color: 'red' }}>Error: {error?.message}</div>
+}
 
 const shrinker = (url) => {
   const parts = url.split('/')

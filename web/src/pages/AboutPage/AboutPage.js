@@ -32,38 +32,14 @@ const AboutPage = () => {
   const recaptchaRef = useRef()
   const formMethods = useForm()
 
-  const value = process.env.REDWOOD_ENV_SESSION_SECRET
-  console.log('session secret', value)
-
   const [create, { loading, error }] = useMutation(CREATE_CONTACT, {
     onCompleted: () => {
       formMethods.reset()
     },
   })
 
-  const exports = async function (event, context) {
-    const value = process.env.REDWOOD_ENV_SESSION_SECRET
-
-    console.log('session secret', value)
-
-    // return {
-    //   statusCode: 200,
-    //   body: JSON.stringify({
-    //     message: `Value of MY_IMPORTANT_VARIABLE is ${value}.`,
-    //   }),
-    // }
-  }
-
   const onSubmit = async (data) => {
     const token = await recaptchaRef.current.executeAsync()
-    console.log('service id/key', process.env.EMAIL_JS_SERVICE_KEY)
-    console.log('service template', process.env.EMAIL_JS_TEMPLATE_KEY)
-    console.log('DB', process.env.DATABASE_URL)
-    console.log('secret 1', process.env.SESSION_SECRET)
-    console.log('secret 2', process.env.REDWOOD_ENV_SESSION_SECRET)
-    // console.log('netflify env', Netlify.env.get('DATABASE_URL'))
-
-    exports('e', 'cct')
 
     if (token) {
       emailjs

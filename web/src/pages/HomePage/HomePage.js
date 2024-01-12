@@ -15,6 +15,9 @@ import WorkprintsCell from 'src/components/WorkprintsCell'
 import Workshops from 'src/components/Workshops/Workshops'
 
 const HomePage = () => {
+  console.log('DB', process.env.DATABASE_URL)
+  console.log('secret 2', process.env.REDWOOD_ENV_SESSION_SECRET)
+
   const [element, setElement] = useState(null)
 
   let location = useLocation()
