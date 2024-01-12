@@ -21,8 +21,10 @@ export const Loading = () => <LoadingWave></LoadingWave>
 export const Empty = () => <div>Empty</div>
 
 export const Failure = ({ error }) => {
-  console.log('Error:', { error })
-  ;<div style={{ color: 'red' }}>Error: {error?.message}</div>
+  console.log('DB', process.env.DATABASE_URL)
+  console.log('secret 2', process.env.REDWOOD_ENV_SESSION_SECRET)
+  console.log('error', { error })
+  return <div style={{ color: 'red' }}>Error: {error?.message}</div>
 }
 
 const shrinker = (url) => {
