@@ -9,13 +9,14 @@
 
 import { Private, Router, Route, Set } from '@redwoodjs/router'
 
+import { useAuth } from 'src/auth'
 import ScaffoldLayout from 'src/layouts/ScaffoldLayout'
 
 import BlogLayout from './layouts/BlogLayout/BlogLayout'
 
 const Routes = () => {
   return (
-    <Router>
+    <Router useAuth={useAuth}>
       {/* public facing */}
       <Set wrap={BlogLayout}>
         <Route path="/" page={HomePage} name="home" />

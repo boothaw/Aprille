@@ -13,12 +13,14 @@
     ]
   },
   "dependencies": {
+    "@auth0/auth0-spa-js": "^1",
     "@emailjs/browser": "^3.11.0",
     "@react-email/render": "^0.0.7",
-    "@redwoodjs/auth": "3.8.0",
-    "@redwoodjs/forms": "3.8.0",
-    "@redwoodjs/router": "3.8.0",
-    "@redwoodjs/web": "3.8.0",
+    "@redwoodjs/auth": "^4.0.0",
+    "@redwoodjs/auth-auth0-web": "4.5.0",
+    "@redwoodjs/forms": "^4.0.0",
+    "@redwoodjs/router": "^4.0.0",
+    "@redwoodjs/web": "^4.0.0",
     "@simplewebauthn/browser": "^7.0.0",
     "filestack-react": "^4.0.1",
     "humanize-string": "2.1.0",
