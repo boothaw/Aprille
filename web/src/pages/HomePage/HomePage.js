@@ -32,7 +32,7 @@ const HomePage = () => {
       setElement(element)
       return element
     } else {
-      return null
+      return
     }
   }, [])
 
@@ -40,7 +40,7 @@ const HomePage = () => {
     if (element) {
       element.scrollIntoView({ block: 'start', behavior: 'smooth' })
     }
-  }, [element])
+  }, [])
 
   return (
     <>
