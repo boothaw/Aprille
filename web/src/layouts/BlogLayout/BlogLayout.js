@@ -1,7 +1,8 @@
 import { useState, useRef, useEffect } from 'react'
 
-import { useAuth } from '@redwoodjs/auth'
 import { Link, routes } from '@redwoodjs/router'
+
+import { useAuth } from 'src/auth'
 
 const BlogLayout = ({ children }) => {
   // const { isAuthenticated, currentUser, logOut } = useAuth()
