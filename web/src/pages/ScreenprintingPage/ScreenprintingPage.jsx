@@ -1,7 +1,7 @@
 import { Link, routes } from '@redwoodjs/router'
 import { MetaTags } from '@redwoodjs/web'
 
-import PrintsCell from 'src/components/PrintsCell/PrintsCell.js'
+import PrintsCell from 'src/components/PrintsCell/PrintsCell'
 import Wave from 'src/components/Wave/Wave'
 
 const ScreenprintingPage = () => {
