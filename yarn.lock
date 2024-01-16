@@ -4557,7 +4557,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@redwoodjs/api@npm:4.5.0, @redwoodjs/api@npm:^4.0.0":
+"@redwoodjs/api@npm:4.5.0":
   version: 4.5.0
   resolution: "@redwoodjs/api@npm:4.5.0"
   dependencies:
@@ -4696,7 +4696,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@redwoodjs/core@npm:^4.0.0":
+"@redwoodjs/core@npm:4.5.0":
   version: 4.5.0
   resolution: "@redwoodjs/core@npm:4.5.0"
   dependencies:
@@ -4795,7 +4795,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@redwoodjs/forms@npm:^4.0.0":
+"@redwoodjs/forms@npm:4.5.0":
   version: 4.5.0
   resolution: "@redwoodjs/forms@npm:4.5.0"
   dependencies:
@@ -4810,7 +4810,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@redwoodjs/graphql-server@npm:4.5.0, @redwoodjs/graphql-server@npm:^4.0.0":
+"@redwoodjs/graphql-server@npm:4.5.0":
   version: 4.5.0
   resolution: "@redwoodjs/graphql-server@npm:4.5.0"
   dependencies:
@@ -4919,7 +4919,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@redwoodjs/router@npm:4.5.0, @redwoodjs/router@npm:^4.0.0":
+"@redwoodjs/router@npm:4.5.0":
   version: 4.5.0
   resolution: "@redwoodjs/router@npm:4.5.0"
   dependencies:
@@ -5025,7 +5025,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@redwoodjs/web@npm:4.5.0, @redwoodjs/web@npm:^4.0.0":
+"@redwoodjs/web@npm:4.5.0":
   version: 4.5.0
   resolution: "@redwoodjs/web@npm:4.5.0"
   dependencies:
@@ -6744,7 +6744,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/express-serve-static-core@npm:*, @types/express-serve-static-core@npm:^4.17.30, @types/express-serve-static-core@npm:^4.17.31, @types/express-serve-static-core@npm:^4.17.33":
+"@types/express-serve-static-core@npm:*, @types/express-serve-static-core@npm:^4.17.30, @types/express-serve-static-core@npm:^4.17.33":
   version: 4.17.41
   resolution: "@types/express-serve-static-core@npm:4.17.41"
   dependencies:
@@ -6756,19 +6756,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/express@npm:*, @types/express@npm:^4.17.13":
-  version: 4.17.15
-  resolution: "@types/express@npm:4.17.15"
-  dependencies:
-    "@types/body-parser": "*"
-    "@types/express-serve-static-core": ^4.17.31
-    "@types/qs": "*"
-    "@types/serve-static": "*"
-  checksum: a230500a0bcf47d090a6a254873325145ad29fb7513c1688aa7376d3ac3cddf4e6478e77e7c0273349260f26b2767ff403368b8ec4e3e72a6dc17159ba1bddb2
-  languageName: node
-  linkType: hard
-
-"@types/express@npm:^4.17.14":
+"@types/express@npm:*, @types/express@npm:^4.17.13, @types/express@npm:^4.17.14":
   version: 4.17.21
   resolution: "@types/express@npm:4.17.21"
   dependencies:
@@ -8344,9 +8332,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "api@workspace:api"
   dependencies:
-    "@redwoodjs/api": ^4.0.0
+    "@redwoodjs/api": 4.5.0
     "@redwoodjs/auth-auth0-api": 4.5.0
-    "@redwoodjs/graphql-server": ^4.0.0
+    "@redwoodjs/graphql-server": 4.5.0
     "@simplewebauthn/server": ^7.0.0
     filestack-js: ^3.25.0
   languageName: unknown
@@ -10877,14 +10865,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"core-js@npm:3.30.0, core-js@npm:^3.0.4, core-js@npm:^3.26.0, core-js@npm:^3.6.5, core-js@npm:^3.8.2":
+"core-js@npm:3.30.0":
   version: 3.30.0
   resolution: "core-js@npm:3.30.0"
   checksum: b96be6526e025f8b3382d6e7823c406987425c72d24efb27f64d7c4c38372b47dddb80ccf44cf4e198ab27765e8fa680f30e251b4758426701f252c2a0c49b4e
   languageName: node
   linkType: hard
 
-"core-js@npm:^3.25.4":
+"core-js@npm:^3.0.4, core-js@npm:^3.25.4, core-js@npm:^3.26.0, core-js@npm:^3.6.5, core-js@npm:^3.8.2":
   version: 3.35.0
   resolution: "core-js@npm:3.35.0"
   checksum: 1d545ff4406f2afa5e681f44b45ed5f7f119d158b380234d5aa7787ce7e47fc7a635b98b74c28c766ba8191e3db8c2316ad6ab4ff1ddecbc3fd618413a52c29c
@@ -21856,7 +21844,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "root-workspace-0b6124@workspace:."
   dependencies:
-    "@redwoodjs/core": ^4.0.0
+    "@redwoodjs/core": 4.5.0
     photoswipe: ^5.3.7
     react-google-recaptcha: ^3.1.0
     react-photoswipe-gallery: ^2.2.7
@@ -24986,9 +24974,9 @@ __metadata:
     "@emailjs/browser": ^3.11.0
     "@react-email/render": ^0.0.7
     "@redwoodjs/auth-auth0-web": 4.5.0
-    "@redwoodjs/forms": ^4.0.0
-    "@redwoodjs/router": ^4.0.0
-    "@redwoodjs/web": ^4.0.0
+    "@redwoodjs/forms": 4.5.0
+    "@redwoodjs/router": 4.5.0
+    "@redwoodjs/web": 4.5.0
     "@simplewebauthn/browser": ^7.0.0
     filestack-react: ^4.0.1
     humanize-string: 2.1.0

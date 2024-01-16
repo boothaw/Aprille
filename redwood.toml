@@ -15,3 +15,4 @@
   port = 8912
 [browser]
   open = true
+	versionUpdates = "v4.5.0"
