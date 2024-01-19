@@ -53,21 +53,21 @@ const HomePage = () => {
           </a>
           <Wave subtitle="photography"></Wave>
           {/* <PhotosCell filter="12" button="true"></PhotosCell> */}
-          <PhotosCell filter="12" button="true"></PhotosCell>
+          <PhotosCell filter="1" button="true"></PhotosCell>
           <Wave subtitle="screenprinting"></Wave>
           <Screenprintcopy></Screenprintcopy>
 
-          <PrintsCell filter="12"></PrintsCell>
+          <PrintsCell filter="1"></PrintsCell>
           <Wave subtitle="workshops"></Wave>
           <Workshops></Workshops>
-          <WorkprintsCell filter="12"></WorkprintsCell>
+          <WorkprintsCell filter="1"></WorkprintsCell>
           {/* <div className="placeholder">
             <Link className="learn-more" to={routes.workshops()}>
               See More
             </Link>
           </div> */}
           <Wave subtitle="projects"></Wave>
-          <ArticlesCell></ArticlesCell>
+          {/* <ArticlesCell></ArticlesCell> */}
           <Wave subtitle="bio & contact"></Wave>
           <AboutCopy></AboutCopy>
         </div>
