@@ -4599,6 +4599,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@redwoodjs/auth-auth0-setup@npm:4.5.0":
+  version: 4.5.0
+  resolution: "@redwoodjs/auth-auth0-setup@npm:4.5.0"
+  dependencies:
+    "@babel/runtime-corejs3": 7.21.0
+    "@redwoodjs/cli-helpers": 4.5.0
+    core-js: 3.30.0
+  checksum: b0608e1a3d567e269edce0f7ea9d323992e6e37911fedc74788edf0e8bd90f9b954ec7ffbff38080e52df8694fdc8d98f2b6058c52cea305c8e0a205112e9783
+  languageName: node
+  linkType: hard
+
 "@redwoodjs/auth-auth0-web@npm:4.5.0":
   version: 4.5.0
   resolution: "@redwoodjs/auth-auth0-web@npm:4.5.0"
@@ -21856,6 +21867,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "root-workspace-0b6124@workspace:."
   dependencies:
+    "@redwoodjs/auth-auth0-setup": 4.5.0
     "@redwoodjs/core": ^4.0.0
     photoswipe: ^5.3.7
     react-google-recaptcha: ^3.1.0

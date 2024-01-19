@@ -14,6 +14,8 @@ import ScaffoldLayout from 'src/layouts/ScaffoldLayout'
 
 import BlogLayout from './layouts/BlogLayout/BlogLayout'
 
+import { useAuth } from './auth'
+
 const Routes = () => {
   return (
     <Router useAuth={useAuth}>
