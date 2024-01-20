@@ -15,32 +15,32 @@ import WorkprintsCell from 'src/components/WorkprintsCell'
 import Workshops from 'src/components/Workshops/Workshops'
 
 const HomePage = () => {
-  const [element, setElement] = useState(null)
+  // const [element, setElement] = useState(null)
 
-  let location = useLocation()
+  // let location = useLocation()
 
-  useEffect(() => {
-    let hash = location.hash
+  // useEffect(() => {
+  //   let hash = location.hash
 
-    const removeHashCharacter = (str) => {
-      const result = str.slice(1)
-      return result
-    }
+  //   const removeHashCharacter = (str) => {
+  //     const result = str.slice(1)
+  //     return result
+  //   }
 
-    if (hash) {
-      let element = document.getElementById(removeHashCharacter(hash))
-      setElement(element)
-      return element
-    } else {
-      return null
-    }
-  }, [])
+  //   if (hash) {
+  //     let element = document.getElementById(removeHashCharacter(hash))
+  //     setElement(element)
+  //     return element
+  //   } else {
+  //     return null
+  //   }
+  // }, [])
 
-  useEffect(() => {
-    if (element) {
-      element.scrollIntoView({ block: 'start', behavior: 'smooth' })
-    }
-  }, [element])
+  // useEffect(() => {
+  //   if (element) {
+  //     element.scrollIntoView({ block: 'start', behavior: 'smooth' })
+  //   }
+  // }, [element])
 
   return (
     <>

@@ -7,32 +7,55 @@ import { useAuth } from 'src/auth'
 const BlogLayout = ({ children }) => {
   // const { isAuthenticated, currentUser, logOut } = useAuth()
   const { isAuthenticated, logOut } = useAuth()
-  const [showMenu, setShowMenu] = useState(false)
+  const [shownMenu, setshownMenu] = useState(false)
   const ref = useRef()
 
-  const OtherClick = (ref, callback) => {
-    const handleClick = (e) => {
-      if (ref.current && !ref.current.contains(e.target)) {
-        callback()
+  // const OtherClick = (ref, callback) => {
+  //   const handleClick = (e) => {
+  //     if (ref.current && !ref.current.contains(e.target)) {
+  //       callback()
+  //     }
+  //   }
+
+  //   useEffect(() => {
+  //     // document.addEventListener('click', handleClick)
+
+  //     console.log('otherclick useeffect')
+
+  //     return () => {
+  //       document.removeEventListener('click', handleClick)
+  //     }
+  //   })
+  // }
+
+  // const switchMenu = () => {
+  //   setshownMenu(!shownMenu)
+  // }
+
+  // OtherClick(ref, () => {
+  //   if (shownMenu) setshownMenu(!shownMenu)
+  // })
+
+  const menuToggle = () => {
+    setshownMenu(!shownMenu)
+  }
+
+  useEffect(() => {
+    const clickedOutside = (e) => {
+      // If the menu is open and the clicked target is not within the menu,
+      // then close the menu
+      if (shownMenu && ref.current && !ref.current.contains(e.target)) {
+        setshownMenu(false)
       }
     }
 
-    useEffect(() => {
-      document.addEventListener('click', handleClick)
+    document.addEventListener('mousedown', clickedOutside)
 
-      return () => {
-        document.removeEventListener('click', handleClick)
-      }
-    })
-  }
-
-  OtherClick(ref, () => {
-    if (showMenu) setShowMenu(!showMenu)
-  })
-
-  function switchMenu() {
-    setShowMenu(!showMenu)
-  }
+    return () => {
+      // Cleanup the event listener
+      document.removeEventListener('mousedown', clickedOutside)
+    }
+  }, [shownMenu])
 
   return (
     <>
@@ -50,7 +73,7 @@ const BlogLayout = ({ children }) => {
           </div>
           <div
             className={`nav-container ${
-              showMenu ? 'menu_active' : 'menu_inactive'
+              shownMenu ? 'menu_active' : 'menu_inactive'
             }`}
           >
             <nav ref={ref} className="nav">
@@ -66,22 +89,22 @@ const BlogLayout = ({ children }) => {
                   </a>
                 </li> */}
                 <li>
-                  <Link to={routes.home()} onClick={switchMenu}>
+                  <Link to={routes.home()} onClick={menuToggle}>
                     portfolio
                   </Link>
                 </li>
                 <li>
-                  <Link to={routes.photography()} onClick={switchMenu}>
+                  <Link to={routes.photography()} onClick={menuToggle}>
                     photography
                   </Link>
                 </li>
                 <li>
-                  <Link to={routes.screenprinting()} onClick={switchMenu}>
+                  <Link to={routes.screenprinting()} onClick={menuToggle}>
                     screenprinting
                   </Link>
                 </li>
                 <li>
-                  <Link to={routes.workshops()} onClick={switchMenu}>
+                  <Link to={routes.workshops()} onClick={menuToggle}>
                     workshops
                   </Link>
                 </li>
@@ -91,7 +114,7 @@ const BlogLayout = ({ children }) => {
                   </a>
                 </li> */}
                 <li>
-                  <Link to={routes.about()} onClick={switchMenu}>
+                  <Link to={routes.about()} onClick={menuToggle}>
                     bio & contact
                   </Link>
                 </li>
@@ -107,7 +130,7 @@ const BlogLayout = ({ children }) => {
             <button
               aria-label="mobile hamburger menu"
               className="hamburger-container"
-              onClick={switchMenu}
+              onClick={menuToggle}
             >
               <div className="hamburger">
                 <svg
