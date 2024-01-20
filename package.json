@@ -8,8 +8,8 @@
     ]
   },
   "devDependencies": {
-    "@redwoodjs/auth-auth0-setup": "5.4.3",
-    "@redwoodjs/core": "5.4.3"
+    "@redwoodjs/auth-auth0-setup": "6.6.2",
+    "@redwoodjs/core": "6.6.2"
   },
   "eslintConfig": {
     "extends": "@redwoodjs/eslint-config",
