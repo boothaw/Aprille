@@ -77,7 +77,12 @@ const AboutPage = () => {
 
   return (
     <>
-      <MetaTags title="Profile & Contact" description="About page" />
+      <MetaTags
+        title="Profile & Contact"
+        description="Aprille Zammit is an artist who
+            channels her passions into various media. The disciplines closest to
+            her heart are screen printing and film photography."
+      />
 
       <div className="about-page copy-section">
         <Wave title="Bio & Contact"></Wave>
