@@ -54,13 +54,13 @@ const ScreenprintingPage = () => {
             will always discuss this with you and match it to the best of our
             abilities.{' '}
           </p>
-          <p>
+          {/* <p>
             Please read the{' '}
             <Link className="learn-more" to={routes.termsAndConditions()}>
               Terms & Conditions
             </Link>
             .
-          </p>
+          </p> */}
         </div>
         <Wave subtitle="Work"></Wave>
       </div>
