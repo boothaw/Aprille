@@ -8,7 +8,8 @@ const BlogLayout = ({ children }) => {
   // const { isAuthenticated, currentUser, logOut } = useAuth()
   const { isAuthenticated, logOut } = useAuth()
   const [shownMenu, setshownMenu] = useState(false)
-  const ref = useRef()
+  const nav = useRef()
+  const hamburger = useRef()
 
   // const OtherClick = (ref, callback) => {
   //   const handleClick = (e) => {
@@ -42,10 +43,15 @@ const BlogLayout = ({ children }) => {
 
   useEffect(() => {
     const clickedOutside = (e) => {
-      // If the menu is open and the clicked target is not within the menu,
+      // If the menu is open and the clicked target is not within the menu and not the hamburger,
       // then close the menu
-      if (shownMenu && ref.current && !ref.current.contains(e.target)) {
-        setshownMenu(false)
+      if (
+        shownMenu &&
+        nav.current &&
+        !nav.current.contains(e.target) &&
+        !hamburger.current.contains(e.target)
+      ) {
+        menuToggle()
       }
     }
 
@@ -92,18 +98,8 @@ const BlogLayout = ({ children }) => {
               shownMenu ? 'menu_active' : 'menu_inactive'
             }`}
           >
-            <nav ref={ref} className="nav">
+            <nav ref={nav} className="nav">
               <ul>
-                {/* <li>
-                  <a href="/#photos" onClick={switchMenu}>
-                    photography
-                  </a>
-                </li>
-                <li>
-                  <a href="/#projects" onClick={switchMenu}>
-                    projects
-                  </a>
-                </li> */}
                 <li>
                   <Link to={routes.home()} onClick={menuToggle}>
                     portfolio
@@ -124,11 +120,6 @@ const BlogLayout = ({ children }) => {
                     workshops
                   </Link>
                 </li>
-                {/* <li>
-                  <a href="/#workshops" onClick={switchMenu}>
-                    workshops
-                  </a>
-                </li> */}
                 <li>
                   <Link to={routes.about()} onClick={menuToggle}>
                     bio & contact
@@ -144,6 +135,7 @@ const BlogLayout = ({ children }) => {
               </ul>
             </nav>
             <button
+              ref={hamburger}
               aria-label="mobile hamburger menu"
               className="hamburger-container"
               onClick={menuToggle}
