@@ -19,7 +19,7 @@ const ScaffoldLayout = ({
         <Link to={routes.admin()}>Back To Admin Dashboard</Link>
         {isAuthenticated && (
           <button type="button" onClick={logOut}>
-            logout
+            Log Out
           </button>
         )}
       </div>
