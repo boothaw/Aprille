@@ -68,7 +68,7 @@ const BlogLayout = ({ children }) => {
       <header className="blog-header">
         <div className="blog-header__inner">
           <div className="logo-container">
-            <Link to={routes.home()}>
+            <Link to={routes.home()} aria-label="Aprille Zammit Logo">
               <svg
                 className="logo"
                 xmlns="http://www.w3.org/2000/svg"
