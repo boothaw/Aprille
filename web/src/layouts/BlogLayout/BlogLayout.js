@@ -8,7 +8,8 @@ const BlogLayout = ({ children }) => {
   // const { isAuthenticated, currentUser, logOut } = useAuth()
   const { isAuthenticated, logOut } = useAuth()
   const [shownMenu, setshownMenu] = useState(false)
-  const ref = useRef()
+  const nav = useRef()
+  const hamburger = useRef()
 
   // const OtherClick = (ref, callback) => {
   //   const handleClick = (e) => {
@@ -42,10 +43,15 @@ const BlogLayout = ({ children }) => {
 
   useEffect(() => {
     const clickedOutside = (e) => {
-      // If the menu is open and the clicked target is not within the menu,
+      // If the menu is open and the clicked target is not within the menu and not the hamburger,
       // then close the menu
-      if (shownMenu && ref.current && !ref.current.contains(e.target)) {
-        setshownMenu(false)
+      if (
+        shownMenu &&
+        nav.current &&
+        !nav.current.contains(e.target) &&
+        !hamburger.current.contains(e.target)
+      ) {
+        menuToggle()
       }
     }
 
@@ -63,12 +69,28 @@ const BlogLayout = ({ children }) => {
         <div className="blog-header__inner">
           <div className="logo-container">
             <Link to={routes.home()}>
-              <img
-                loading="lazy"
+              <svg
                 className="logo"
-                src="/LOGO_colour.png"
-                alt="logo"
-              />
+                xmlns="http://www.w3.org/2000/svg"
+                xmlSpace="preserve"
+                style={{
+                  enableBackground: 'new 0 0 576 576',
+                }}
+                viewBox="0 0 576 576"
+              >
+                <path
+                  d="M282.57 86.84c28.57 48.77 57.14 97.54 85.71 146.32 24.48 41.79 48.95 83.58 73.43 125.37 2.4 4.1-2.49 8.57-6.36 5.83-9.04-6.41-18.08-12.82-26.95-19.46-12.04-9.01-23.08-19.28-34.96-28.49-16.21-12.57-35.73-24.16-56.89-24.12-20 .04-40.82 10.4-51.68 27.47-1.14 1.79-.7 4.67 2.11 4.25 16.89-2.55 33-5.86 48.25 4.55 11.55 7.89 18.93 21.71 18.61 35.69-.32 13.98-8.52 27.62-20.92 34.09-10.54 5.49-23.21 5.74-34.75 2.95-11.55-2.79-22.2-8.4-32.54-14.25-20.87-11.81-46.42-28.3-71.47-21.17-6.65 1.89-12.93 5.07-19.3 8.42-3.75 1.98-7.86-1.95-6.04-5.78 44.15-93.01 88.36-186.1 133.75-281.67"
+                  style={{
+                    fill: '#212558',
+                  }}
+                />
+                <path
+                  d="M303.78 447.77h8.34v6.71h-8.34z"
+                  style={{
+                    fill: '#fff',
+                  }}
+                />
+              </svg>
             </Link>
           </div>
           <div
@@ -76,18 +98,8 @@ const BlogLayout = ({ children }) => {
               shownMenu ? 'menu_active' : 'menu_inactive'
             }`}
           >
-            <nav ref={ref} className="nav">
+            <nav ref={nav} className="nav">
               <ul>
-                {/* <li>
-                  <a href="/#photos" onClick={switchMenu}>
-                    photography
-                  </a>
-                </li>
-                <li>
-                  <a href="/#projects" onClick={switchMenu}>
-                    projects
-                  </a>
-                </li> */}
                 <li>
                   <Link to={routes.home()} onClick={menuToggle}>
                     portfolio
@@ -108,11 +120,6 @@ const BlogLayout = ({ children }) => {
                     workshops
                   </Link>
                 </li>
-                {/* <li>
-                  <a href="/#workshops" onClick={switchMenu}>
-                    workshops
-                  </a>
-                </li> */}
                 <li>
                   <Link to={routes.about()} onClick={menuToggle}>
                     bio & contact
@@ -128,6 +135,7 @@ const BlogLayout = ({ children }) => {
               </ul>
             </nav>
             <button
+              ref={hamburger}
               aria-label="mobile hamburger menu"
               className="hamburger-container"
               onClick={menuToggle}

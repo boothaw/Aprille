@@ -6,7 +6,10 @@ import WorkprintsCell from 'src/components/WorkprintsCell'
 const WorkshopsPage = () => {
   return (
     <>
-      <MetaTags title="Workshops" description="Workshops page" />
+      <MetaTags
+        title="Workshops"
+        description="Workshops are perfect for someone who wants to experience the magic of screen printing."
+      />
 
       <div className="workshops-section copy-section">
         <Wave title="workshops"></Wave>
