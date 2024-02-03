@@ -114,6 +114,11 @@ textarea::placeholder {
 label {
   margin-top: 1rem;
 }
+.error-message {
+  color: var($yellow);
+  text-align: center;
+  font-weight: bold;
+}
 .error {
   color: red;
   text-transform: capitalize;

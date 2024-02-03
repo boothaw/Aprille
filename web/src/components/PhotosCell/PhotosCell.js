@@ -2,7 +2,6 @@ import { Gallery, Item } from 'react-photoswipe-gallery'
 
 import { routes, Link } from '@redwoodjs/router'
 
-// import PhotoThumb from '../PhotoThumb/PhotoThumb'
 import 'photoswipe/dist/photoswipe.css'
 import LoadingWave from '../LoadingWave/LoadingWave'
 
@@ -21,10 +20,12 @@ export const Loading = () => <LoadingWave></LoadingWave>
 export const Empty = () => <div>Empty</div>
 
 export const Failure = ({ error }) => {
-  console.log('DB', process.env.DATABASE_URL)
-  console.log('secret 2', process.env.REDWOOD_ENV_SESSION_SECRET)
   console.log('error', { error })
-  return <div style={{ color: 'red' }}>Error: {error?.message}</div>
+  return (
+    <div className="error-message">
+      Sorry, something went wrong. Error: {error?.message}
+    </div>
+  )
 }
 
 const shrinker = (url) => {
