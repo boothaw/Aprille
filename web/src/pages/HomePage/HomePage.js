@@ -24,14 +24,15 @@ const HomePage = () => {
           </a>
           <Wave subtitle="photography"></Wave>
           <PhotosCell filter="12" button="true"></PhotosCell>
-          <Wave subtitle="screenprinting"></Wave>
+          <Wave subtitle="projects"></Wave>
+          <ArticlesCell></ArticlesCell>
+          <Wave subtitle="screenprinsting"></Wave>
           <Screenprintcopy></Screenprintcopy>
           <PrintsCell filter="12"></PrintsCell>
           <Wave subtitle="workshops"></Wave>
           <Workshops></Workshops>
           <WorkprintsCell filter="12"></WorkprintsCell>
-          <Wave subtitle="projects"></Wave>
-          <ArticlesCell></ArticlesCell>
+
           <Wave subtitle="bio & contact"></Wave>
           <AboutCopy></AboutCopy>
         </div>

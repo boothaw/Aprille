@@ -94,21 +94,23 @@ const AboutPage = () => {
             alt="Aprille"
           />
           <p>
-            <span className="navy bold">Aprille Zammit</span> is an artist who
-            channels her passions into various media. The disciplines closest to
-            her heart are screen printing and film photography. She attained a
-            BFA in graphic design and printmaking at Virginia Commonwealth
-            University in the USA, where her interest in screen printing
-            blossomed. After spending a few years working in Virginia she
-            returned to Malta and founded her screen printing studio.
+            <span>Aprille</span> is a passionate artist who channels her
+            creativity into various mediums, with screen printing and film
+            photography being the disciplines closest to her heart. She honed
+            her skills and deepened her interest in screen printing while
+            pursuing a BFA in graphic design and printmaking at Virginia
+            Commonwealth University in the USA. After gaining professional
+            experience in Virginia, Aprille returned to Malta and established
+            her own screen printing studio.s
           </p>
           <p>
-            Her art is almost entirely inspired by nature, with reverence for
-            the sea. Her work often invokes a feeling of hope and appreciation
-            for what we have, a tribute to the ever-changing present. She
-            believes the creative process should be free-flowing, like the sea,
-            where one is unrestricted and able to play around with ideas,
-            creating space for them to form.
+            Nature serves as the primary source of inspiration for Aprille’s
+            art, with a particular reverence for the sea evident in her work.
+            Through her artistic expressions, she aims to evoke feelings of hope
+            and gratitude for the beauty of the natural world, offering a
+            tribute to the ever-changing present moment. She embraces
+            experimentation and playfulness in her work, allowing ideas to take
+            shape organically and creating space for innovation to flourish.
           </p>
           <p>
             <a
@@ -118,50 +120,58 @@ const AboutPage = () => {
               More Detailed Background
             </a>
           </p>
+          <div className="extra-space shows-section">
+            <h2>Exhibitions/Publications: </h2>
+            <p>
+              <span>SPRING,</span> Finding Ease, collective exhibition, Gabriel
+              Caruana Foundation, 2024
+            </p>
+            <p>
+              <a
+                target="__blank"
+                href="https://carmencitafilmlab.com/blog/best-of-2022/"
+              >
+                CARMENCITA BEST OF 2022,
+              </a>{' '}
+              film photo selected and published, Carmencita, Spain, 2023
+            </p>
+            <p>
+              <span>MARA 2, </span>
+              Interdisciplinary exhibition, Valletta, 2023
+            </p>
+            <p>
+              <span>Between Layers,</span> Collaborative exhibition with Rose
+              Nygaard, Arts on Main, Gloucester VA, 2023
+            </p>
+            <p>
+              <span>FUSE,</span> Refraction, Public installation, Valletta,
+              Group Exhibition, Funded by Valletta Cultural Agency, 2021
+            </p>
+            <p>
+              <span>FOTOBOOK #02,</span> 3 photos published, Editor: Zvezdan
+              Reljic, 2020 Surfvisuals online essay publication -{' '}
+              <a
+                href="https://surfvisuals.com.au/blogs/yours/april-zammit"
+                target="__blank"
+              >
+                The Turbulent & Wonderful Rides,{' '}
+              </a>
+              2019
+            </p>
+            <p>
+              <span>2nd Annual Open Juried Art</span> - Arts on Main, Gloucester
+              VA, Group exhibition 2019
+            </p>
 
-          <h2>Exhibitions/Publications: </h2>
-          <p>
-            <a target="__blank" href="">
-              CARMENCITA BEST OF 2022,
-            </a>{' '}
-            film photo selected and published, Carmencita, Spain, 2023
-          </p>
-          <p>
-            <span>MARA 2, </span>
-            Interdisciplinary exhibition, Valletta, 2023
-          </p>
-          <p>
-            <span>Between Layers,</span> Collaborative exhibition with Rose
-            Nygaard, Arts on Main, Gloucester VA, 2023
-          </p>
-          <p>
-            <span>FUSE,</span> Refraction, Public installation, Valletta, Group
-            Exhibition, Funded by Valletta Cultural Agency, 2021
-          </p>
-          <p>
-            <span>FOTOBOOK #02,</span> 3 photos published, Editor: Zvezdan
-            Reljic, 2020 Surfvisuals online essay publication -{' '}
-            <a
-              href="https://surfvisuals.com.au/blogs/yours/april-zammit"
-              target="__blank"
-            >
-              The Turbulent & Wonderful Rides,{' '}
-            </a>
-            2019
-          </p>
-          <p>
-            <span>2nd Annual Open Juried Art</span> - Arts on Main, Gloucester
-            VA, Group exhibition 2019
-          </p>
-
-          <p>
-            <span>Action Planet Exhibition,</span> Spazju Kreattiv, Group
-            exhibition, 2018
-          </p>
-          <p>
-            <span>Senior Show 2016,</span> Main Street Richmond, BA Group
-            exhibition, 2016
-          </p>
+            <p>
+              <span>Action Planet Exhibition,</span> Spazju Kreattiv, Group
+              exhibition, 2018
+            </p>
+            <p>
+              <span>Senior Show 2016,</span> Main Street Richmond, BA Group
+              exhibition, 2016
+            </p>
+          </div>
 
           <div className="form-section">
             <h2>Say Hello!</h2>

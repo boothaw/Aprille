@@ -350,12 +350,21 @@ textarea.error {
     align-items: center;
   }
 
+  .copyright {
+    color: $blue;
+    text-align: center;
+    font-weight: 300;
+    font-size: 14px;
+    padding-top: 40px;
+  }
+
   .aprille-name {
     position: static;
     transform: translate(0, 0);
     padding-top: 0;
     padding-right: 0;
     align-items: flex-start;
+    width: fit-content;
 
     h2 {
       color: $yellow;
@@ -372,6 +381,7 @@ textarea.error {
 
   .social-container {
     display: flex;
+    justify-content: flex-end;
 
     a {
       width: 48px;
@@ -842,6 +852,10 @@ textarea.error {
   .copy-section__inner {
     p:last-of-type {
       margin-bottom: 0;
+
+      > a {
+        font-weight: 400;
+      }
     }
   }
 
@@ -930,6 +944,17 @@ textarea.error {
   .hidden-recaptcha {
     display: none;
   }
+
+  .extra-space {
+    margin-top: 40px;
+  }
+  .copy-section__inner {
+    .shows-section {
+    }
+  }
+  p {
+    font-weight: 300;
+  }
 }
 
 .headshot {
@@ -1012,7 +1037,7 @@ textarea.error {
     right: auto;
     width: 100%;
     height: 100%;
-    background-color: $yellow;
+    background-color: rgba(235, 156, 49, 0.8);
     opacity: 0;
   }
 
