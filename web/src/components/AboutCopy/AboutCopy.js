@@ -11,10 +11,13 @@ const AboutCopy = () => {
           alt="Aprille"
         />
         <p>
-          <span className="navy bold">Aprille Zammit</span> can often be found
-          in her studio, covered in ink working on her next creative project. A
-          graphic designer and DIY screen printer who chose to follow her
-          passion and devote much more time to this craft.
+          <span className="navy bold">Aprille Zammit</span> is a versatile
+          creative force, equally content in her studio creating or out at sea
+          gathering inspiration. As a multi-hyphenated creative, she dives into
+          various mediums to capture the perfect feeling for each project.
+          Inspired by the ocean's fluidity, her work reflects a deep connection
+          to nature. Aprille's journey is a testament to her boundless
+          creativity and passion for bringing emotions to life through art.
         </p>
         <Link className="learn-more" to={routes.about()}>
           Say Hello
