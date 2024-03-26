@@ -111,14 +111,24 @@ const BlogLayout = ({ children }) => {
                   </Link>
                 </li>
                 <li>
-                  <Link to={routes.screenprinting()} onClick={menuToggle}>
+                  <a
+                    href="https://screenprintingmalta.com/"
+                    target="_blank"
+                    onClick={menuToggle}
+                    rel="noreferrer"
+                  >
                     screenprinting
-                  </Link>
+                  </a>
                 </li>
                 <li>
-                  <Link to={routes.workshops()} onClick={menuToggle}>
-                    workshops
-                  </Link>
+                  <a
+                    href="https://screenprintingmalta.com/shop/"
+                    target="_blank"
+                    onClick={menuToggle}
+                    rel="noreferrer"
+                  >
+                    shop
+                  </a>
                 </li>
                 <li>
                   <Link to={routes.about()} onClick={menuToggle}>
@@ -188,6 +198,9 @@ const BlogLayout = ({ children }) => {
               </svg>
             </a>
           </div>
+        </div>
+        <div className="copyright">
+          All rights reserved by Aprille Zammit © 2024
         </div>
       </footer>
     </>

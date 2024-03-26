@@ -46,9 +46,14 @@ const Workshops = () => {
           ~ you have 10 days to cancel your workshop from the date of booking.
           Failure to do so will not guarantee a full refund.
         </p> */}
-        <Link className="learn-more" to={routes.workshops()}>
+        <a
+          target="_blank"
+          href="https://screenprintingmalta.com/screen-printing-workshops/"
+          className="learn-more"
+          rel="noreferrer"
+        >
           Experience The Magic
-        </Link>
+        </a>
       </div>
     </div>
   )
