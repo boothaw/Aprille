@@ -5,7 +5,7 @@ import { Toaster } from '@redwoodjs/web/toast'
 import { useAuth } from 'src/auth'
 
 const LoginPage = () => {
-  const { isAuthenticated, signUp, logOut } = useAuth()
+  const { isAuthenticated, signUp, logIn, logOut } = useAuth()
 
   return (
     <>
@@ -36,7 +36,7 @@ const LoginPage = () => {
               ) : (
                 <div>
                   <p>Sign In</p>
-                  <button className="rw-button rw-button-blue" onClick={signUp}>
+                  <button className="rw-button rw-button-blue" onClick={logIn}>
                     sign in
                   </button>
                 </div>
