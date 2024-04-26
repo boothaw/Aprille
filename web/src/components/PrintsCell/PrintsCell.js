@@ -28,9 +28,11 @@ export const Failure = ({ error }) => {
 }
 
 const shrinker = (url) => {
-  const parts = url.split('/')
-  parts.splice(3, 0, 'resize=height:300')
-  return parts.join('/')
+  if (url) {
+    const parts = url.split('/')
+    parts.splice(3, 0, 'resize=height:300')
+    return parts.join('/')
+  }
 }
 
 const gallerySized = (url) => {
