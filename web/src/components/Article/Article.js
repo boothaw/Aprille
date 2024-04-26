@@ -4,9 +4,11 @@ import Wave from 'src/components/Wave/Wave'
 
 const Article = ({ article }) => {
   const shrinker = (url) => {
-    const parts = url.split('/')
-    parts.splice(3, 0, 'resize=height:2000')
-    return parts.join('/')
+    if (url) {
+      const parts = url.split('/')
+      parts.splice(3, 0, 'resize=height:2000')
+      return parts.join('/')
+    }
   }
   // TO DO:
   // 1. loop over article object - Object.keys

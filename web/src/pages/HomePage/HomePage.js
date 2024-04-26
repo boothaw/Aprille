@@ -22,11 +22,11 @@ const HomePage = () => {
             <h1>Aprille Zammit ~ Studio</h1>
             <p>Screenprinting, Photography, Adventure</p>
           </a>
-          <Wave subtitle="photography"></Wave>
-          <PhotosCell filter="12" button="true"></PhotosCell>
-          {/* <Wave subtitle="projects"></Wave>
-          <ArticlesCell></ArticlesCell> */}
-          <Wave subtitle="screenprinsting"></Wave>
+          {/* <Wave subtitle="photography"></Wave>
+          <PhotosCell filter="12" button="true"></PhotosCell> */}
+          <Wave subtitle="projects"></Wave>
+          <ArticlesCell></ArticlesCell>
+          {/* <Wave subtitle="screenprinsting"></Wave>
           <Screenprintcopy></Screenprintcopy>
           <PrintsCell filter="12"></PrintsCell>
           <Wave subtitle="workshops"></Wave>
@@ -34,7 +34,7 @@ const HomePage = () => {
           <WorkprintsCell filter="12"></WorkprintsCell>
 
           <Wave subtitle="bio & contact"></Wave>
-          <AboutCopy></AboutCopy>
+          <AboutCopy></AboutCopy> */}
         </div>
       </>
     </>
