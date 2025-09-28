@@ -111,16 +111,11 @@ const BlogLayout = ({ children }) => {
                   </Link>
                 </li>
                 <li>
-                  <a
-                    href="https://screenprintingmalta.com/"
-                    target="_blank"
-                    onClick={menuToggle}
-                    rel="noreferrer"
-                  >
+                  <Link to={routes.screenprinting()} onClick={menuToggle}>
                     screenprinting
-                  </a>
+                  </Link>
                 </li>
-                <li>
+                {/* <li>
                   <a
                     href="https://screenprintingmalta.com/shop/"
                     target="_blank"
@@ -129,7 +124,7 @@ const BlogLayout = ({ children }) => {
                   >
                     shop
                   </a>
-                </li>
+                </li> */}
                 <li>
                   <Link to={routes.about()} onClick={menuToggle}>
                     bio & contact
