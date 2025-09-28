@@ -10,6 +10,7 @@ import {
   TextField,
   Submit,
 } from '@redwoodjs/forms'
+import { toast } from '@redwoodjs/web/toast'
 
 const ProjectForm = (props) => {
   const [url, setUrl] = useState(props?.project?.url)
@@ -22,17 +23,21 @@ const ProjectForm = (props) => {
   const [url8, setUrl8] = useState(props?.project?.url8)
 
   const onSubmit = (data) => {
-    const dataWithUrl = Object.assign(data, {
-      url,
-      url2,
-      url3,
-      url4,
-      url5,
-      url6,
-      url7,
-      url8,
-    })
-    props.onSave(dataWithUrl, props?.project?.id)
+    if (url) {
+      const dataWithUrl = Object.assign(data, {
+        url,
+        url2,
+        url3,
+        url4,
+        url5,
+        url6,
+        url7,
+        url8,
+      })
+      props.onSave(dataWithUrl, props?.project?.id)
+    } else {
+      toast.error('upload an image')
+    }
   }
 
   const onFileUpload = (response) => {
@@ -169,6 +174,7 @@ const ProjectForm = (props) => {
 
         <PickerInline
           apikey={process.env.REDWOOD_ENV_FILESTACK_API_KEY}
+          validation={{ required: true }}
           onSuccess={onFileUpload}
         >
           <div
