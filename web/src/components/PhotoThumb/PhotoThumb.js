@@ -1,12 +1,16 @@
 import { Link, routes } from '@redwoodjs/router'
 
 const PhotoThumb = ({ photo }) => {
+  // Utility to insert a Cloudinary transformation string into a URL
+  const transformCloudinaryUrl = (url, transformation) => {
+    if (!url) return null
+    const parts = url.split('/upload/')
+    return `${parts[0]}/upload/${transformation}/${parts[1]}`
+  }
+
+  // Shrinker: height 300, auto format and quality
   const shrinker = (url) => {
-    if (url) {
-      const parts = url.split('/')
-      parts.splice(3, 0, 'resize=height:1200')
-      return parts.join('/')
-    }
+    return transformCloudinaryUrl(url, 'h_300,c_scale,q_auto,f_auto')
   }
 
   return (

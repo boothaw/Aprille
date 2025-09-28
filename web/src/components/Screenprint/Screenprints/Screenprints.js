@@ -35,9 +35,10 @@ const ScreenprintsList = ({ screenprints }) => {
   }
 
   const thumbnail = (url) => {
-    const parts = url.split('/')
-    parts.splice(3, 0, 'resize=width:100')
-    return parts.join('/')
+    // Find the index of '/upload/' in the URL
+    const parts = url.split('/upload/')
+    // Insert the transformation string after 'upload/'
+    return `${parts[0]}/upload/w_100/${parts[1]}`
   }
 
   return (

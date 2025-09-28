@@ -27,16 +27,33 @@ export const Failure = ({ error }) => {
   )
 }
 
-const thumbnailed = (url) => {
-  const parts = url.split('/')
-  parts.splice(3, 0, 'resize=height:300')
-  return parts.join('/')
+// const thumbnailed = (url) => {
+//   const parts = url.split('/')
+//   parts.splice(3, 0, 'resize=height:300')
+//   return parts.join('/')
+// }
+
+// const gallerySized = (url) => {
+//   const parts = url.split('/')
+//   parts.splice(3, 0, 'resize=height:1200')
+//   return parts.join('/')
+// }
+
+// Utility to insert a Cloudinary transformation string into a URL
+const transformCloudinaryUrl = (url, transformation) => {
+  if (!url) return null
+  const parts = url.split('/upload/')
+  return `${parts[0]}/upload/${transformation}/${parts[1]}`
 }
 
+// Gallery sized: height 1200, auto format and quality
 const gallerySized = (url) => {
-  const parts = url.split('/')
-  parts.splice(3, 0, 'resize=height:1200')
-  return parts.join('/')
+  return transformCloudinaryUrl(url, 'h_1200,c_scale,q_auto,f_auto')
+}
+
+// Thumbnail example (from before)
+const thumbnailed = (url) => {
+  return transformCloudinaryUrl(url, 'w_100,c_scale,q_auto,f_auto')
 }
 
 export const Success = ({ prints, filter }) => {

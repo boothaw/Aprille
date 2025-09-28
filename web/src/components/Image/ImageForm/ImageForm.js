@@ -1,27 +1,42 @@
 import { useState } from 'react'
 
-import { PickerInline } from 'filestack-react'
-
 import {
   Form,
   FormError,
   FieldError,
   Label,
   TextField,
+  FileField,
   Submit,
 } from '@redwoodjs/forms'
 
 const ImageForm = (props) => {
   const [url, setUrl] = useState(props?.image?.url)
+  const [uploading, setUploading] = useState(false)
 
   const onSubmit = (data) => {
-    const dataWithUrl = Object.assign(data, { url })
+    const { title } = data // destructure only the fields we want
+    const dataWithUrl = { title, url }
     props.onSave(dataWithUrl, props?.image?.id)
   }
 
-  const onFileUpload = (response) => {
-    setUrl(response.filesUploaded[0].url)
-    // console.info(response)
+  const uploadToCloudinary = async (file) => {
+    setUploading(true)
+    const formData = new FormData()
+    formData.append('file', file)
+    formData.append('upload_preset', process.env.CLOUDINARY_PRESET)
+
+    const res = await fetch(
+      `https://api.cloudinary.com/v1_1/${process.env.CLOUDINARY_NAME}/image/upload`,
+      {
+        method: 'POST',
+        body: formData,
+      }
+    )
+
+    const json = await res.json()
+    setUploading(false)
+    setUrl(json.secure_url)
   }
 
   return (
@@ -52,14 +67,22 @@ const ImageForm = (props) => {
 
         <FieldError name="title" className="rw-field-error" />
 
-        <PickerInline
-          apikey={process.env.REDWOOD_ENV_FILESTACK_API_KEY}
-          onSuccess={onFileUpload}
-        >
-          <div
-            style={{ display: url ? 'none' : 'block', height: '500px' }}
-          ></div>
-        </PickerInline>
+        {!url && (
+          <div>
+            <Label name="image" className="rw-label">
+              Upload Image
+            </Label>
+            <FileField
+              name="image"
+              className="rw-input"
+              onChange={(e) => {
+                const file = e.target.files[0]
+                if (file) uploadToCloudinary(file)
+              }}
+            />
+            {uploading && <p>Uploading...</p>}
+          </div>
+        )}
 
         {url && (
           <div>
@@ -67,9 +90,10 @@ const ImageForm = (props) => {
               loading="lazy"
               alt={url}
               src={url}
-              style={{ display: 'block', margin: '2rem 0' }}
+              style={{ display: 'block', margin: '2rem 0', maxWidth: '300px' }}
             />
             <button
+              type="button"
               onClick={() => setUrl(null)}
               className="rw-button rw-button-blue"
             >
@@ -79,7 +103,10 @@ const ImageForm = (props) => {
         )}
 
         <div className="rw-button-group">
-          <Submit disabled={props.loading} className="rw-button rw-button-blue">
+          <Submit
+            disabled={props.loading || !url || uploading}
+            className="rw-button rw-button-blue"
+          >
             Save
           </Submit>
         </div>

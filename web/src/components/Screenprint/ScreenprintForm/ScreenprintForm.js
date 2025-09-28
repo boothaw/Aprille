@@ -1,27 +1,43 @@
 import { useState } from 'react'
 
-import { PickerInline } from 'filestack-react'
-
 import {
   Form,
   FormError,
   FieldError,
   Label,
   TextField,
+  FileField,
   Submit,
 } from '@redwoodjs/forms'
 
 const ScreenprintForm = (props) => {
-  const [url, setUrl] = useState(props?.image?.url)
+  const [url, setUrl] = useState(props?.screenprint?.url)
+  const [uploading, setUploading] = useState(false)
 
   const onSubmit = (data) => {
-    const dataWithUrl = Object.assign(data, { url })
+    const { title, description } = data
+    const dataWithUrl = { title, description, url }
     props.onSave(dataWithUrl, props?.screenprint?.id)
   }
 
-  const onFileUpload = (response) => {
-    setUrl(response.filesUploaded[0].url)
-    // console.info(response)
+  const uploadToCloudinary = async (file) => {
+    setUploading(true)
+    const formData = new FormData()
+    formData.append('file', file)
+    formData.append('upload_preset', process.env.CLOUDINARY_PRESET)
+
+    try {
+      const res = await fetch(
+        `https://api.cloudinary.com/v1_1/${process.env.CLOUDINARY_NAME}/image/upload`,
+        { method: 'POST', body: formData }
+      )
+      const json = await res.json()
+      setUrl(json.secure_url)
+    } catch (error) {
+      console.error('Cloudinary upload error:', error)
+    } finally {
+      setUploading(false)
+    }
   }
 
   return (
@@ -41,7 +57,6 @@ const ScreenprintForm = (props) => {
         >
           Title
         </Label>
-
         <TextField
           name="title"
           defaultValue={props.screenprint?.title}
@@ -49,26 +64,7 @@ const ScreenprintForm = (props) => {
           errorClassName="rw-input rw-input-error"
           validation={{ required: true }}
         />
-
         <FieldError name="title" className="rw-field-error" />
-
-        {/* <Label
-          name="url"
-          className="rw-label"
-          errorClassName="rw-label rw-label-error"
-        >
-          Url
-        </Label>
-
-        <TextField
-          name="url"
-          defaultValue={props.screenprint?.url}
-          className="rw-input"
-          errorClassName="rw-input rw-input-error"
-          validation={{ required: true }}
-        />
-
-        <FieldError name="url" className="rw-field-error" /> */}
 
         <Label
           name="description"
@@ -77,42 +73,46 @@ const ScreenprintForm = (props) => {
         >
           Description
         </Label>
-
         <TextField
           name="description"
           defaultValue={props.screenprint?.description}
           className="rw-input"
           errorClassName="rw-input rw-input-error"
         />
-
         <FieldError name="description" className="rw-field-error" />
 
-        <FieldError name="title" className="rw-field-error" />
+        {/* Image Upload */}
+        {!url && (
+          <div>
+            <Label
+              name="image"
+              className="rw-label"
+              errorClassName="rw-label rw-label-error"
+            >
+              Upload Image
+            </Label>
+            <FileField
+              name="image"
+              className="rw-input"
+              onChange={(e) => {
+                const file = e.target.files[0]
+                if (file) uploadToCloudinary(file)
+              }}
+            />
+            {uploading && <p>Uploading...</p>}
+          </div>
+        )}
 
-        <Label
-          name="url"
-          className="rw-label"
-          errorClassName="rw-label rw-label-error"
-        >
-          Image -- {props.screenprint?.url}
-        </Label>
-
-        <PickerInline
-          apikey={process.env.REDWOOD_ENV_FILESTACK_API_KEY}
-          onUploadDone={onFileUpload}
-        >
-          <div
-            style={{ display: url ? 'none' : 'block', height: '500px' }}
-          ></div>
-        </PickerInline>
         {url && (
           <div>
             <img
-              alt={url}
+              loading="lazy"
+              alt="Uploaded"
               src={url}
-              style={{ display: 'block', margin: '2rem 0' }}
+              style={{ display: 'block', margin: '2rem 0', maxWidth: '300px' }}
             />
             <button
+              type="button"
               onClick={() => setUrl(null)}
               className="rw-button rw-button-blue"
             >
@@ -122,7 +122,10 @@ const ScreenprintForm = (props) => {
         )}
 
         <div className="rw-button-group">
-          <Submit disabled={props.loading} className="rw-button rw-button-blue">
+          <Submit
+            disabled={props.loading || uploading || !url}
+            className="rw-button rw-button-blue"
+          >
             Save
           </Submit>
         </div>

@@ -24,9 +24,9 @@ const HomePage = () => {
           </a>
           <Wave subtitle="photography"></Wave>
           <PhotosCell filter="12" button="true"></PhotosCell>
-          <Wave subtitle="projects"></Wave>
-          <ArticlesCell></ArticlesCell>
-          <Wave subtitle="screenprinsting"></Wave>
+          {/* <Wave subtitle="projects"></Wave>
+          <ArticlesCell></ArticlesCell> */}
+          <Wave subtitle="screenprinting"></Wave>
           <Screenprintcopy></Screenprintcopy>
           <PrintsCell filter="12"></PrintsCell>
           <Wave subtitle="workshops"></Wave>

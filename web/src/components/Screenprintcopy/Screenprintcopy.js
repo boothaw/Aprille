@@ -14,14 +14,9 @@ const Screenprintcopy = () => {
           can print is A2 unless you want a repeat pattern.
         </p>
 
-        <a
-          target="_blank"
-          className="learn-more"
-          href="https://screenprintingmalta.com/screen-printing-workshops/"
-          rel="noreferrer"
-        >
+        <Link className="learn-more" to={routes.screenprinting()}>
           Start Printing
-        </a>
+        </Link>
       </div>
     </div>
   )

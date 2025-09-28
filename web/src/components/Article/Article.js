@@ -3,13 +3,18 @@ import { Head } from '@redwoodjs/web'
 import Wave from 'src/components/Wave/Wave'
 
 const Article = ({ article }) => {
-  const shrinker = (url) => {
-    if (url) {
-      const parts = url.split('/')
-      parts.splice(3, 0, 'resize=height:2000')
-      return parts.join('/')
-    }
+  // Utility to insert a Cloudinary transformation string into a URL
+  const transformCloudinaryUrl = (url, transformation) => {
+    if (!url) return null
+    const parts = url.split('/upload/')
+    return `${parts[0]}/upload/${transformation}/${parts[1]}`
   }
+
+  // Shrinker: height 300, auto format and quality
+  const shrinker = (url) => {
+    return transformCloudinaryUrl(url, 'h_300,c_scale,q_auto,f_auto')
+  }
+
   // TO DO:
   // 1. loop over article object - Object.keys
   // 2. check for if p or if images -- count .length
